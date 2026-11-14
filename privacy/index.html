@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Privacy Policy — Murashki</title>
+<style>:root{--bg:#faf6f4;--surface:#ffffff;--text:#231b20;--muted:#6b5d64;--accent:#a8264c;--line:#eadfe2;--pill:#f3e8eb}
+@media (prefers-color-scheme:dark){:root{--bg:#16111a;--surface:#1f1824;--text:#efe6ea;--muted:#b3a3ab;--accent:#f28aa8;--line:#352a3a;--pill:#2a2130}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:44rem;margin:0 auto;padding:16px}
+header{padding:8px 0 4px}
+.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none}
+nav.langs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;padding:0;list-style:none}
+nav.langs a{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pill);color:var(--text);text-decoration:none;font-size:15px;min-height:36px;line-height:24px}
+nav.langs a[aria-current="true"]{background:var(--accent);color:var(--bg)}
+article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 20px 20px;margin:16px 0}
+h1{font-size:1.6em;line-height:1.25;margin:.8em 0 .5em}
+h2{font-size:1.2em;line-height:1.3;margin:1.6em 0 .4em}
+h3{font-size:1.05em;margin:1.3em 0 .3em}
+p,ul,ol{margin:.6em 0}
+ul,ol{padding-left:1.3em}
+li{margin:.3em 0}
+a{color:var(--accent);overflow-wrap:anywhere}
+code{font:.9em ui-monospace,Consolas,monospace;background:var(--pill);padding:1px 4px;border-radius:4px}
+.tagline{font-size:1.1em}
+.docs a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
+footer{color:var(--muted);font-size:14px;padding:8px 0 32px}
+footer a{color:var(--muted)}
+html.js article[data-lang]{display:none}
+html.js article[data-lang].active{display:block}</style>
+<script>(function(){
+var d=document,h=d.documentElement;h.className+=' js';
+var langs=["ru","en","es","pt-BR","de","fr"],titles={"ru": "Политика конфиденциальности — Мурашки", "en": "Privacy Policy — Murashki", "es": "Política de privacidad — Murashki", "pt-BR": "Política de Privacidade — Murashki", "de": "Datenschutzerklärung — Murashki", "fr": "Politique de confidentialité — Murashki"};
+function find(code){if(!code)return null;code=code.toLowerCase();
+for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===code)return langs[i];
+var base=code.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===base)return langs[j];return null}
+function saved(){try{return localStorage.getItem('lang')}catch(e){return null}}
+function pick(){var l=find(location.hash.slice(1));if(l)return l;l=find(saved());if(l)return l;
+var nav=navigator.languages||[navigator.language];for(var i=0;i<nav.length;i++){l=find(nav[i]);if(l)return l}return 'en'}
+function show(l){var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
+var n=d.querySelectorAll('nav.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
+var f=d.querySelectorAll('a[data-page]');for(var m=0;m<f.length;m++)f[m].setAttribute('href',f[m].getAttribute('data-page')+'#'+l);
+h.lang=l;if(titles[l])d.title=titles[l]}
+d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('nav.langs a');if(!t)return;
+try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
+window.addEventListener('hashchange',function(){var l=find(location.hash.slice(1));if(l){show(l);scrollTo(0,0)}});
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){show(pick())});else show(pick());
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="brand" href="../" data-page="../">Murashki · Мурашки</a>
+<nav class="langs" aria-label="Language">
+<a href="#ru" hreflang="ru" lang="ru">Русский</a>
+<a href="#en" hreflang="en" lang="en">English</a>
+<a href="#es" hreflang="es" lang="es">Español</a>
+<a href="#pt-BR" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="#de" hreflang="de" lang="de">Deutsch</a>
+<a href="#fr" hreflang="fr" lang="fr">Français</a>
+</nav>
+</header>
+<main>
+<article id="ru" data-lang="ru" lang="ru">
+<h1>Политика конфиденциальности «Мурашек»</h1>
+<p>Вступает в силу: 14 ноября 2026 г.<br>
+Последнее обновление: 14 ноября 2026 г.</p>
+<h2>Коротко</h2>
+<ul>
+<li>«Мурашки» — игра для взрослых пар (18+). Аккаунтов, регистрации и входа нет.</li>
+<li>Всё, что вы вводите в игре, хранится только на вашем телефоне. Мы этих данных не получаем и не видим: у нас нет сервера, куда они могли бы попасть.</li>
+<li>В игре нет аналитики, рекламы, рекламных идентификаторов, трекинга и отчётов о сбоях.</li>
+<li>В интернет игра выходит только ради покупок через магазин приложений и когда вы сами открываете ссылку.</li>
+</ul>
+<h2>Кто мы</h2>
+<p>Игру «Мурашки» разрабатывает и выпускает Soverion Games (дальше — «мы»). По любым вопросам о данных и об этой политике пишите на <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>Что игра хранит на вашем телефоне</h2>
+<p>Чтобы игра работала, она сохраняет данные во внутренней папке приложения. Другие приложения эту папку не видят.</p>
+<ul>
+<li>Имена игроков и пол — чтобы подставлять их в тексты заданий. Уровень, очки, «сердечки», история показанных карт.</li>
+<li>Стоп-лист тем и стоп-слово.</li>
+<li>Настройки: язык, тема оформления, звук, вибрация, напоминания.</li>
+<li>Свои паки карт, если вы их создали или загрузили из файла.</li>
+<li>Защита входа, если вы её включили. Хранится не сам PIN-код, а его хеш: восстановить по нему PIN нельзя. Ещё — включён ли вход по отпечатку или Face ID и через сколько срабатывает блокировка.</li>
+<li>Отметка о купленной полной версии или подписке, чтобы открывать оплаченное без интернета.</li>
+</ul>
+<p>Эти данные не отправляются ни нам, ни кому-либо ещё.</p>
+<p>Вход по отпечатку пальца или по лицу проверяет сама система телефона (Android или iOS). Игра не получает ни отпечаток, ни изображение лица — только ответ «подтверждено» или «нет».</p>
+<h2>Чего игра не делает</h2>
+<ul>
+<li>Не собирает аналитику и статистику использования, в ней нет сторонних SDK аналитики. Встроенная аналитика и отчёты движка Unity выключены.</li>
+<li>Не показывает рекламу и не читает рекламный идентификатор (Advertising ID, IDFA).</li>
+<li>Не отслеживает вас в других приложениях и на сайтах.</li>
+<li>Не отправляет отчёты о сбоях.</li>
+<li>Не просит доступ к камере, микрофону, местоположению, контактам и фото. К файлу игра получает доступ, только когда вы сами выбираете его в системном окне, чтобы загрузить или сохранить свой пак.</li>
+</ul>
+<h2>Покупки и подписка</h2>
+<p>Полную версию и подписку продаёт магазин приложений, из которого вы установили игру (Google Play или App Store). Оплату проводит магазин. Он получает ваши платёжные данные и данные учётной записи и обрабатывает их по своим правилам: <a href="https://policies.google.com/privacy">политика Google</a>, <a href="https://www.apple.com/legal/privacy/">политика Apple</a>. Мы ваших платёжных данных не получаем.</p>
+<p>Игре магазин сообщает только, какие покупки есть у вашей учётной записи, — чтобы открыть оплаченные уровни. Нам как разработчику магазин показывает обобщённую статистику: число установок и продаж по странам, оценки и отзывы, которые вы публикуете сами. По этой статистике нельзя узнать, кто вы и что вы делаете в игре.</p>
+<h2>Резервные копии и новый телефон</h2>
+<ul>
+<li><strong>Android.</strong> Данные игры исключены из резервной копии Google и из переноса на новый телефон. На новом телефоне игра начинается с чистого листа, а покупки возвращаются кнопкой «Восстановить покупки».</li>
+<li><strong>iPhone и iPad.</strong> Файлы игры входят в резервную копию iCloud или компьютера, если она у вас включена. Такую копию хранит Apple (или ваш компьютер) по своим правилам; у нас доступа к ней нет.</li>
+</ul>
+<h2>Напоминания</h2>
+<p>Если вы включите напоминания в «Настройках», игра запланирует их на самом телефоне, по выбранному вами расписанию. Сервера уведомлений нет. На экране блокировки нет откровенных слов. Выключить напоминания можно в «Настройках» игры или в настройках телефона.</p>
+<h2>Свои паки карт</h2>
+<p>Тексты своих карт пишете вы. Они остаются на вашем телефоне, мы их не видим и не модерируем. Если вы сохраните пак в файл, этот файл окажется там, куда вы его положили, и дальше вы сами решаете, что с ним делать.</p>
+<h2>Игра на расстоянии</h2>
+<p>В этом режиме игра показывает вам короткий код, а вы сами пересылаете его партнёру — например, в мессенджере. Игра при этом ничего не отправляет.</p>
+<ul>
+<li><strong>Что внутри кода:</strong> номера желаний и ваши ответы (в «Совпадениях желаний»), номер задания и отметка «сделано» или «нет» (в отчёте), уровень и случайный номер кода. Имён, пола, стоп-листа и истории в коде нет.</li>
+<li><strong>Код не зашифрован.</strong> Тот, у кого он окажется и кто знает его формат, сможет прочитать ваши ответы. Отправляйте код только партнёру.</li>
+<li><strong>Передача идёт через выбранный вами мессенджер,</strong> поэтому к ней применяются его правила и его политика конфиденциальности. Мы ничего не получаем.</li>
+<li>Кнопка «Скопировать» кладёт код в буфер обмена. Буфер игра читает, только когда вы нажимаете «Вставить из буфера».</li>
+<li>Сами коды и ответы игра не сохраняет. Она запоминает только короткие служебные ключи кодов, чтобы не начислять «сердечки» дважды.</li>
+</ul>
+<h2>Сайт с документами</h2>
+<p>Эта политика и условия использования лежат на сайте, который размещён на GitHub Pages. На сайте нет cookie, счётчиков и скриптов слежения. GitHub, как любой хостинг, может технически записывать IP-адреса посетителей для защиты от атак — по <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">своей политике</a>.</p>
+<h2>Как удалить данные</h2>
+<ul>
+<li><strong>«Сбросить игру»</strong> в «Настройках» удаляет очки и прогресс.</li>
+<li><strong>«Забыли PIN-код?»</strong> на экране входа удаляет все данные игры: имена, прогресс, историю, стоп-лист, настройки, защиту входа и свои паки. Покупки остаются за вашей учётной записью в магазине.</li>
+<li><strong>Удаление приложения</strong> удаляет все его данные с телефона. На iPhone копия может остаться в резервной копии iCloud — её можно удалить в настройках iCloud.</li>
+<li>Историю покупок хранит магазин; удалить или получить её можно через магазин.</li>
+</ul>
+<h2>Ваши права</h2>
+<p>Законы о персональных данных — GDPR в Европейском союзе, UK GDPR, законы США (например, CCPA/CPRA в Калифорнии), закон № 152-ФЗ в России и другие — дают вам право узнать, какие данные о вас есть, получить их копию, исправить, удалить, ограничить обработку или возразить против неё, отозвать согласие и пожаловаться в надзорный орган.</p>
+<p>У нас ваших данных нет, поэтому выдать копию или удалить что-то на своей стороне мы не можем — там просто ничего нет. Все данные игры лежат на вашем телефоне, и распоряжаетесь ими вы: смотрите и меняете в игре, удаляете способами из раздела выше.</p>
+<p>Мы не продаём персональные данные и не передаём их для рекламы — ни в смысле CCPA/CPRA, ни в каком-либо другом.</p>
+<p>Если вы напишете нам на почту, у нас окажутся ваш адрес и текст письма. Мы используем их только чтобы ответить и решить ваш вопрос, никому не передаём и удаляем переписку, когда она больше не нужна. Попросите — удалим раньше.</p>
+<p>Если вы считаете, что ваши права нарушены, напишите нам. Вы также вправе обратиться в надзорный орган вашей страны.</p>
+<h2>Дети</h2>
+<p>«Мурашки» предназначены только для людей старше 18 лет. При первом запуске игра просит подтвердить возраст. Игра не рассчитана на детей и ни о ком не собирает данные — в том числе о детях. Если игрой воспользовался ребёнок, родитель может удалить приложение; ограничить установку помогает родительский контроль магазина.</p>
+<h2>Безопасность</h2>
+<p>PIN-код хранится только в виде хеша со случайной солью. Функция «Скрывать в «Недавних»» прячет экран игры в списке приложений, а на Android ещё и запрещает снимки и запись экрана игры. Но тот, у кого есть доступ к вашему разблокированному телефону, может открыть игру, если защита входа выключена, — поэтому советуем блокировку экрана телефона и PIN-код в игре.</p>
+<h2>Изменения политики</h2>
+<p>Если мы изменим политику, на этой странице поменяется дата последнего обновления. О существенных изменениях мы расскажем в описании обновления приложения в магазине. Если игра когда-нибудь начнёт собирать какие-то данные, мы сначала обновим эту политику и, где это нужно по закону, спросим ваше согласие в самой игре.</p>
+<h2>Контакты</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Условия использования: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+<article id="en" data-lang="en" lang="en">
+<h1>Murashki Privacy Policy</h1>
+<p>Effective: November 14, 2026<br>
+Last updated: November 14, 2026</p>
+<h2>In short</h2>
+<ul>
+<li>Murashki is a game for adult couples (18+). There are no accounts, sign-up, or sign-in.</li>
+<li>Everything you enter in the game is stored only on your phone. We don't receive or see this data: we have no server where it could end up.</li>
+<li>The game has no analytics, ads, advertising identifiers, tracking, or crash reports.</li>
+<li>The game goes online only for purchases through the app store and when you open a link yourself.</li>
+</ul>
+<h2>Who we are</h2>
+<p>The game Murashki is developed and published by Soverion Games ("we"). For any questions about data and this policy, write to <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>What the game stores on your phone</h2>
+<p>To work, the game saves data in the app's internal folder. Other apps can't see this folder.</p>
+<ul>
+<li>Player names and gender, to put them into the prompt texts. Level, points, hearts, and the history of cards shown.</li>
+<li>The no-go list of topics and the safe word.</li>
+<li>Settings: language, theme, sound, vibration, reminders.</li>
+<li>Your own card packs, if you created them or loaded them from a file.</li>
+<li>Sign-in protection, if you turned it on. What is stored is not the PIN itself but its hash: the PIN can't be recovered from it. Also stored: whether fingerprint or Face ID sign-in is on and after how long the lock kicks in.</li>
+<li>A mark that you bought the full version or a subscription, so paid content opens without the internet.</li>
+</ul>
+<p>This data is not sent to us or to anyone else.</p>
+<p>Fingerprint or face sign-in is checked by the phone's own system (Android or iOS). The game receives neither your fingerprint nor an image of your face, only the answer "confirmed" or "not confirmed".</p>
+<h2>What the game does not do</h2>
+<ul>
+<li>It does not collect analytics or usage statistics, and it has no third-party analytics SDKs. The Unity engine's built-in analytics and reports are turned off.</li>
+<li>It does not show ads and does not read the advertising identifier (Advertising ID, IDFA).</li>
+<li>It does not track you across other apps and websites.</li>
+<li>It does not send crash reports.</li>
+<li>It does not ask for access to the camera, microphone, location, contacts, or photos. The game gets access to a file only when you pick it yourself in the system dialog, to load or save your own pack.</li>
+</ul>
+<h2>Purchases and subscription</h2>
+<p>The full version and the subscription are sold by the app store you installed the game from (Google Play or App Store). The store processes the payment. It receives your payment details and account data and handles them under its own rules: <a href="https://policies.google.com/privacy">Google's policy</a>, <a href="https://www.apple.com/legal/privacy/">Apple's policy</a>. We do not receive your payment details.</p>
+<p>The store tells the game only which purchases your account has, so that the paid levels can be unlocked. As the developer, we see aggregate statistics from the store: the number of installs and sales by country, and ratings and reviews that you post yourself. These statistics can't tell who you are or what you do in the game.</p>
+<h2>Backups and a new phone</h2>
+<ul>
+<li><strong>Android.</strong> Game data is excluded from Google backup and from transfer to a new phone. On a new phone the game starts with a clean slate, and purchases come back with the "Restore purchases" button.</li>
+<li><strong>iPhone and iPad.</strong> The game's files are included in an iCloud or computer backup, if you have one turned on. Apple (or your computer) keeps that backup under its own rules; we have no access to it.</li>
+</ul>
+<h2>Reminders</h2>
+<p>If you turn on reminders in "Settings", the game schedules them on the phone itself, on the schedule you choose. There is no notification server. There are no explicit words on the lock screen. You can turn reminders off in the game's "Settings" or in your phone's settings.</p>
+<h2>Custom card packs</h2>
+<p>You write the texts of your own cards. They stay on your phone, and we don't see or moderate them. If you save a pack to a file, that file ends up wherever you put it, and from there you decide what to do with it.</p>
+<h2>Remote play</h2>
+<p>In this mode the game shows you a short code, and you send it to your partner yourself, for example in a messenger. The game sends nothing in the process.</p>
+<ul>
+<li><strong>What is inside the code:</strong> wish numbers and your answers (in "Wish Match"), the prompt number and a "done" or "not done" mark (in the report), the level, and a random code number. The code contains no names, gender, no-go list, or history.</li>
+<li><strong>The code is not encrypted.</strong> Anyone who gets it and knows its format can read your answers. Send the code only to your partner.</li>
+<li><strong>The transfer goes through the messenger you choose,</strong> so its rules and its privacy policy apply. We receive nothing.</li>
+<li>The "Copy" button puts the code on the clipboard. The game reads the clipboard only when you tap "Paste from Clipboard".</li>
+<li>The game does not save the codes or answers themselves. It remembers only short service keys of the codes, so that hearts aren't awarded twice.</li>
+</ul>
+<h2>Website with the documents</h2>
+<p>This policy and the terms of use are hosted on a website on GitHub Pages. The site has no cookies, counters, or tracking scripts. GitHub, like any host, may technically log visitors' IP addresses to protect against attacks, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its own policy</a>.</p>
+<h2>How to delete data</h2>
+<ul>
+<li><strong>"Reset game"</strong> in "Settings" deletes points and progress.</li>
+<li><strong>"Forgot PIN?"</strong> on the sign-in screen deletes all game data: names, progress, history, no-go list, settings, sign-in protection, and your own packs. Purchases stay with your store account.</li>
+<li><strong>Uninstalling the app</strong> removes all its data from the phone. On iPhone a copy may remain in an iCloud backup; you can delete it in iCloud settings.</li>
+<li>Purchase history is kept by the store; you can delete or obtain it through the store.</li>
+</ul>
+<h2>Your rights</h2>
+<p>Personal data laws, such as the GDPR in the European Union, the UK GDPR, U.S. laws (for example, CCPA/CPRA in California), Russian Federal Law No. 152-FZ, and others, give you the right to know what data exists about you, get a copy, correct it, delete it, restrict or object to its processing, withdraw consent, and complain to a supervisory authority.</p>
+<p>We hold no data about you, so we can't provide a copy or delete anything on our side: there is simply nothing there. All of the game's data is on your phone and you control it: view and change it in the game, and delete it using the methods in the section above.</p>
+<p>We do not sell personal data and do not share it for advertising, whether under CCPA/CPRA or otherwise.</p>
+<p>If you email us, we will have your address and the text of your message. We use them only to reply and resolve your question, we share them with no one, and we delete the correspondence when it is no longer needed. Ask, and we will delete it sooner.</p>
+<p>If you believe your rights have been violated, write to us. You may also contact the supervisory authority in your country.</p>
+<h2>Children</h2>
+<p>Murashki is intended only for people over 18. On first launch the game asks you to confirm your age. The game is not designed for children and collects data about no one, including children. If a child has used the game, a parent can delete the app; the store's parental controls help restrict installation.</p>
+<h2>Security</h2>
+<p>The PIN is stored only as a hash with a random salt. The "Hide in Recents" feature hides the game's screen in the app switcher, and on Android it also blocks screenshots and screen recording of the game. But anyone with access to your unlocked phone can open the game if sign-in protection is off, so we recommend a phone screen lock and a PIN in the game.</p>
+<h2>Changes to this policy</h2>
+<p>If we change the policy, the last-updated date on this page will change. We will announce material changes in the app's update notes in the store. If the game ever starts collecting any data, we will first update this policy and, where the law requires, ask for your consent in the game itself.</p>
+<h2>Contact</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Terms of Use: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+<article id="es" data-lang="es" lang="es">
+<h1>Política de privacidad de Murashki</h1>
+<p>Entra en vigor: 14 de noviembre de 2026<br>
+Última actualización: 14 de noviembre de 2026</p>
+<h2>En resumen</h2>
+<ul>
+<li>Murashki es un juego para parejas adultas (18+). No hay cuentas, registro ni inicio de sesión.</li>
+<li>Todo lo que introduces en el juego se guarda solo en tu teléfono. Nosotros no recibimos ni vemos esos datos: no tenemos ningún servidor al que pudieran llegar.</li>
+<li>El juego no tiene analítica, publicidad, identificadores publicitarios, seguimiento ni informes de fallos.</li>
+<li>El juego se conecta a internet solo para las compras a través de la tienda de aplicaciones y cuando tú mismo abres un enlace.</li>
+</ul>
+<h2>Quiénes somos</h2>
+<p>El juego Murashki lo desarrolla y publica Soverion Games («nosotros»). Para cualquier duda sobre los datos y esta política, escribe a <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>Qué guarda el juego en tu teléfono</h2>
+<p>Para funcionar, el juego guarda datos en la carpeta interna de la aplicación. Otras aplicaciones no ven esa carpeta.</p>
+<ul>
+<li>Los nombres de los jugadores y el género, para insertarlos en los textos de los retos. El nivel, los puntos, los corazones y el historial de cartas mostradas.</li>
+<li>La lista de límites de temas y la palabra de seguridad.</li>
+<li>Los ajustes: idioma, tema visual, sonido, vibración, recordatorios.</li>
+<li>Tus packs de cartas, si los has creado o cargado desde un archivo.</li>
+<li>La protección de acceso, si la activaste. Se guarda no el PIN en sí, sino su hash: a partir de él no se puede recuperar el PIN. También se guarda si está activado el acceso con huella o Face ID y al cabo de cuánto tiempo se activa el bloqueo.</li>
+<li>Una marca de que compraste la versión completa o una suscripción, para abrir lo pagado sin internet.</li>
+</ul>
+<p>Estos datos no se envían ni a nosotros ni a nadie más.</p>
+<p>El acceso con huella dactilar o con el rostro lo comprueba el propio sistema del teléfono (Android o iOS). El juego no recibe ni la huella ni la imagen del rostro, solo la respuesta «confirmado» o «no».</p>
+<h2>Lo que el juego no hace</h2>
+<ul>
+<li>No recopila analítica ni estadísticas de uso, y no incluye SDK de analítica de terceros. La analítica y los informes integrados del motor Unity están desactivados.</li>
+<li>No muestra publicidad y no lee el identificador publicitario (Advertising ID, IDFA).</li>
+<li>No te rastrea en otras aplicaciones ni en sitios web.</li>
+<li>No envía informes de fallos.</li>
+<li>No pide acceso a la cámara, el micrófono, la ubicación, los contactos ni las fotos. El juego accede a un archivo solo cuando tú lo eliges en la ventana del sistema, para cargar o guardar tu propio pack.</li>
+</ul>
+<h2>Compras y suscripción</h2>
+<p>La versión completa y la suscripción las vende la tienda de aplicaciones desde la que instalaste el juego (Google Play o App Store). El pago lo procesa la tienda. Ella recibe tus datos de pago y de la cuenta y los trata según sus propias reglas: <a href="https://policies.google.com/privacy">política de Google</a>, <a href="https://www.apple.com/legal/privacy/">política de Apple</a>. Nosotros no recibimos tus datos de pago.</p>
+<p>La tienda le comunica al juego solo qué compras tiene tu cuenta, para abrir los niveles pagados. A nosotros, como desarrolladores, la tienda nos muestra estadísticas agregadas: número de instalaciones y ventas por país, y las valoraciones y reseñas que publiques tú mismo. Con esas estadísticas no se puede saber quién eres ni qué haces en el juego.</p>
+<h2>Copias de seguridad y teléfono nuevo</h2>
+<ul>
+<li><strong>Android.</strong> Los datos del juego están excluidos de la copia de seguridad de Google y de la transferencia a un teléfono nuevo. En un teléfono nuevo el juego empieza de cero y las compras se recuperan con el botón «Restaurar compras».</li>
+<li><strong>iPhone y iPad.</strong> Los archivos del juego se incluyen en la copia de seguridad de iCloud o del ordenador, si la tienes activada. Esa copia la guarda Apple (o tu ordenador) según sus propias reglas; nosotros no tenemos acceso a ella.</li>
+</ul>
+<h2>Recordatorios</h2>
+<p>Si activas los recordatorios en «Ajustes», el juego los programa en el propio teléfono, con el horario que elijas. No hay servidor de notificaciones. En la pantalla de bloqueo no aparecen palabras explícitas. Puedes desactivar los recordatorios en «Ajustes» del juego o en los ajustes del teléfono.</p>
+<h2>Packs de cartas propios</h2>
+<p>Los textos de tus cartas los escribes tú. Se quedan en tu teléfono, y nosotros no los vemos ni los moderamos. Si guardas un pack en un archivo, ese archivo queda donde lo hayas puesto, y a partir de ahí decides tú qué hacer con él.</p>
+<h2>Juego a distancia</h2>
+<p>En este modo el juego te muestra un código corto y tú mismo se lo reenvías a tu pareja, por ejemplo, por una aplicación de mensajería. El juego no envía nada.</p>
+<ul>
+<li><strong>Qué hay dentro del código:</strong> los números de los deseos y tus respuestas (en «Deseos en común»), el número del reto y la marca «hecho» o «no» (en el informe), el nivel y un número de código aleatorio. En el código no hay nombres, género, lista de límites ni historial.</li>
+<li><strong>El código no está cifrado.</strong> Quien lo consiga y conozca su formato podrá leer tus respuestas. Envía el código solo a tu pareja.</li>
+<li><strong>El envío pasa por la aplicación de mensajería que elijas,</strong> por lo que se le aplican sus reglas y su política de privacidad. Nosotros no recibimos nada.</li>
+<li>El botón «Copiar» pone el código en el portapapeles. El juego lee el portapapeles solo cuando pulsas «Pegar del portapapeles».</li>
+<li>El juego no guarda los códigos ni las respuestas en sí. Solo recuerda unas claves de servicio cortas de los códigos, para no dar corazones dos veces.</li>
+</ul>
+<h2>Sitio web con los documentos</h2>
+<p>Esta política y los términos de uso están en un sitio alojado en GitHub Pages. El sitio no tiene cookies, contadores ni scripts de seguimiento. GitHub, como cualquier alojamiento, puede registrar técnicamente las direcciones IP de los visitantes para protegerse de ataques, según <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">su propia política</a>.</p>
+<h2>Cómo eliminar los datos</h2>
+<ul>
+<li><strong>«Reiniciar juego»</strong> en «Ajustes» elimina los puntos y el progreso.</li>
+<li><strong>«¿Olvidaste el PIN?»</strong> en la pantalla de acceso elimina todos los datos del juego: nombres, progreso, historial, lista de límites, ajustes, protección de acceso y tus packs. Las compras siguen asociadas a tu cuenta de la tienda.</li>
+<li><strong>Desinstalar la aplicación</strong> elimina todos sus datos del teléfono. En iPhone puede quedar una copia en la copia de seguridad de iCloud; puedes eliminarla en los ajustes de iCloud.</li>
+<li>El historial de compras lo guarda la tienda; puedes eliminarlo u obtenerlo a través de la tienda.</li>
+</ul>
+<h2>Tus derechos</h2>
+<p>Las leyes de protección de datos personales (el GDPR en la Unión Europea, el UK GDPR, leyes de EE. UU. como CCPA/CPRA en California, la Ley Federal rusa n.º 152-FZ y otras) te dan derecho a saber qué datos hay sobre ti, obtener una copia, corregirlos, eliminarlos, limitar su tratamiento u oponerte a él, retirar el consentimiento y presentar una reclamación ante una autoridad de control.</p>
+<p>Nosotros no tenemos tus datos, así que no podemos entregarte una copia ni eliminar nada de nuestro lado: allí simplemente no hay nada. Todos los datos del juego están en tu teléfono y los gestionas tú: los ves y los cambias en el juego y los eliminas con los métodos de la sección anterior.</p>
+<p>No vendemos datos personales ni los compartimos con fines publicitarios, ni según CCPA/CPRA ni en ningún otro sentido.</p>
+<p>Si nos escribes por correo, tendremos tu dirección y el texto del mensaje. Los usamos solo para responderte y resolver tu consulta, no se los damos a nadie y eliminamos la correspondencia cuando ya no hace falta. Si lo pides, la eliminamos antes.</p>
+<p>Si crees que tus derechos han sido vulnerados, escríbenos. También puedes acudir a la autoridad de control de tu país.</p>
+<h2>Menores</h2>
+<p>Murashki está destinado solo a personas mayores de 18 años. En el primer inicio el juego te pide confirmar tu edad. El juego no está pensado para menores y no recopila datos de nadie, tampoco de menores. Si un menor ha usado el juego, su madre, padre o tutor puede eliminar la aplicación; el control parental de la tienda ayuda a restringir la instalación.</p>
+<h2>Seguridad</h2>
+<p>El PIN se guarda solo en forma de hash con una sal aleatoria. La función «Ocultar en «Recientes»» oculta la pantalla del juego en la lista de aplicaciones y, en Android, además impide las capturas y la grabación de pantalla del juego. Pero quien tenga acceso a tu teléfono desbloqueado podrá abrir el juego si la protección de acceso está desactivada, por eso te recomendamos el bloqueo de pantalla del teléfono y un PIN en el juego.</p>
+<h2>Cambios en la política</h2>
+<p>Si cambiamos la política, cambiará la fecha de última actualización en esta página. Los cambios importantes los comunicaremos en la descripción de la actualización de la app en la tienda. Si algún día el juego empieza a recopilar algún dato, primero actualizaremos esta política y, cuando la ley lo exija, te pediremos el consentimiento en el propio juego.</p>
+<h2>Contacto</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Términos de uso: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+<article id="pt-BR" data-lang="pt-BR" lang="pt-BR">
+<h1>Política de Privacidade de Murashki</h1>
+<p>Em vigor desde: 14 de novembro de 2026<br>
+Última atualização: 14 de novembro de 2026</p>
+<h2>Resumo</h2>
+<ul>
+<li>Murashki é um jogo para casais adultos (18+). Não há contas, cadastro nem login.</li>
+<li>Tudo o que você digita no jogo fica guardado apenas no seu celular. Nós não recebemos nem vemos esses dados: não temos um servidor para onde eles pudessem ir.</li>
+<li>O jogo não tem análise de uso, publicidade, identificadores de publicidade, rastreamento nem relatórios de falhas.</li>
+<li>O jogo só acessa a internet para compras pela loja de aplicativos e quando você mesmo abre um link.</li>
+</ul>
+<h2>Quem somos</h2>
+<p>O jogo Murashki é desenvolvido e publicado pela Soverion Games (daqui em diante, "nós"). Para qualquer dúvida sobre dados e sobre esta política, escreva para <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>O que o jogo guarda no seu celular</h2>
+<p>Para funcionar, o jogo salva dados na pasta interna do aplicativo. Outros aplicativos não enxergam essa pasta.</p>
+<ul>
+<li>Nomes e gênero dos jogadores — para inserir nos textos das tarefas. Nível, pontos, "Corações", histórico das cartas mostradas.</li>
+<li>Lista de limites de temas e palavra de segurança.</li>
+<li>Configurações: idioma, tema visual, som, vibração, lembretes.</li>
+<li>Pacotes de cartas próprios, se você os criou ou carregou de um arquivo.</li>
+<li>Proteção de acesso, se você a ativou. O que fica guardado não é o PIN em si, mas o hash dele: não é possível recuperar o PIN a partir dele. Também ficam guardados se o acesso por impressão digital ou Face ID está ativado e depois de quanto tempo o bloqueio entra em ação.</li>
+<li>Um registro da versão completa ou da assinatura comprada, para liberar o conteúdo pago sem internet.</li>
+</ul>
+<p>Esses dados não são enviados a nós nem a mais ninguém.</p>
+<p>O acesso por impressão digital ou por rosto é verificado pelo próprio sistema do celular (Android ou iOS). O jogo não recebe a impressão digital nem a imagem do rosto — apenas a resposta "confirmado" ou "não".</p>
+<h2>O que o jogo não faz</h2>
+<ul>
+<li>Não coleta análise nem estatísticas de uso, e não há SDKs de análise de terceiros nele. A análise e os relatórios integrados do motor Unity estão desativados.</li>
+<li>Não exibe publicidade e não lê o identificador de publicidade (Advertising ID, IDFA).</li>
+<li>Não rastreia você em outros aplicativos e sites.</li>
+<li>Não envia relatórios de falhas.</li>
+<li>Não pede acesso à câmera, ao microfone, à localização, aos contatos e às fotos. O jogo só acessa um arquivo quando você mesmo o escolhe na janela do sistema, para carregar ou salvar um pacote seu.</li>
+</ul>
+<h2>Compras e assinatura</h2>
+<p>A versão completa e a assinatura são vendidas pela loja de aplicativos de onde você instalou o jogo (Google Play ou App Store). O pagamento é feito pela loja. Ela recebe seus dados de pagamento e da conta e os trata conforme as regras dela: <a href="https://policies.google.com/privacy">política do Google</a>, <a href="https://www.apple.com/legal/privacy/">política da Apple</a>. Nós não recebemos seus dados de pagamento.</p>
+<p>A loja informa ao jogo apenas quais compras existem na sua conta — para liberar os níveis pagos. A nós, como desenvolvedores, a loja mostra estatísticas gerais: número de instalações e vendas por país, notas e avaliações que você mesmo publica. Com essas estatísticas não é possível saber quem você é nem o que você faz no jogo.</p>
+<h2>Backups e celular novo</h2>
+<ul>
+<li><strong>Android.</strong> Os dados do jogo ficam fora do backup do Google e da transferência para um celular novo. No celular novo, o jogo começa do zero, e as compras voltam com o botão "Restaurar compras".</li>
+<li><strong>iPhone e iPad.</strong> Os arquivos do jogo entram no backup do iCloud ou do computador, se você o tiver ativado. Esse backup é guardado pela Apple (ou pelo seu computador) conforme as regras dela; nós não temos acesso a ele.</li>
+</ul>
+<h2>Lembretes</h2>
+<p>Se você ativar os lembretes em "Configurações", o jogo os agenda no próprio celular, no horário que você escolheu. Não há servidor de notificações. Na tela de bloqueio não aparecem palavras explícitas. Você pode desativar os lembretes em "Configurações" do jogo ou nas configurações do celular.</p>
+<h2>Pacotes de cartas próprios</h2>
+<p>Os textos das suas cartas são escritos por você. Eles ficam no seu celular, e nós não os vemos nem os moderamos. Se você salvar um pacote em um arquivo, esse arquivo fica onde você o colocou, e, dali em diante, cabe a você decidir o que fazer com ele.</p>
+<h2>Jogo à distância</h2>
+<p>Nesse modo, o jogo mostra um código curto, e você mesmo o envia ao parceiro ou à parceira — por exemplo, por um mensageiro. O jogo não envia nada por conta própria.</p>
+<ul>
+<li><strong>O que há dentro do código:</strong> números dos desejos e suas respostas (em "Desejos em comum"), número da tarefa e a marca "feito" ou "não" (no relatório), nível e um número aleatório do código. Nomes, gênero, lista de limites e histórico não estão no código.</li>
+<li><strong>O código não é criptografado.</strong> Quem o obtiver e conhecer o formato conseguirá ler suas respostas. Envie o código somente ao seu parceiro ou à sua parceira.</li>
+<li><strong>O envio passa pelo mensageiro que você escolher,</strong> então valem as regras e a política de privacidade dele. Nós não recebemos nada.</li>
+<li>O botão "Copiar" coloca o código na área de transferência. O jogo só lê a área de transferência quando você toca em "Colar da área de transferência".</li>
+<li>O jogo não guarda os códigos nem as respostas. Ele memoriza apenas chaves de serviço curtas dos códigos, para não conceder "Corações" duas vezes.</li>
+</ul>
+<h2>Site com os documentos</h2>
+<p>Esta política e os termos de uso estão em um site hospedado no GitHub Pages. O site não tem cookies, contadores nem scripts de rastreamento. O GitHub, como qualquer hospedagem, pode registrar tecnicamente os endereços IP dos visitantes para proteção contra ataques — conforme a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">política dele</a>.</p>
+<h2>Como excluir os dados</h2>
+<ul>
+<li><strong>"Reiniciar jogo"</strong> em "Configurações" apaga os pontos e o progresso.</li>
+<li><strong>"Esqueceu o PIN?"</strong> na tela de acesso apaga todos os dados do jogo: nomes, progresso, histórico, lista de limites, configurações, proteção de acesso e pacotes próprios. As compras continuam vinculadas à sua conta na loja.</li>
+<li><strong>Desinstalar o aplicativo</strong> apaga todos os dados dele do celular. No iPhone, uma cópia pode permanecer no backup do iCloud — você pode excluí-la nas configurações do iCloud.</li>
+<li>O histórico de compras fica com a loja; você pode excluí-lo ou obtê-lo pela loja.</li>
+</ul>
+<h2>Seus direitos</h2>
+<p>As leis de proteção de dados pessoais — o GDPR na União Europeia, o UK GDPR, leis dos EUA (por exemplo, o CCPA/CPRA na Califórnia), a LGPD no Brasil, a Lei Federal russa nº 152-FZ na Rússia e outras — dão a você o direito de saber quais dados sobre você existem, obter uma cópia deles, corrigi-los, excluí-los, restringir o tratamento ou se opor a ele, retirar o consentimento e reclamar a uma autoridade de supervisão.</p>
+<p>Nós não temos seus dados, então não podemos fornecer uma cópia nem excluir algo do nosso lado — simplesmente não há nada lá. Todos os dados do jogo estão no seu celular, e quem decide sobre eles é você: veja e altere no jogo, exclua pelos meios da seção acima.</p>
+<p>Não vendemos dados pessoais nem os repassamos para publicidade — nem no sentido do CCPA/CPRA, nem em qualquer outro.</p>
+<p>Se você nos escrever por e-mail, ficaremos com o seu endereço e o texto da mensagem. Usamos isso somente para responder e resolver a sua questão, não repassamos a ninguém e apagamos a correspondência quando ela não for mais necessária. Se você pedir, apagamos antes.</p>
+<p>Se você acha que seus direitos foram violados, escreva para nós. Você também tem o direito de recorrer à autoridade de supervisão do seu país.</p>
+<h2>Crianças</h2>
+<p>Murashki é destinado apenas a pessoas com mais de 18 anos. Na primeira vez que abre o jogo, ele pede que você confirme sua idade. O jogo não foi feito para crianças e não coleta dados de ninguém — nem de crianças. Se uma criança usar o jogo, o responsável pode desinstalar o aplicativo; o controle parental da loja ajuda a restringir a instalação.</p>
+<h2>Segurança</h2>
+<p>O PIN é guardado apenas como um hash com sal aleatório. A função "Ocultar em "Recentes"" esconde a tela do jogo na lista de aplicativos e, no Android, também proíbe capturas e gravações da tela do jogo. Mas quem tiver acesso ao seu celular desbloqueado pode abrir o jogo se a proteção de acesso estiver desativada — por isso recomendamos o bloqueio de tela do celular e um PIN no jogo.</p>
+<h2>Mudanças na política</h2>
+<p>Se mudarmos a política, a data da última atualização nesta página será alterada. Avisaremos sobre mudanças importantes na descrição da atualização do aplicativo na loja. Se algum dia o jogo passar a coletar algum dado, primeiro atualizaremos esta política e, onde a lei exigir, pediremos seu consentimento no próprio jogo.</p>
+<h2>Contato</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Termos de Uso: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+<article id="de" data-lang="de" lang="de">
+<h1>Datenschutzerklärung für Murashki</h1>
+<p>Gültig ab: 14. November 2026<br>
+Zuletzt aktualisiert: 14. November 2026</p>
+<h2>Kurz gesagt</h2>
+<ul>
+<li>Murashki ist ein Spiel für erwachsene Paare (18+). Es gibt keine Konten, keine Registrierung und keine Anmeldung.</li>
+<li>Alles, was du im Spiel eingibst, wird nur auf deinem Handy gespeichert. Wir erhalten und sehen diese Daten nicht: Wir haben keinen Server, auf den sie gelangen könnten.</li>
+<li>Das Spiel enthält keine Analyse, keine Werbung, keine Werbe-IDs, kein Tracking und keine Absturzberichte.</li>
+<li>Ins Internet geht das Spiel nur für Käufe über den App-Store und wenn du selbst einen Link öffnest.</li>
+</ul>
+<h2>Wer wir sind</h2>
+<p>Das Spiel Murashki wird von Soverion Games (im Folgenden „wir“) entwickelt und veröffentlicht. Bei Fragen zu Daten und zu dieser Erklärung schreib an <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>Was das Spiel auf deinem Handy speichert</h2>
+<p>Damit das Spiel funktioniert, speichert es Daten im internen Ordner der App. Andere Apps sehen diesen Ordner nicht.</p>
+<ul>
+<li>Namen und Geschlecht der Spielenden – um sie in die Aufgabentexte einzusetzen. Stufe, Punkte, „Herzen“, Verlauf der gezeigten Karten.</li>
+<li>Tabuliste der Themen und Stoppwort.</li>
+<li>Einstellungen: Sprache, Design, Ton, Vibration, Erinnerungen.</li>
+<li>Eigene Kartenpakete, wenn du sie erstellt oder aus einer Datei geladen hast.</li>
+<li>Zugangsschutz, wenn du ihn aktiviert hast. Gespeichert wird nicht die PIN selbst, sondern ihr Hash: Die PIN lässt sich daraus nicht wiederherstellen. Außerdem, ob der Zugang per Fingerabdruck oder Face ID aktiviert ist und nach welcher Zeit die Sperre greift.</li>
+<li>Ein Vermerk über die gekaufte Vollversion oder das Abo, damit Bezahltes auch ohne Internet freigeschaltet wird.</li>
+</ul>
+<p>Diese Daten werden weder an uns noch an andere gesendet.</p>
+<p>Der Zugang per Fingerabdruck oder Gesicht wird vom Betriebssystem des Handys (Android oder iOS) geprüft. Das Spiel erhält weder den Fingerabdruck noch ein Bild des Gesichts – nur die Antwort „bestätigt“ oder „nein“.</p>
+<h2>Was das Spiel nicht tut</h2>
+<ul>
+<li>Es sammelt keine Analyse- oder Nutzungsstatistiken, und es enthält keine Analyse-SDKs von Dritten. Die eingebaute Analyse und die Berichte der Unity-Engine sind ausgeschaltet.</li>
+<li>Es zeigt keine Werbung und liest keine Werbe-ID (Advertising ID, IDFA).</li>
+<li>Es verfolgt dich nicht in anderen Apps und auf Websites.</li>
+<li>Es sendet keine Absturzberichte.</li>
+<li>Es fragt nicht nach Zugriff auf Kamera, Mikrofon, Standort, Kontakte und Fotos. Auf eine Datei greift das Spiel nur zu, wenn du sie selbst im Systemfenster auswählst, um ein eigenes Paket zu laden oder zu speichern.</li>
+</ul>
+<h2>Käufe und Abo</h2>
+<p>Die Vollversion und das Abo verkauft der App-Store, über den du das Spiel installiert hast (Google Play oder App Store). Die Zahlung wickelt der Store ab. Er erhält deine Zahlungs- und Kontodaten und verarbeitet sie nach seinen eigenen Regeln: <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>, <a href="https://www.apple.com/legal/privacy/">Datenschutzerklärung von Apple</a>. Wir erhalten deine Zahlungsdaten nicht.</p>
+<p>Dem Spiel teilt der Store nur mit, welche Käufe dein Konto hat – damit bezahlte Stufen freigeschaltet werden. Uns als Entwicklern zeigt der Store zusammengefasste Statistiken: Zahl der Installationen und Verkäufe nach Ländern, Bewertungen und Rezensionen, die du selbst veröffentlichst. Aus dieser Statistik lässt sich nicht erkennen, wer du bist und was du im Spiel tust.</p>
+<h2>Sicherungen und neues Handy</h2>
+<ul>
+<li><strong>Android.</strong> Die Spieldaten sind von der Google-Sicherung und von der Übertragung auf ein neues Handy ausgeschlossen. Auf einem neuen Handy beginnt das Spiel bei null, und die Käufe kommen mit der Taste „Käufe wiederherstellen“ zurück.</li>
+<li><strong>iPhone und iPad.</strong> Die Spieldateien sind Teil der iCloud-Sicherung oder der Computer-Sicherung, wenn du sie aktiviert hast. Diese Sicherung bewahrt Apple (oder dein Computer) nach eigenen Regeln auf; wir haben darauf keinen Zugriff.</li>
+</ul>
+<h2>Erinnerungen</h2>
+<p>Wenn du Erinnerungen unter „Einstellungen“ aktivierst, plant das Spiel sie auf dem Handy selbst, nach dem Zeitplan, den du gewählt hast. Es gibt keinen Benachrichtigungsserver. Auf dem Sperrbildschirm erscheinen keine expliziten Wörter. Du kannst die Erinnerungen in den „Einstellungen“ des Spiels oder in den Handy-Einstellungen ausschalten.</p>
+<h2>Eigene Kartenpakete</h2>
+<p>Die Texte deiner eigenen Karten schreibst du. Sie bleiben auf deinem Handy, wir sehen und moderieren sie nicht. Wenn du ein Paket in einer Datei speicherst, liegt diese Datei dort, wo du sie abgelegt hast, und was damit geschieht, entscheidest du selbst.</p>
+<h2>Spielen auf Distanz</h2>
+<p>In diesem Modus zeigt dir das Spiel einen kurzen Code, den du selbst an deine Partnerin oder deinen Partner schickst – zum Beispiel per Messenger. Das Spiel sendet dabei nichts.</p>
+<ul>
+<li><strong>Was im Code steckt:</strong> Nummern der Wünsche und deine Antworten (im „Wunsch-Match“), Nummer der Aufgabe und der Vermerk „erledigt“ oder „nein“ (im Bericht), Stufe und eine zufällige Codenummer. Namen, Geschlecht, Tabuliste und Verlauf sind nicht im Code.</li>
+<li><strong>Der Code ist nicht verschlüsselt.</strong> Wer ihn in die Hände bekommt und das Format kennt, kann deine Antworten lesen. Sende den Code nur an deine Partnerin oder deinen Partner.</li>
+<li><strong>Die Übermittlung läuft über den Messenger deiner Wahl,</strong> deshalb gelten dessen Regeln und dessen Datenschutzerklärung. Wir erhalten nichts.</li>
+<li>Die Taste „Kopieren“ legt den Code in die Zwischenablage. Die Zwischenablage liest das Spiel nur, wenn du auf „Aus Zwischenablage einfügen“ tippst.</li>
+<li>Die Codes und Antworten selbst speichert das Spiel nicht. Es merkt sich nur kurze interne Schlüssel der Codes, damit „Herzen“ nicht doppelt gutgeschrieben werden.</li>
+</ul>
+<h2>Website mit den Dokumenten</h2>
+<p>Diese Erklärung und die Nutzungsbedingungen liegen auf einer Website, die bei GitHub Pages gehostet wird. Auf der Website gibt es keine Cookies, keine Zähler und keine Tracking-Skripte. GitHub kann, wie jeder Hoster, die IP-Adressen der Besuchenden technisch zum Schutz vor Angriffen protokollieren – nach der <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">eigenen Datenschutzerklärung</a>.</p>
+<h2>So löschst du Daten</h2>
+<ul>
+<li><strong>„Spiel zurücksetzen“</strong> unter „Einstellungen“ löscht Punkte und Fortschritt.</li>
+<li><strong>„PIN vergessen?“</strong> auf dem Anmeldebildschirm löscht alle Spieldaten: Namen, Fortschritt, Verlauf, Tabuliste, Einstellungen, Zugangsschutz und eigene Pakete. Käufe bleiben deinem Konto im Store zugeordnet.</li>
+<li><strong>Das Deinstallieren der App</strong> löscht alle ihre Daten vom Handy. Auf dem iPhone kann eine Kopie in der iCloud-Sicherung bleiben – du kannst sie in den iCloud-Einstellungen löschen.</li>
+<li>Den Kaufverlauf speichert der Store; löschen oder anfordern kannst du ihn über den Store.</li>
+</ul>
+<h2>Deine Rechte</h2>
+<p>Datenschutzgesetze – die DSGVO (GDPR) in der Europäischen Union, die UK GDPR, Gesetze der USA (zum Beispiel CCPA/CPRA in Kalifornien), das russische Bundesgesetz Nr. 152-FZ in Russland und andere – geben dir das Recht, zu erfahren, welche Daten über dich vorliegen, eine Kopie davon zu erhalten, sie zu berichtigen, zu löschen, die Verarbeitung einzuschränken oder ihr zu widersprechen, eine Einwilligung zu widerrufen und dich bei einer Aufsichtsbehörde zu beschweren.</p>
+<p>Wir haben keine Daten von dir, deshalb können wir auch keine Kopie herausgeben oder auf unserer Seite etwas löschen – dort ist schlicht nichts. Alle Spieldaten liegen auf deinem Handy, und du verfügst darüber: Du siehst und änderst sie im Spiel und löschst sie auf den Wegen aus dem Abschnitt oben.</p>
+<p>Wir verkaufen keine personenbezogenen Daten und geben sie nicht für Werbung weiter – weder im Sinne von CCPA/CPRA noch in irgendeinem anderen Sinn.</p>
+<p>Wenn du uns per E-Mail schreibst, haben wir deine Adresse und den Text der Nachricht. Wir nutzen sie nur, um zu antworten und dein Anliegen zu klären, geben sie an niemanden weiter und löschen den Schriftverkehr, wenn er nicht mehr gebraucht wird. Auf Wunsch löschen wir ihn früher.</p>
+<p>Wenn du der Meinung bist, dass deine Rechte verletzt wurden, schreib uns. Du kannst dich außerdem an die Aufsichtsbehörde deines Landes wenden.</p>
+<h2>Kinder</h2>
+<p>Murashki richtet sich nur an Menschen über 18 Jahre. Beim ersten Start bittet das Spiel dich, dein Alter zu bestätigen. Das Spiel ist nicht für Kinder gedacht und sammelt über niemanden Daten – auch nicht über Kinder. Wenn ein Kind das Spiel benutzt hat, können die Eltern die App deinstallieren; die Kindersicherung des Stores hilft, die Installation zu beschränken.</p>
+<h2>Sicherheit</h2>
+<p>Die PIN wird nur als Hash mit zufälligem Salt gespeichert. Die Funktion „In „Zuletzt“ verbergen“ versteckt den Spielbildschirm in der App-Liste und verbietet unter Android außerdem Screenshots und Bildschirmaufnahmen des Spiels. Aber wer Zugriff auf dein entsperrtes Handy hat, kann das Spiel öffnen, wenn der Zugangsschutz ausgeschaltet ist – deshalb empfehlen wir die Bildschirmsperre des Handys und eine PIN im Spiel.</p>
+<h2>Änderungen der Erklärung</h2>
+<p>Wenn wir die Erklärung ändern, ändert sich auf dieser Seite das Datum der letzten Aktualisierung. Über wesentliche Änderungen informieren wir in der Beschreibung des App-Updates im Store. Falls das Spiel jemals Daten sammeln sollte, aktualisieren wir zuerst diese Erklärung und fragen, wo es gesetzlich nötig ist, im Spiel selbst nach deiner Einwilligung.</p>
+<h2>Kontakt</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Nutzungsbedingungen: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+<article id="fr" data-lang="fr" lang="fr">
+<h1>Politique de confidentialité de Murashki</h1>
+<p>Entre en vigueur le : 14 novembre 2026<br>
+Dernière mise à jour : 14 novembre 2026</p>
+<h2>En bref</h2>
+<ul>
+<li>Murashki est un jeu pour couples adultes (18+). Il n'y a ni compte, ni inscription, ni connexion.</li>
+<li>Tout ce que vous saisissez dans le jeu est stocké uniquement sur votre téléphone. Nous ne recevons pas ces données et ne les voyons pas : nous n'avons pas de serveur où elles pourraient arriver.</li>
+<li>Le jeu ne contient ni analyse d'usage, ni publicité, ni identifiant publicitaire, ni suivi, ni rapport de plantage.</li>
+<li>Le jeu n'accède à internet que pour les achats via la boutique d'applications et lorsque vous ouvrez vous-même un lien.</li>
+</ul>
+<h2>Qui sommes-nous</h2>
+<p>Le jeu Murashki est développé et publié par Soverion Games (ci-après « nous »). Pour toute question sur les données et sur la présente politique, écrivez à <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<h2>Ce que le jeu enregistre sur votre téléphone</h2>
+<p>Pour fonctionner, le jeu enregistre des données dans le dossier interne de l'application. Les autres applications ne voient pas ce dossier.</p>
+<ul>
+<li>Les prénoms des joueurs et leur genre, pour les insérer dans les textes des défis. Le niveau, les points, les « Cœurs », l'historique des cartes affichées.</li>
+<li>La liste des limites (sujets exclus) et le mot de sécurité.</li>
+<li>Les réglages : langue, thème visuel, son, vibration, rappels.</li>
+<li>Vos propres paquets de cartes, si vous en avez créé ou chargé depuis un fichier.</li>
+<li>La protection de l'accès, si vous l'avez activée. Ce n'est pas le code PIN lui-même qui est stocké, mais son empreinte (hash) : il est impossible d'en retrouver le PIN. S'y ajoutent l'activation de la connexion par empreinte digitale ou Face ID et le délai au bout duquel le verrouillage se déclenche.</li>
+<li>Une mention de la version complète ou de l'abonnement achetés, afin de débloquer le contenu payé sans internet.</li>
+</ul>
+<p>Ces données ne sont envoyées ni à nous, ni à personne d'autre.</p>
+<p>La connexion par empreinte digitale ou par reconnaissance faciale est vérifiée par le système du téléphone lui-même (Android ou iOS). Le jeu ne reçoit ni l'empreinte, ni l'image du visage, seulement la réponse « confirmé » ou « non ».</p>
+<h2>Ce que le jeu ne fait pas</h2>
+<ul>
+<li>Il ne collecte ni analyses ni statistiques d'utilisation, et ne contient aucun SDK d'analyse tiers. L'analyse intégrée et les rapports du moteur Unity sont désactivés.</li>
+<li>Il n'affiche pas de publicité et ne lit pas l'identifiant publicitaire (Advertising ID, IDFA).</li>
+<li>Il ne vous suit pas dans d'autres applications ni sur des sites.</li>
+<li>Il n'envoie pas de rapports de plantage.</li>
+<li>Il ne demande pas l'accès à l'appareil photo, au microphone, à la localisation, aux contacts ni aux photos. Le jeu n'accède à un fichier que lorsque vous le choisissez vous-même dans la fenêtre système, pour charger ou enregistrer votre paquet.</li>
+</ul>
+<h2>Achats et abonnement</h2>
+<p>La version complète et l'abonnement sont vendus par la boutique d'applications depuis laquelle vous avez installé le jeu (Google Play ou App Store). Le paiement est effectué par la boutique. Elle reçoit vos données de paiement et de compte et les traite selon ses propres règles : <a href="https://policies.google.com/privacy">politique de Google</a>, <a href="https://www.apple.com/legal/privacy/">politique d'Apple</a>. Nous ne recevons pas vos données de paiement.</p>
+<p>La boutique indique seulement au jeu quels achats existent sur votre compte, afin de débloquer les niveaux payés. En tant que développeur, la boutique nous montre des statistiques agrégées : nombre d'installations et de ventes par pays, notes et avis que vous publiez vous-même. Ces statistiques ne permettent pas de savoir qui vous êtes ni ce que vous faites dans le jeu.</p>
+<h2>Sauvegardes et nouveau téléphone</h2>
+<ul>
+<li><strong>Android.</strong> Les données du jeu sont exclues de la sauvegarde Google et du transfert vers un nouveau téléphone. Sur un nouveau téléphone, le jeu repart de zéro, et les achats se récupèrent avec le bouton « Restaurer les achats ».</li>
+<li><strong>iPhone et iPad.</strong> Les fichiers du jeu sont inclus dans la sauvegarde iCloud ou celle de l'ordinateur, si vous l'avez activée. Cette sauvegarde est conservée par Apple (ou par votre ordinateur) selon ses propres règles ; nous n'y avons pas accès.</li>
+</ul>
+<h2>Rappels</h2>
+<p>Si vous activez les rappels dans les « Réglages », le jeu les programme sur le téléphone lui-même, selon le calendrier que vous avez choisi. Il n'y a pas de serveur de notifications. L'écran de verrouillage ne contient aucun mot explicite. Vous pouvez désactiver les rappels dans les « Réglages » du jeu ou dans les réglages du téléphone.</p>
+<h2>Vos propres paquets de cartes</h2>
+<p>Vous rédigez vous-même les textes de vos cartes. Ils restent sur votre téléphone, nous ne les voyons pas et ne les modérons pas. Si vous enregistrez un paquet dans un fichier, ce fichier se trouve là où vous l'avez placé, et c'est ensuite à vous de décider ce que vous en faites.</p>
+<h2>Jeu à distance</h2>
+<p>Dans ce mode, le jeu vous affiche un court code que vous envoyez vous-même à votre partenaire, par exemple dans une messagerie. Le jeu n'envoie rien à cette occasion.</p>
+<ul>
+<li><strong>Ce que contient le code :</strong> les numéros des désirs et vos réponses (dans les « Désirs partagés »), le numéro du défi et la mention « Fait » ou non (dans le compte rendu), le niveau et un numéro de code aléatoire. Le code ne contient ni prénoms, ni genre, ni liste des limites, ni historique.</li>
+<li><strong>Le code n'est pas chiffré.</strong> Celui qui l'obtient et en connaît le format pourra lire vos réponses. N'envoyez le code qu'à votre partenaire.</li>
+<li><strong>La transmission passe par la messagerie de votre choix,</strong> de sorte que ses règles et sa politique de confidentialité s'appliquent. Nous ne recevons rien.</li>
+<li>Le bouton « Copier » place le code dans le presse-papiers. Le jeu ne lit le presse-papiers que lorsque vous appuyez sur « Coller depuis le presse-papiers ».</li>
+<li>Le jeu ne conserve ni les codes ni les réponses eux-mêmes. Il mémorise seulement de courtes clés techniques des codes, afin de ne pas créditer deux fois les « Cœurs ».</li>
+</ul>
+<h2>Site des documents</h2>
+<p>La présente politique et les conditions d'utilisation sont publiées sur un site hébergé sur GitHub Pages. Le site ne contient ni cookies, ni compteurs, ni scripts de suivi. GitHub, comme tout hébergeur, peut techniquement enregistrer les adresses IP des visiteurs pour se protéger contre les attaques, selon <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">sa propre politique</a>.</p>
+<h2>Comment supprimer vos données</h2>
+<ul>
+<li><strong>« Réinitialiser le jeu »</strong> dans les « Réglages » supprime les points et la progression.</li>
+<li><strong>« Code PIN oublié ? »</strong> sur l'écran de connexion supprime toutes les données du jeu : prénoms, progression, historique, liste des limites, réglages, protection de l'accès et vos propres paquets. Les achats restent attachés à votre compte dans la boutique.</li>
+<li><strong>La désinstallation de l'application</strong> supprime toutes ses données du téléphone. Sur iPhone, une copie peut subsister dans la sauvegarde iCloud ; vous pouvez la supprimer dans les réglages d'iCloud.</li>
+<li>L'historique des achats est conservé par la boutique ; vous pouvez le supprimer ou l'obtenir via la boutique.</li>
+</ul>
+<h2>Vos droits</h2>
+<p>Les lois sur les données personnelles (le RGPD (GDPR) dans l'Union européenne, le UK GDPR, les lois américaines comme le CCPA/CPRA en Californie, la loi fédérale russe n° 152-FZ en Russie et d'autres) vous donnent le droit de savoir quelles données vous concernent, d'en obtenir une copie, de les rectifier, de les supprimer, de limiter leur traitement ou de vous y opposer, de retirer votre consentement et de saisir une autorité de contrôle.</p>
+<p>Nous ne détenons pas vos données ; nous ne pouvons donc ni en fournir une copie, ni rien supprimer de notre côté : il n'y a tout simplement rien. Toutes les données du jeu se trouvent sur votre téléphone et vous en disposez : vous les consultez et les modifiez dans le jeu, et vous les supprimez par les moyens décrits dans la section ci-dessus.</p>
+<p>Nous ne vendons pas les données personnelles et ne les transmettons pas à des fins publicitaires, ni au sens du CCPA/CPRA, ni dans aucun autre sens.</p>
+<p>Si vous nous écrivez par e-mail, nous aurons votre adresse et le texte de votre message. Nous ne les utilisons que pour vous répondre et régler votre question, nous ne les transmettons à personne et nous supprimons la correspondance lorsqu'elle n'est plus nécessaire. Sur votre demande, nous la supprimerons plus tôt.</p>
+<p>Si vous estimez que vos droits sont violés, écrivez-nous. Vous pouvez également saisir l'autorité de contrôle de votre pays.</p>
+<h2>Enfants</h2>
+<p>Murashki est destiné uniquement aux personnes de plus de 18 ans. Au premier lancement, le jeu demande de confirmer votre âge. Le jeu n'est pas conçu pour les enfants et ne collecte de données sur personne, y compris sur les enfants. Si un enfant a utilisé le jeu, un parent peut supprimer l'application ; le contrôle parental de la boutique aide à limiter l'installation.</p>
+<h2>Sécurité</h2>
+<p>Le code PIN n'est stocké que sous forme d'empreinte (hash) avec un sel aléatoire. La fonction « Masquer dans « Récents » » cache l'écran du jeu dans la liste des applications et, sur Android, interdit en plus les captures et l'enregistrement de l'écran du jeu. Mais quiconque a accès à votre téléphone déverrouillé peut ouvrir le jeu si la protection de l'accès est désactivée ; nous vous conseillons donc de verrouiller l'écran du téléphone et de définir un code PIN dans le jeu.</p>
+<h2>Modification de la politique</h2>
+<p>Si nous modifions la politique, la date de dernière mise à jour change sur cette page. Nous vous informerons des modifications importantes dans la description de la mise à jour de l'application dans la boutique. Si le jeu venait un jour à collecter des données, nous mettrions d'abord à jour la présente politique et, lorsque la loi l'exige, nous vous demanderions votre consentement dans le jeu lui-même.</p>
+<h2>Contact</h2>
+<p>Soverion Games, <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+<p>Conditions d'utilisation : <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</article>
+</main>
+<footer>© Soverion Games · <a href="../terms/" data-page="../terms/">Terms</a> · <a href="../privacy/" data-page="../privacy/">Privacy</a> · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></footer>
+</div>
+</body>
+</html>

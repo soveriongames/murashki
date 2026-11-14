@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<title>Murashki</title>
+<style>:root{--bg:#faf6f4;--surface:#ffffff;--text:#231b20;--muted:#6b5d64;--accent:#a8264c;--line:#eadfe2;--pill:#f3e8eb}
+@media (prefers-color-scheme:dark){:root{--bg:#16111a;--surface:#1f1824;--text:#efe6ea;--muted:#b3a3ab;--accent:#f28aa8;--line:#352a3a;--pill:#2a2130}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:44rem;margin:0 auto;padding:16px}
+header{padding:8px 0 4px}
+.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none}
+nav.langs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;padding:0;list-style:none}
+nav.langs a{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pill);color:var(--text);text-decoration:none;font-size:15px;min-height:36px;line-height:24px}
+nav.langs a[aria-current="true"]{background:var(--accent);color:var(--bg)}
+article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 20px 20px;margin:16px 0}
+h1{font-size:1.6em;line-height:1.25;margin:.8em 0 .5em}
+h2{font-size:1.2em;line-height:1.3;margin:1.6em 0 .4em}
+h3{font-size:1.05em;margin:1.3em 0 .3em}
+p,ul,ol{margin:.6em 0}
+ul,ol{padding-left:1.3em}
+li{margin:.3em 0}
+a{color:var(--accent);overflow-wrap:anywhere}
+code{font:.9em ui-monospace,Consolas,monospace;background:var(--pill);padding:1px 4px;border-radius:4px}
+.tagline{font-size:1.1em}
+.docs a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
+footer{color:var(--muted);font-size:14px;padding:8px 0 32px}
+footer a{color:var(--muted)}
+html.js article[data-lang]{display:none}
+html.js article[data-lang].active{display:block}</style>
+<script>(function(){
+var d=document,h=d.documentElement;h.className+=' js';
+var langs=["ru","en","es","pt-BR","de","fr"],titles={"ru": "Мурашки", "en": "Murashki", "es": "Murashki", "pt-BR": "Murashki", "de": "Murashki", "fr": "Murashki"};
+function find(code){if(!code)return null;code=code.toLowerCase();
+for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===code)return langs[i];
+var base=code.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===base)return langs[j];return null}
+function saved(){try{return localStorage.getItem('lang')}catch(e){return null}}
+function pick(){var l=find(location.hash.slice(1));if(l)return l;l=find(saved());if(l)return l;
+var nav=navigator.languages||[navigator.language];for(var i=0;i<nav.length;i++){l=find(nav[i]);if(l)return l}return 'en'}
+function show(l){var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
+var n=d.querySelectorAll('nav.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
+var f=d.querySelectorAll('a[data-page]');for(var m=0;m<f.length;m++)f[m].setAttribute('href',f[m].getAttribute('data-page')+'#'+l);
+h.lang=l;if(titles[l])d.title=titles[l]}
+d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('nav.langs a');if(!t)return;
+try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
+window.addEventListener('hashchange',function(){var l=find(location.hash.slice(1));if(l){show(l);scrollTo(0,0)}});
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){show(pick())});else show(pick());
+})();</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+<a class="brand" href="./" data-page="./">Murashki · Мурашки</a>
+<nav class="langs" aria-label="Language">
+<a href="#ru" hreflang="ru" lang="ru">Русский</a>
+<a href="#en" hreflang="en" lang="en">English</a>
+<a href="#es" hreflang="es" lang="es">Español</a>
+<a href="#pt-BR" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="#de" hreflang="de" lang="de">Deutsch</a>
+<a href="#fr" hreflang="fr" lang="fr">Français</a>
+</nav>
+</header>
+<main>
+<article id="ru" data-lang="ru" lang="ru">
+<h1>Мурашки</h1>
+<p class="tagline">Карточная игра для взрослых пар (18+). Всё, что вы вводите, остаётся на вашем телефоне.</p>
+<h2>Документы</h2>
+<div class="docs">
+<a href="terms/#ru">Условия использования</a>
+<a href="privacy/#ru">Политика конфиденциальности</a>
+</div>
+<h2>Связь</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+<article id="en" data-lang="en" lang="en">
+<h1>Murashki</h1>
+<p class="tagline">A card game for adult couples (18+). Everything you enter stays on your phone.</p>
+<h2>Documents</h2>
+<div class="docs">
+<a href="terms/#en">Terms of Use</a>
+<a href="privacy/#en">Privacy Policy</a>
+</div>
+<h2>Contact</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+<article id="es" data-lang="es" lang="es">
+<h1>Murashki</h1>
+<p class="tagline">Un juego de cartas para parejas adultas (18+). Todo lo que escribes se queda en tu teléfono.</p>
+<h2>Documentos</h2>
+<div class="docs">
+<a href="terms/#es">Términos de uso</a>
+<a href="privacy/#es">Política de privacidad</a>
+</div>
+<h2>Contacto</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+<article id="pt-BR" data-lang="pt-BR" lang="pt-BR">
+<h1>Murashki</h1>
+<p class="tagline">Um jogo de cartas para casais adultos (18+). Tudo o que você digita fica no seu celular.</p>
+<h2>Documentos</h2>
+<div class="docs">
+<a href="terms/#pt-BR">Termos de Uso</a>
+<a href="privacy/#pt-BR">Política de Privacidade</a>
+</div>
+<h2>Contato</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+<article id="de" data-lang="de" lang="de">
+<h1>Murashki</h1>
+<p class="tagline">Ein Kartenspiel für erwachsene Paare (18+). Alles, was du eingibst, bleibt auf deinem Handy.</p>
+<h2>Dokumente</h2>
+<div class="docs">
+<a href="terms/#de">Nutzungsbedingungen</a>
+<a href="privacy/#de">Datenschutzerklärung</a>
+</div>
+<h2>Kontakt</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+<article id="fr" data-lang="fr" lang="fr">
+<h1>Murashki</h1>
+<p class="tagline">Un jeu de cartes pour couples adultes (18+). Tout ce que vous saisissez reste sur votre téléphone.</p>
+<h2>Documents</h2>
+<div class="docs">
+<a href="terms/#fr">Conditions d&#x27;utilisation</a>
+<a href="privacy/#fr">Politique de confidentialité</a>
+</div>
+<h2>Contact</h2>
+<p>Soverion Games · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></p>
+</article>
+</main>
+<footer>© Soverion Games · <a href="terms/" data-page="terms/">Terms</a> · <a href="privacy/" data-page="privacy/">Privacy</a> · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></footer>
+</div>
+</body>
+</html>
