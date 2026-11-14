@@ -88,14 +88,15 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Защита входа, если вы её включили. Хранится не сам PIN-код, а его хеш: восстановить по нему PIN нельзя. Ещё — включён ли вход по отпечатку или Face ID и через сколько срабатывает блокировка.</li>
 <li>Отметка о купленной полной версии или подписке, чтобы открывать оплаченное без интернета.</li>
 </ul>
-<p>Эти данные не отправляются ни нам, ни кому-либо ещё.</p>
+<p>Эти данные не отправляются ни нам, ни кому-либо ещё. Хранить их на телефоне необходимо, чтобы работала игра, которую вы сами установили; ничего лишнего игра не сохраняет.</p>
 <p>Вход по отпечатку пальца или по лицу проверяет сама система телефона (Android или iOS). Игра не получает ни отпечаток, ни изображение лица — только ответ «подтверждено» или «нет».</p>
 <h2>Чего игра не делает</h2>
 <ul>
 <li>Не собирает аналитику и статистику использования, в ней нет сторонних SDK аналитики. Встроенная аналитика и отчёты движка Unity выключены.</li>
 <li>Не показывает рекламу и не читает рекламный идентификатор (Advertising ID, IDFA).</li>
-<li>Не отслеживает вас в других приложениях и на сайтах.</li>
+<li>Не отслеживает вас в других приложениях и на сайтах. Поэтому сигналы Do Not Track и Global Privacy Control ничего не меняют: отслеживать и так нечего.</li>
 <li>Не отправляет отчёты о сбоях.</li>
+<li>Не принимает о вас автоматических решений и не составляет профилей.</li>
 <li>Не просит доступ к камере, микрофону, местоположению, контактам и фото. К файлу игра получает доступ, только когда вы сами выбираете его в системном окне, чтобы загрузить или сохранить свой пак.</li>
 </ul>
 <h2>Покупки и подписка</h2>
@@ -121,7 +122,18 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 </ul>
 <h2>Сайт с документами</h2>
 <p>Эта политика и условия использования лежат на сайте, который размещён на GitHub Pages. На сайте нет cookie, счётчиков и скриптов слежения. GitHub, как любой хостинг, может технически записывать IP-адреса посетителей для защиты от атак — по <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">своей политике</a>.</p>
-<h2>Как удалить данные</h2>
+<h2>Письма в поддержку</h2>
+<p>Это единственный случай, когда ваши данные попадают к нам.</p>
+<ul>
+<li><strong>Что мы получаем:</strong> адрес почты, имя (если оно указано в письме), текст письма и вложения.</li>
+<li><strong>Зачем:</strong> чтобы ответить и решить ваш вопрос. Правовое основание по GDPR — наш законный интерес отвечать на обращения (ст. 6(1)(f)), а если вопрос о купленном — исполнение договора с вами (ст. 6(1)(b)).</li>
+<li><strong>Письмо — по желанию.</strong> Игра полностью работает и без него.</li>
+<li><strong>Где хранятся письма.</strong> Почта поддержки работает на Gmail, поэтому письма хранятся на серверах Google, в том числе за пределами вашей страны (например, в США), по <a href="https://policies.google.com/privacy">правилам Google</a>. Больше мы ваши письма никому не передаём.</li>
+<li><strong>Сколько храним:</strong> пока решаем вопрос и не дольше 12 месяцев после последнего письма в переписке, если закон не требует хранить дольше (например, при споре о покупке). Попросите — удалим раньше.</li>
+<li><strong>Пожалуйста, не присылайте</strong> подробности интимной жизни, фотографии, платёжные данные и пароли: для ответа они не нужны. Если пришлёте, используем их только для ответа и удалим вместе с перепиской.</li>
+</ul>
+<h2>Сколько хранятся данные и как их удалить</h2>
+<p>Данные игры хранятся на вашем телефоне, пока вы их не удалите сами одним из способов ниже.</p>
 <ul>
 <li><strong>«Сбросить игру»</strong> в «Настройках» удаляет очки и прогресс.</li>
 <li><strong>«Забыли PIN-код?»</strong> на экране входа удаляет все данные игры: имена, прогресс, историю, стоп-лист, настройки, защиту входа и свои паки. Покупки остаются за вашей учётной записью в магазине.</li>
@@ -130,12 +142,12 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 </ul>
 <h2>Ваши права</h2>
 <p>Законы о персональных данных — GDPR в Европейском союзе, UK GDPR, законы США (например, CCPA/CPRA в Калифорнии), закон № 152-ФЗ в России и другие — дают вам право узнать, какие данные о вас есть, получить их копию, исправить, удалить, ограничить обработку или возразить против неё, отозвать согласие и пожаловаться в надзорный орган.</p>
-<p>У нас ваших данных нет, поэтому выдать копию или удалить что-то на своей стороне мы не можем — там просто ничего нет. Все данные игры лежат на вашем телефоне, и распоряжаетесь ими вы: смотрите и меняете в игре, удаляете способами из раздела выше.</p>
-<p>Мы не продаём персональные данные и не передаём их для рекламы — ни в смысле CCPA/CPRA, ни в каком-либо другом.</p>
-<p>Если вы напишете нам на почту, у нас окажутся ваш адрес и текст письма. Мы используем их только чтобы ответить и решить ваш вопрос, никому не передаём и удаляем переписку, когда она больше не нужна. Попросите — удалим раньше.</p>
+<p>Данных игры у нас нет, поэтому выдать их копию или удалить что-то на своей стороне мы не можем — там просто ничего нет. Все данные игры лежат на вашем телефоне, и распоряжаетесь ими вы: смотрите и меняете в игре, удаляете способами из раздела выше.</p>
+<p>У нас могут оказаться только ваши письма в поддержку. По ним вы можете воспользоваться всеми правами выше, включая получение копии в удобном формате: напишите нам с того же адреса, и мы пришлём копию, исправим, ограничим использование или удалим переписку.</p>
+<p>Мы не продаём персональные данные, не передаём их для рекламы и никому не раскрываем — ни в смысле CCPA/CPRA, ни в каком-либо другом.</p>
 <p>Если вы считаете, что ваши права нарушены, напишите нам. Вы также вправе обратиться в надзорный орган вашей страны.</p>
 <h2>Дети</h2>
-<p>«Мурашки» предназначены только для людей старше 18 лет. При первом запуске игра просит подтвердить возраст. Игра не рассчитана на детей и ни о ком не собирает данные — в том числе о детях. Если игрой воспользовался ребёнок, родитель может удалить приложение; ограничить установку помогает родительский контроль магазина.</p>
+<p>«Мурашки» предназначены только для людей старше 18 лет. При первом запуске игра просит подтвердить возраст. Игра не рассчитана на детей и подростков (в том числе младше 13 лет, а в ЕС — младше 16) и ни о ком не собирает данные — в том числе о детях. Если мы узнаем, что нам написал ребёнок, мы удалим его письмо и не будем его использовать. Если игрой воспользовался ребёнок, родитель может удалить приложение; ограничить установку помогает родительский контроль магазина.</p>
 <h2>Безопасность</h2>
 <p>PIN-код хранится только в виде хеша со случайной солью. Функция «Скрывать в «Недавних»» прячет экран игры в списке приложений, а на Android ещё и запрещает снимки и запись экрана игры. Но тот, у кого есть доступ к вашему разблокированному телефону, может открыть игру, если защита входа выключена, — поэтому советуем блокировку экрана телефона и PIN-код в игре.</p>
 <h2>Изменения политики</h2>
@@ -167,14 +179,15 @@ Last updated: November 14, 2026</p>
 <li>Sign-in protection, if you turned it on. What is stored is not the PIN itself but its hash: the PIN can't be recovered from it. Also stored: whether fingerprint or Face ID sign-in is on and after how long the lock kicks in.</li>
 <li>A mark that you bought the full version or a subscription, so paid content opens without the internet.</li>
 </ul>
-<p>This data is not sent to us or to anyone else.</p>
+<p>This data is not sent to us or to anyone else. It has to be stored on your phone for the game you installed yourself to work; the game saves nothing extra.</p>
 <p>Fingerprint or face sign-in is checked by the phone's own system (Android or iOS). The game receives neither your fingerprint nor an image of your face, only the answer "confirmed" or "not confirmed".</p>
 <h2>What the game does not do</h2>
 <ul>
 <li>It does not collect analytics or usage statistics, and it has no third-party analytics SDKs. The Unity engine's built-in analytics and reports are turned off.</li>
 <li>It does not show ads and does not read the advertising identifier (Advertising ID, IDFA).</li>
-<li>It does not track you across other apps and websites.</li>
+<li>It does not track you across other apps and websites. So Do Not Track and Global Privacy Control signals change nothing: there is nothing to track in the first place.</li>
 <li>It does not send crash reports.</li>
+<li>It makes no automated decisions about you and builds no profiles.</li>
 <li>It does not ask for access to the camera, microphone, location, contacts, or photos. The game gets access to a file only when you pick it yourself in the system dialog, to load or save your own pack.</li>
 </ul>
 <h2>Purchases and subscription</h2>
@@ -200,7 +213,18 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Website with the documents</h2>
 <p>This policy and the terms of use are hosted on a website on GitHub Pages. The site has no cookies, counters, or tracking scripts. GitHub, like any host, may technically log visitors' IP addresses to protect against attacks, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its own policy</a>.</p>
-<h2>How to delete data</h2>
+<h2>Support emails</h2>
+<p>This is the only case where your data reaches us.</p>
+<ul>
+<li><strong>What we receive:</strong> your email address, your name (if it is in the message), the text of the message, and attachments.</li>
+<li><strong>Why:</strong> to reply and resolve your question. The legal basis under the GDPR is our legitimate interest in answering enquiries (Art. 6(1)(f)), and, if the question is about something you bought, performance of our contract with you (Art. 6(1)(b)).</li>
+<li><strong>Writing to us is optional.</strong> The game works fully without it.</li>
+<li><strong>Where emails are stored.</strong> Support mail runs on Gmail, so the emails are stored on Google's servers, including outside your country (for example, in the U.S.), under <a href="https://policies.google.com/privacy">Google's policy</a>. We do not pass your emails to anyone else.</li>
+<li><strong>How long we keep them:</strong> while we are resolving the question and no longer than 12 months after the last message in the thread, unless the law requires us to keep them longer (for example, in a dispute over a purchase). Ask, and we will delete them sooner.</li>
+<li><strong>Please do not send</strong> details of your intimate life, photos, payment details, or passwords: we don't need them to reply. If you send them anyway, we will use them only to reply and delete them along with the correspondence.</li>
+</ul>
+<h2>How long data is kept and how to delete it</h2>
+<p>The game's data stays on your phone until you delete it yourself using one of the methods below.</p>
 <ul>
 <li><strong>"Reset game"</strong> in "Settings" deletes points and progress.</li>
 <li><strong>"Forgot PIN?"</strong> on the sign-in screen deletes all game data: names, progress, history, no-go list, settings, sign-in protection, and your own packs. Purchases stay with your store account.</li>
@@ -209,12 +233,12 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Your rights</h2>
 <p>Personal data laws, such as the GDPR in the European Union, the UK GDPR, U.S. laws (for example, CCPA/CPRA in California), Russian Federal Law No. 152-FZ, and others, give you the right to know what data exists about you, get a copy, correct it, delete it, restrict or object to its processing, withdraw consent, and complain to a supervisory authority.</p>
-<p>We hold no data about you, so we can't provide a copy or delete anything on our side: there is simply nothing there. All of the game's data is on your phone and you control it: view and change it in the game, and delete it using the methods in the section above.</p>
-<p>We do not sell personal data and do not share it for advertising, whether under CCPA/CPRA or otherwise.</p>
-<p>If you email us, we will have your address and the text of your message. We use them only to reply and resolve your question, we share them with no one, and we delete the correspondence when it is no longer needed. Ask, and we will delete it sooner.</p>
+<p>We hold no game data about you, so we can't provide a copy of it or delete anything on our side: there is simply nothing there. All of the game's data is on your phone and you control it: view and change it in the game, and delete it using the methods in the section above.</p>
+<p>The only thing we may hold is your support emails. For them you can use all the rights above, including getting a copy in a convenient format: write to us from the same address, and we will send you a copy, correct it, restrict its use, or delete the correspondence.</p>
+<p>We do not sell personal data, do not share it for advertising, and do not disclose it to anyone, whether under CCPA/CPRA or otherwise.</p>
 <p>If you believe your rights have been violated, write to us. You may also contact the supervisory authority in your country.</p>
 <h2>Children</h2>
-<p>Murashki is intended only for people over 18. On first launch the game asks you to confirm your age. The game is not designed for children and collects data about no one, including children. If a child has used the game, a parent can delete the app; the store's parental controls help restrict installation.</p>
+<p>Murashki is intended only for people over 18. On first launch the game asks you to confirm your age. The game is not designed for children and teenagers (including anyone under 13, or under 16 in the EU) and collects data about no one, including children. If we learn that a child has written to us, we will delete the message and will not use it. If a child has used the game, a parent can delete the app; the store's parental controls help restrict installation.</p>
 <h2>Security</h2>
 <p>The PIN is stored only as a hash with a random salt. The "Hide in Recents" feature hides the game's screen in the app switcher, and on Android it also blocks screenshots and screen recording of the game. But anyone with access to your unlocked phone can open the game if sign-in protection is off, so we recommend a phone screen lock and a PIN in the game.</p>
 <h2>Changes to this policy</h2>
@@ -246,14 +270,15 @@ Last updated: November 14, 2026</p>
 <li>La protección de acceso, si la activaste. Se guarda no el PIN en sí, sino su hash: a partir de él no se puede recuperar el PIN. También se guarda si está activado el acceso con huella o Face ID y al cabo de cuánto tiempo se activa el bloqueo.</li>
 <li>Una marca de que compraste la versión completa o una suscripción, para abrir lo pagado sin internet.</li>
 </ul>
-<p>Estos datos no se envían ni a nosotros ni a nadie más.</p>
+<p>Estos datos no se envían ni a nosotros ni a nadie más. Hace falta guardarlos en tu teléfono para que funcione el juego que instalaste tú mismo; el juego no guarda nada de más.</p>
 <p>El acceso con huella dactilar o con el rostro lo comprueba el propio sistema del teléfono (Android o iOS). El juego no recibe ni la huella ni la imagen del rostro, solo la respuesta «confirmado» o «no».</p>
 <h2>Lo que el juego no hace</h2>
 <ul>
 <li>No recopila analítica ni estadísticas de uso, y no incluye SDK de analítica de terceros. La analítica y los informes integrados del motor Unity están desactivados.</li>
 <li>No muestra publicidad y no lee el identificador publicitario (Advertising ID, IDFA).</li>
-<li>No te rastrea en otras aplicaciones ni en sitios web.</li>
+<li>No te rastrea en otras aplicaciones ni en sitios web. Por eso las señales Do Not Track y Global Privacy Control no cambian nada: de todos modos no hay nada que rastrear.</li>
 <li>No envía informes de fallos.</li>
+<li>No toma decisiones automatizadas sobre ti ni elabora perfiles.</li>
 <li>No pide acceso a la cámara, el micrófono, la ubicación, los contactos ni las fotos. El juego accede a un archivo solo cuando tú lo eliges en la ventana del sistema, para cargar o guardar tu propio pack.</li>
 </ul>
 <h2>Compras y suscripción</h2>
@@ -279,7 +304,18 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Sitio web con los documentos</h2>
 <p>Esta política y los términos de uso están en un sitio alojado en GitHub Pages. El sitio no tiene cookies, contadores ni scripts de seguimiento. GitHub, como cualquier alojamiento, puede registrar técnicamente las direcciones IP de los visitantes para protegerse de ataques, según <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">su propia política</a>.</p>
-<h2>Cómo eliminar los datos</h2>
+<h2>Correos al soporte</h2>
+<p>Es el único caso en que tus datos llegan a nosotros.</p>
+<ul>
+<li><strong>Qué recibimos:</strong> tu dirección de correo, tu nombre (si aparece en el mensaje), el texto del mensaje y los archivos adjuntos.</li>
+<li><strong>Para qué:</strong> para responderte y resolver tu consulta. La base jurídica según el GDPR es nuestro interés legítimo en atender las consultas (art. 6(1)(f)) y, si la consulta es sobre algo que compraste, la ejecución del contrato contigo (art. 6(1)(b)).</li>
+<li><strong>Escribirnos es opcional.</strong> El juego funciona por completo sin ello.</li>
+<li><strong>Dónde se guardan los correos.</strong> El correo de soporte funciona con Gmail, por lo que los mensajes se guardan en servidores de Google, también fuera de tu país (por ejemplo, en EE. UU.), según la <a href="https://policies.google.com/privacy">política de Google</a>. No cedemos tus correos a nadie más.</li>
+<li><strong>Cuánto los conservamos:</strong> mientras resolvemos la consulta y no más de 12 meses después del último mensaje de la conversación, salvo que la ley exija conservarlos más tiempo (por ejemplo, en una disputa por una compra). Si lo pides, los eliminamos antes.</li>
+<li><strong>Por favor, no envíes</strong> detalles de tu vida íntima, fotos, datos de pago ni contraseñas: no hacen falta para responderte. Si los envías, los usaremos solo para responderte y los eliminaremos junto con la correspondencia.</li>
+</ul>
+<h2>Cuánto se conservan los datos y cómo eliminarlos</h2>
+<p>Los datos del juego se guardan en tu teléfono hasta que los elimines tú mismo con uno de los métodos siguientes.</p>
 <ul>
 <li><strong>«Reiniciar juego»</strong> en «Ajustes» elimina los puntos y el progreso.</li>
 <li><strong>«¿Olvidaste el PIN?»</strong> en la pantalla de acceso elimina todos los datos del juego: nombres, progreso, historial, lista de límites, ajustes, protección de acceso y tus packs. Las compras siguen asociadas a tu cuenta de la tienda.</li>
@@ -288,12 +324,12 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Tus derechos</h2>
 <p>Las leyes de protección de datos personales (el GDPR en la Unión Europea, el UK GDPR, leyes de EE. UU. como CCPA/CPRA en California, la Ley Federal rusa n.º 152-FZ y otras) te dan derecho a saber qué datos hay sobre ti, obtener una copia, corregirlos, eliminarlos, limitar su tratamiento u oponerte a él, retirar el consentimiento y presentar una reclamación ante una autoridad de control.</p>
-<p>Nosotros no tenemos tus datos, así que no podemos entregarte una copia ni eliminar nada de nuestro lado: allí simplemente no hay nada. Todos los datos del juego están en tu teléfono y los gestionas tú: los ves y los cambias en el juego y los eliminas con los métodos de la sección anterior.</p>
-<p>No vendemos datos personales ni los compartimos con fines publicitarios, ni según CCPA/CPRA ni en ningún otro sentido.</p>
-<p>Si nos escribes por correo, tendremos tu dirección y el texto del mensaje. Los usamos solo para responderte y resolver tu consulta, no se los damos a nadie y eliminamos la correspondencia cuando ya no hace falta. Si lo pides, la eliminamos antes.</p>
+<p>Nosotros no tenemos datos del juego sobre ti, así que no podemos entregarte una copia de ellos ni eliminar nada de nuestro lado: allí simplemente no hay nada. Todos los datos del juego están en tu teléfono y los gestionas tú: los ves y los cambias en el juego y los eliminas con los métodos de la sección anterior.</p>
+<p>Lo único que podemos tener son tus correos al soporte. Respecto a ellos puedes ejercer todos los derechos anteriores, incluida la obtención de una copia en un formato cómodo: escríbenos desde la misma dirección y te enviaremos una copia, corregiremos los datos, limitaremos su uso o eliminaremos la correspondencia.</p>
+<p>No vendemos datos personales, no los compartimos con fines publicitarios y no se los revelamos a nadie, ni según CCPA/CPRA ni en ningún otro sentido.</p>
 <p>Si crees que tus derechos han sido vulnerados, escríbenos. También puedes acudir a la autoridad de control de tu país.</p>
 <h2>Menores</h2>
-<p>Murashki está destinado solo a personas mayores de 18 años. En el primer inicio el juego te pide confirmar tu edad. El juego no está pensado para menores y no recopila datos de nadie, tampoco de menores. Si un menor ha usado el juego, su madre, padre o tutor puede eliminar la aplicación; el control parental de la tienda ayuda a restringir la instalación.</p>
+<p>Murashki está destinado solo a personas mayores de 18 años. En el primer inicio el juego te pide confirmar tu edad. El juego no está pensado para menores ni adolescentes (incluidos los menores de 13 años y, en la UE, de 16) y no recopila datos de nadie, tampoco de menores. Si sabemos que nos ha escrito un menor, eliminaremos su mensaje y no lo usaremos. Si un menor ha usado el juego, su madre, padre o tutor puede eliminar la aplicación; el control parental de la tienda ayuda a restringir la instalación.</p>
 <h2>Seguridad</h2>
 <p>El PIN se guarda solo en forma de hash con una sal aleatoria. La función «Ocultar en «Recientes»» oculta la pantalla del juego en la lista de aplicaciones y, en Android, además impide las capturas y la grabación de pantalla del juego. Pero quien tenga acceso a tu teléfono desbloqueado podrá abrir el juego si la protección de acceso está desactivada, por eso te recomendamos el bloqueo de pantalla del teléfono y un PIN en el juego.</p>
 <h2>Cambios en la política</h2>
@@ -325,14 +361,15 @@ Last updated: November 14, 2026</p>
 <li>Proteção de acesso, se você a ativou. O que fica guardado não é o PIN em si, mas o hash dele: não é possível recuperar o PIN a partir dele. Também ficam guardados se o acesso por impressão digital ou Face ID está ativado e depois de quanto tempo o bloqueio entra em ação.</li>
 <li>Um registro da versão completa ou da assinatura comprada, para liberar o conteúdo pago sem internet.</li>
 </ul>
-<p>Esses dados não são enviados a nós nem a mais ninguém.</p>
+<p>Esses dados não são enviados a nós nem a mais ninguém. Guardá-los no celular é necessário para que funcione o jogo que você mesmo instalou; o jogo não salva nada além do necessário.</p>
 <p>O acesso por impressão digital ou por rosto é verificado pelo próprio sistema do celular (Android ou iOS). O jogo não recebe a impressão digital nem a imagem do rosto — apenas a resposta "confirmado" ou "não".</p>
 <h2>O que o jogo não faz</h2>
 <ul>
 <li>Não coleta análise nem estatísticas de uso, e não há SDKs de análise de terceiros nele. A análise e os relatórios integrados do motor Unity estão desativados.</li>
 <li>Não exibe publicidade e não lê o identificador de publicidade (Advertising ID, IDFA).</li>
-<li>Não rastreia você em outros aplicativos e sites.</li>
+<li>Não rastreia você em outros aplicativos e sites. Por isso, os sinais Do Not Track e Global Privacy Control não mudam nada: não há o que rastrear.</li>
 <li>Não envia relatórios de falhas.</li>
+<li>Não toma decisões automatizadas sobre você nem cria perfis.</li>
 <li>Não pede acesso à câmera, ao microfone, à localização, aos contatos e às fotos. O jogo só acessa um arquivo quando você mesmo o escolhe na janela do sistema, para carregar ou salvar um pacote seu.</li>
 </ul>
 <h2>Compras e assinatura</h2>
@@ -358,7 +395,18 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Site com os documentos</h2>
 <p>Esta política e os termos de uso estão em um site hospedado no GitHub Pages. O site não tem cookies, contadores nem scripts de rastreamento. O GitHub, como qualquer hospedagem, pode registrar tecnicamente os endereços IP dos visitantes para proteção contra ataques — conforme a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">política dele</a>.</p>
-<h2>Como excluir os dados</h2>
+<h2>Mensagens ao suporte</h2>
+<p>Este é o único caso em que seus dados chegam até nós.</p>
+<ul>
+<li><strong>O que recebemos:</strong> o endereço de e-mail, o nome (se estiver na mensagem), o texto da mensagem e os anexos.</li>
+<li><strong>Para quê:</strong> para responder e resolver a sua questão. A base legal conforme o GDPR é o nosso interesse legítimo em responder às solicitações (art. 6(1)(f)) e, se a dúvida for sobre uma compra, a execução do contrato com você (art. 6(1)(b)).</li>
+<li><strong>Escrever é opcional.</strong> O jogo funciona por completo sem isso.</li>
+<li><strong>Onde as mensagens ficam guardadas.</strong> O e-mail de suporte funciona no Gmail, então as mensagens ficam em servidores do Google, inclusive fora do seu país (por exemplo, nos EUA), conforme a <a href="https://policies.google.com/privacy">política do Google</a>. Além disso, não repassamos suas mensagens a ninguém.</li>
+<li><strong>Por quanto tempo guardamos:</strong> enquanto resolvemos a questão e por no máximo 12 meses após a última mensagem da conversa, a menos que a lei exija guardar por mais tempo (por exemplo, em caso de disputa sobre uma compra). Se você pedir, apagamos antes.</li>
+<li><strong>Por favor, não envie</strong> detalhes da vida íntima, fotos, dados de pagamento nem senhas: não são necessários para a resposta. Se você enviar, vamos usá-los somente para responder e apagá-los junto com a conversa.</li>
+</ul>
+<h2>Por quanto tempo guardamos os dados e como excluí-los</h2>
+<p>Os dados do jogo ficam no seu celular até você mesmo excluí-los por um dos meios abaixo.</p>
 <ul>
 <li><strong>"Reiniciar jogo"</strong> em "Configurações" apaga os pontos e o progresso.</li>
 <li><strong>"Esqueceu o PIN?"</strong> na tela de acesso apaga todos os dados do jogo: nomes, progresso, histórico, lista de limites, configurações, proteção de acesso e pacotes próprios. As compras continuam vinculadas à sua conta na loja.</li>
@@ -367,12 +415,12 @@ Last updated: November 14, 2026</p>
 </ul>
 <h2>Seus direitos</h2>
 <p>As leis de proteção de dados pessoais — o GDPR na União Europeia, o UK GDPR, leis dos EUA (por exemplo, o CCPA/CPRA na Califórnia), a LGPD no Brasil, a Lei Federal russa nº 152-FZ na Rússia e outras — dão a você o direito de saber quais dados sobre você existem, obter uma cópia deles, corrigi-los, excluí-los, restringir o tratamento ou se opor a ele, retirar o consentimento e reclamar a uma autoridade de supervisão.</p>
-<p>Nós não temos seus dados, então não podemos fornecer uma cópia nem excluir algo do nosso lado — simplesmente não há nada lá. Todos os dados do jogo estão no seu celular, e quem decide sobre eles é você: veja e altere no jogo, exclua pelos meios da seção acima.</p>
-<p>Não vendemos dados pessoais nem os repassamos para publicidade — nem no sentido do CCPA/CPRA, nem em qualquer outro.</p>
-<p>Se você nos escrever por e-mail, ficaremos com o seu endereço e o texto da mensagem. Usamos isso somente para responder e resolver a sua questão, não repassamos a ninguém e apagamos a correspondência quando ela não for mais necessária. Se você pedir, apagamos antes.</p>
+<p>Nós não temos os dados do jogo, então não podemos fornecer uma cópia deles nem excluir algo do nosso lado — simplesmente não há nada lá. Todos os dados do jogo estão no seu celular, e quem decide sobre eles é você: veja e altere no jogo, exclua pelos meios da seção acima.</p>
+<p>Só podemos ter as suas mensagens ao suporte. Em relação a elas, você pode exercer todos os direitos acima, inclusive obter uma cópia em formato conveniente: escreva para nós do mesmo endereço, e enviaremos a cópia, corrigiremos, restringiremos o uso ou excluiremos a conversa.</p>
+<p>Não vendemos dados pessoais, não os repassamos para publicidade e não os divulgamos a ninguém — nem no sentido do CCPA/CPRA, nem em qualquer outro.</p>
 <p>Se você acha que seus direitos foram violados, escreva para nós. Você também tem o direito de recorrer à autoridade de supervisão do seu país.</p>
 <h2>Crianças</h2>
-<p>Murashki é destinado apenas a pessoas com mais de 18 anos. Na primeira vez que abre o jogo, ele pede que você confirme sua idade. O jogo não foi feito para crianças e não coleta dados de ninguém — nem de crianças. Se uma criança usar o jogo, o responsável pode desinstalar o aplicativo; o controle parental da loja ajuda a restringir a instalação.</p>
+<p>Murashki é destinado apenas a pessoas com mais de 18 anos. Na primeira vez que abre o jogo, ele pede que você confirme sua idade. O jogo não foi feito para crianças e adolescentes (inclusive menores de 13 anos e, na UE, menores de 16) e não coleta dados de ninguém — nem de crianças. Se soubermos que uma criança nos escreveu, apagaremos a mensagem e não a usaremos. Se uma criança usar o jogo, o responsável pode desinstalar o aplicativo; o controle parental da loja ajuda a restringir a instalação.</p>
 <h2>Segurança</h2>
 <p>O PIN é guardado apenas como um hash com sal aleatório. A função "Ocultar em "Recentes"" esconde a tela do jogo na lista de aplicativos e, no Android, também proíbe capturas e gravações da tela do jogo. Mas quem tiver acesso ao seu celular desbloqueado pode abrir o jogo se a proteção de acesso estiver desativada — por isso recomendamos o bloqueio de tela do celular e um PIN no jogo.</p>
 <h2>Mudanças na política</h2>
@@ -404,14 +452,15 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Zugangsschutz, wenn du ihn aktiviert hast. Gespeichert wird nicht die PIN selbst, sondern ihr Hash: Die PIN lässt sich daraus nicht wiederherstellen. Außerdem, ob der Zugang per Fingerabdruck oder Face ID aktiviert ist und nach welcher Zeit die Sperre greift.</li>
 <li>Ein Vermerk über die gekaufte Vollversion oder das Abo, damit Bezahltes auch ohne Internet freigeschaltet wird.</li>
 </ul>
-<p>Diese Daten werden weder an uns noch an andere gesendet.</p>
+<p>Diese Daten werden weder an uns noch an andere gesendet. Sie auf dem Handy zu speichern ist nötig, damit das Spiel läuft, das du selbst installiert hast; mehr als nötig speichert das Spiel nicht.</p>
 <p>Der Zugang per Fingerabdruck oder Gesicht wird vom Betriebssystem des Handys (Android oder iOS) geprüft. Das Spiel erhält weder den Fingerabdruck noch ein Bild des Gesichts – nur die Antwort „bestätigt“ oder „nein“.</p>
 <h2>Was das Spiel nicht tut</h2>
 <ul>
 <li>Es sammelt keine Analyse- oder Nutzungsstatistiken, und es enthält keine Analyse-SDKs von Dritten. Die eingebaute Analyse und die Berichte der Unity-Engine sind ausgeschaltet.</li>
 <li>Es zeigt keine Werbung und liest keine Werbe-ID (Advertising ID, IDFA).</li>
-<li>Es verfolgt dich nicht in anderen Apps und auf Websites.</li>
+<li>Es verfolgt dich nicht in anderen Apps und auf Websites. Deshalb ändern die Signale Do Not Track und Global Privacy Control nichts: Es gibt ohnehin nichts zu verfolgen.</li>
 <li>Es sendet keine Absturzberichte.</li>
+<li>Es trifft keine automatisierten Entscheidungen über dich und erstellt keine Profile.</li>
 <li>Es fragt nicht nach Zugriff auf Kamera, Mikrofon, Standort, Kontakte und Fotos. Auf eine Datei greift das Spiel nur zu, wenn du sie selbst im Systemfenster auswählst, um ein eigenes Paket zu laden oder zu speichern.</li>
 </ul>
 <h2>Käufe und Abo</h2>
@@ -437,7 +486,18 @@ Zuletzt aktualisiert: 14. November 2026</p>
 </ul>
 <h2>Website mit den Dokumenten</h2>
 <p>Diese Erklärung und die Nutzungsbedingungen liegen auf einer Website, die bei GitHub Pages gehostet wird. Auf der Website gibt es keine Cookies, keine Zähler und keine Tracking-Skripte. GitHub kann, wie jeder Hoster, die IP-Adressen der Besuchenden technisch zum Schutz vor Angriffen protokollieren – nach der <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">eigenen Datenschutzerklärung</a>.</p>
-<h2>So löschst du Daten</h2>
+<h2>Nachrichten an den Support</h2>
+<p>Das ist der einzige Fall, in dem deine Daten zu uns gelangen.</p>
+<ul>
+<li><strong>Was wir erhalten:</strong> die E-Mail-Adresse, den Namen (wenn er in der Nachricht steht), den Text der Nachricht und Anhänge.</li>
+<li><strong>Wozu:</strong> um zu antworten und dein Anliegen zu klären. Rechtsgrundlage nach der DSGVO ist unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f), und, wenn es um einen Kauf geht, die Erfüllung des Vertrags mit dir (Art. 6 Abs. 1 lit. b).</li>
+<li><strong>Die Nachricht ist freiwillig.</strong> Das Spiel funktioniert auch ohne sie vollständig.</li>
+<li><strong>Wo die Nachrichten gespeichert werden.</strong> Die Support-Adresse läuft über Gmail, deshalb liegen die Nachrichten auf Servern von Google, auch außerhalb deines Landes (zum Beispiel in den USA), nach der <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>. Darüber hinaus geben wir deine Nachrichten an niemanden weiter.</li>
+<li><strong>Wie lange wir sie speichern:</strong> solange wir das Anliegen klären und nicht länger als 12 Monate nach der letzten Nachricht im Schriftwechsel, es sei denn, das Gesetz verlangt eine längere Aufbewahrung (zum Beispiel bei einem Streit über einen Kauf). Auf Wunsch löschen wir sie früher.</li>
+<li><strong>Bitte schick nicht</strong> Details aus dem Intimleben, Fotos, Zahlungsdaten und Passwörter: Für eine Antwort sind sie nicht nötig. Falls du sie doch schickst, nutzen wir sie nur für die Antwort und löschen sie zusammen mit dem Schriftwechsel.</li>
+</ul>
+<h2>Wie lange Daten gespeichert werden und wie du sie löschst</h2>
+<p>Die Spieldaten bleiben auf deinem Handy, bis du sie selbst auf einem der Wege unten löschst.</p>
 <ul>
 <li><strong>„Spiel zurücksetzen“</strong> unter „Einstellungen“ löscht Punkte und Fortschritt.</li>
 <li><strong>„PIN vergessen?“</strong> auf dem Anmeldebildschirm löscht alle Spieldaten: Namen, Fortschritt, Verlauf, Tabuliste, Einstellungen, Zugangsschutz und eigene Pakete. Käufe bleiben deinem Konto im Store zugeordnet.</li>
@@ -446,12 +506,12 @@ Zuletzt aktualisiert: 14. November 2026</p>
 </ul>
 <h2>Deine Rechte</h2>
 <p>Datenschutzgesetze – die DSGVO (GDPR) in der Europäischen Union, die UK GDPR, Gesetze der USA (zum Beispiel CCPA/CPRA in Kalifornien), das russische Bundesgesetz Nr. 152-FZ in Russland und andere – geben dir das Recht, zu erfahren, welche Daten über dich vorliegen, eine Kopie davon zu erhalten, sie zu berichtigen, zu löschen, die Verarbeitung einzuschränken oder ihr zu widersprechen, eine Einwilligung zu widerrufen und dich bei einer Aufsichtsbehörde zu beschweren.</p>
-<p>Wir haben keine Daten von dir, deshalb können wir auch keine Kopie herausgeben oder auf unserer Seite etwas löschen – dort ist schlicht nichts. Alle Spieldaten liegen auf deinem Handy, und du verfügst darüber: Du siehst und änderst sie im Spiel und löschst sie auf den Wegen aus dem Abschnitt oben.</p>
-<p>Wir verkaufen keine personenbezogenen Daten und geben sie nicht für Werbung weiter – weder im Sinne von CCPA/CPRA noch in irgendeinem anderen Sinn.</p>
-<p>Wenn du uns per E-Mail schreibst, haben wir deine Adresse und den Text der Nachricht. Wir nutzen sie nur, um zu antworten und dein Anliegen zu klären, geben sie an niemanden weiter und löschen den Schriftverkehr, wenn er nicht mehr gebraucht wird. Auf Wunsch löschen wir ihn früher.</p>
+<p>Wir haben keine Spieldaten von dir, deshalb können wir auch keine Kopie davon herausgeben oder auf unserer Seite etwas löschen – dort ist schlicht nichts. Alle Spieldaten liegen auf deinem Handy, und du verfügst darüber: Du siehst und änderst sie im Spiel und löschst sie auf den Wegen aus dem Abschnitt oben.</p>
+<p>Bei uns können nur deine Nachrichten an den Support liegen. Dazu kannst du alle oben genannten Rechte ausüben, auch eine Kopie in einem gängigen Format erhalten: Schreib uns von derselben Adresse, und wir schicken dir die Kopie, berichtigen, schränken die Nutzung ein oder löschen den Schriftwechsel.</p>
+<p>Wir verkaufen keine personenbezogenen Daten, geben sie nicht für Werbung weiter und legen sie niemandem offen – weder im Sinne von CCPA/CPRA noch in irgendeinem anderen Sinn.</p>
 <p>Wenn du der Meinung bist, dass deine Rechte verletzt wurden, schreib uns. Du kannst dich außerdem an die Aufsichtsbehörde deines Landes wenden.</p>
 <h2>Kinder</h2>
-<p>Murashki richtet sich nur an Menschen über 18 Jahre. Beim ersten Start bittet das Spiel dich, dein Alter zu bestätigen. Das Spiel ist nicht für Kinder gedacht und sammelt über niemanden Daten – auch nicht über Kinder. Wenn ein Kind das Spiel benutzt hat, können die Eltern die App deinstallieren; die Kindersicherung des Stores hilft, die Installation zu beschränken.</p>
+<p>Murashki richtet sich nur an Menschen über 18 Jahre. Beim ersten Start bittet das Spiel dich, dein Alter zu bestätigen. Das Spiel ist nicht für Kinder und Jugendliche gedacht (auch nicht für unter 13-Jährige, in der EU nicht für unter 16-Jährige) und sammelt über niemanden Daten – auch nicht über Kinder. Wenn wir erfahren, dass uns ein Kind geschrieben hat, löschen wir seine Nachricht und nutzen sie nicht. Wenn ein Kind das Spiel benutzt hat, können die Eltern die App deinstallieren; die Kindersicherung des Stores hilft, die Installation zu beschränken.</p>
 <h2>Sicherheit</h2>
 <p>Die PIN wird nur als Hash mit zufälligem Salt gespeichert. Die Funktion „In „Zuletzt“ verbergen“ versteckt den Spielbildschirm in der App-Liste und verbietet unter Android außerdem Screenshots und Bildschirmaufnahmen des Spiels. Aber wer Zugriff auf dein entsperrtes Handy hat, kann das Spiel öffnen, wenn der Zugangsschutz ausgeschaltet ist – deshalb empfehlen wir die Bildschirmsperre des Handys und eine PIN im Spiel.</p>
 <h2>Änderungen der Erklärung</h2>
@@ -483,14 +543,15 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>La protection de l'accès, si vous l'avez activée. Ce n'est pas le code PIN lui-même qui est stocké, mais son empreinte (hash) : il est impossible d'en retrouver le PIN. S'y ajoutent l'activation de la connexion par empreinte digitale ou Face ID et le délai au bout duquel le verrouillage se déclenche.</li>
 <li>Une mention de la version complète ou de l'abonnement achetés, afin de débloquer le contenu payé sans internet.</li>
 </ul>
-<p>Ces données ne sont envoyées ni à nous, ni à personne d'autre.</p>
+<p>Ces données ne sont envoyées ni à nous, ni à personne d'autre. Elles doivent être stockées sur le téléphone pour que le jeu que vous avez installé vous-même fonctionne ; le jeu n'enregistre rien de superflu.</p>
 <p>La connexion par empreinte digitale ou par reconnaissance faciale est vérifiée par le système du téléphone lui-même (Android ou iOS). Le jeu ne reçoit ni l'empreinte, ni l'image du visage, seulement la réponse « confirmé » ou « non ».</p>
 <h2>Ce que le jeu ne fait pas</h2>
 <ul>
 <li>Il ne collecte ni analyses ni statistiques d'utilisation, et ne contient aucun SDK d'analyse tiers. L'analyse intégrée et les rapports du moteur Unity sont désactivés.</li>
 <li>Il n'affiche pas de publicité et ne lit pas l'identifiant publicitaire (Advertising ID, IDFA).</li>
-<li>Il ne vous suit pas dans d'autres applications ni sur des sites.</li>
+<li>Il ne vous suit pas dans d'autres applications ni sur des sites. Les signaux Do Not Track et Global Privacy Control ne changent donc rien : il n'y a de toute façon rien à suivre.</li>
 <li>Il n'envoie pas de rapports de plantage.</li>
+<li>Il ne prend aucune décision automatisée vous concernant et n'établit aucun profil.</li>
 <li>Il ne demande pas l'accès à l'appareil photo, au microphone, à la localisation, aux contacts ni aux photos. Le jeu n'accède à un fichier que lorsque vous le choisissez vous-même dans la fenêtre système, pour charger ou enregistrer votre paquet.</li>
 </ul>
 <h2>Achats et abonnement</h2>
@@ -516,7 +577,18 @@ Dernière mise à jour : 14 novembre 2026</p>
 </ul>
 <h2>Site des documents</h2>
 <p>La présente politique et les conditions d'utilisation sont publiées sur un site hébergé sur GitHub Pages. Le site ne contient ni cookies, ni compteurs, ni scripts de suivi. GitHub, comme tout hébergeur, peut techniquement enregistrer les adresses IP des visiteurs pour se protéger contre les attaques, selon <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">sa propre politique</a>.</p>
-<h2>Comment supprimer vos données</h2>
+<h2>Courriers au support</h2>
+<p>C'est le seul cas où vos données nous parviennent.</p>
+<ul>
+<li><strong>Ce que nous recevons :</strong> l'adresse e-mail, le nom (s'il figure dans le message), le texte du message et les pièces jointes.</li>
+<li><strong>Pourquoi :</strong> pour vous répondre et régler votre question. La base juridique au titre du RGPD (GDPR) est notre intérêt légitime à répondre aux demandes (art. 6(1)(f)) et, si la question porte sur un achat, l'exécution du contrat conclu avec vous (art. 6(1)(b)).</li>
+<li><strong>Écrire est facultatif.</strong> Le jeu fonctionne pleinement sans cela.</li>
+<li><strong>Où les messages sont conservés.</strong> La messagerie du support fonctionne sur Gmail ; les messages sont donc conservés sur les serveurs de Google, y compris en dehors de votre pays (par exemple aux États-Unis), selon la <a href="https://policies.google.com/privacy">politique de Google</a>. Nous ne transmettons plus vos messages à personne d'autre.</li>
+<li><strong>Durée de conservation :</strong> le temps de régler votre question et au plus 12 mois après le dernier message de l'échange, sauf si la loi impose de conserver plus longtemps (par exemple en cas de litige sur un achat). Sur votre demande, nous les supprimerons plus tôt.</li>
+<li><strong>Merci de ne pas envoyer</strong> de détails sur votre vie intime, de photos, de données de paiement ni de mots de passe : ils ne sont pas nécessaires pour vous répondre. Si vous les envoyez, nous ne les utiliserons que pour vous répondre et les supprimerons avec l'échange.</li>
+</ul>
+<h2>Durée de conservation des données et comment les supprimer</h2>
+<p>Les données du jeu restent sur votre téléphone jusqu'à ce que vous les supprimiez vous-même, par l'un des moyens ci-dessous.</p>
 <ul>
 <li><strong>« Réinitialiser le jeu »</strong> dans les « Réglages » supprime les points et la progression.</li>
 <li><strong>« Code PIN oublié ? »</strong> sur l'écran de connexion supprime toutes les données du jeu : prénoms, progression, historique, liste des limites, réglages, protection de l'accès et vos propres paquets. Les achats restent attachés à votre compte dans la boutique.</li>
@@ -525,12 +597,12 @@ Dernière mise à jour : 14 novembre 2026</p>
 </ul>
 <h2>Vos droits</h2>
 <p>Les lois sur les données personnelles (le RGPD (GDPR) dans l'Union européenne, le UK GDPR, les lois américaines comme le CCPA/CPRA en Californie, la loi fédérale russe n° 152-FZ en Russie et d'autres) vous donnent le droit de savoir quelles données vous concernent, d'en obtenir une copie, de les rectifier, de les supprimer, de limiter leur traitement ou de vous y opposer, de retirer votre consentement et de saisir une autorité de contrôle.</p>
-<p>Nous ne détenons pas vos données ; nous ne pouvons donc ni en fournir une copie, ni rien supprimer de notre côté : il n'y a tout simplement rien. Toutes les données du jeu se trouvent sur votre téléphone et vous en disposez : vous les consultez et les modifiez dans le jeu, et vous les supprimez par les moyens décrits dans la section ci-dessus.</p>
-<p>Nous ne vendons pas les données personnelles et ne les transmettons pas à des fins publicitaires, ni au sens du CCPA/CPRA, ni dans aucun autre sens.</p>
-<p>Si vous nous écrivez par e-mail, nous aurons votre adresse et le texte de votre message. Nous ne les utilisons que pour vous répondre et régler votre question, nous ne les transmettons à personne et nous supprimons la correspondance lorsqu'elle n'est plus nécessaire. Sur votre demande, nous la supprimerons plus tôt.</p>
+<p>Nous ne détenons pas les données du jeu ; nous ne pouvons donc ni en fournir une copie, ni rien supprimer de notre côté : il n'y a tout simplement rien. Toutes les données du jeu se trouvent sur votre téléphone et vous en disposez : vous les consultez et les modifiez dans le jeu, et vous les supprimez par les moyens décrits dans la section ci-dessus.</p>
+<p>Seuls vos courriers au support peuvent se trouver chez nous. Pour ceux-ci, vous pouvez exercer tous les droits ci-dessus, y compris obtenir une copie dans un format courant : écrivez-nous depuis la même adresse, et nous vous enverrons une copie, rectifierons, limiterons l'utilisation ou supprimerons l'échange.</p>
+<p>Nous ne vendons pas les données personnelles, ne les transmettons pas à des fins publicitaires et ne les divulguons à personne, ni au sens du CCPA/CPRA, ni dans aucun autre sens.</p>
 <p>Si vous estimez que vos droits sont violés, écrivez-nous. Vous pouvez également saisir l'autorité de contrôle de votre pays.</p>
 <h2>Enfants</h2>
-<p>Murashki est destiné uniquement aux personnes de plus de 18 ans. Au premier lancement, le jeu demande de confirmer votre âge. Le jeu n'est pas conçu pour les enfants et ne collecte de données sur personne, y compris sur les enfants. Si un enfant a utilisé le jeu, un parent peut supprimer l'application ; le contrôle parental de la boutique aide à limiter l'installation.</p>
+<p>Murashki est destiné uniquement aux personnes de plus de 18 ans. Au premier lancement, le jeu demande de confirmer votre âge. Le jeu n'est pas conçu pour les enfants ni les adolescents (y compris de moins de 13 ans, et de moins de 16 ans dans l'UE) et ne collecte de données sur personne, y compris sur les enfants. Si nous apprenons qu'un enfant nous a écrit, nous supprimerons son message et ne l'utiliserons pas. Si un enfant a utilisé le jeu, un parent peut supprimer l'application ; le contrôle parental de la boutique aide à limiter l'installation.</p>
 <h2>Sécurité</h2>
 <p>Le code PIN n'est stocké que sous forme d'empreinte (hash) avec un sel aléatoire. La fonction « Masquer dans « Récents » » cache l'écran du jeu dans la liste des applications et, sur Android, interdit en plus les captures et l'enregistrement de l'écran du jeu. Mais quiconque a accès à votre téléphone déverrouillé peut ouvrir le jeu si la protection de l'accès est désactivée ; nous vous conseillons donc de verrouiller l'écran du téléphone et de définir un code PIN dans le jeu.</p>
 <h2>Modification de la politique</h2>
