@@ -84,13 +84,20 @@ function isLang(c){for(var i=0;i<langs.length;i++)if(langs[i]===c)return true;re
 function saved(){try{return localStorage.getItem('lang')}catch(e){return null}}
 function pick(){var l=find(location.hash.slice(1));if(l)return l;l=find(saved());if(l)return l;
 var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++){l=find(n[i]);if(l)return l}return 'en'}
+// A page shown in one of the reader's own languages is marked "do not translate": an automatic browser
+// translation (it once took the Russian text for another language) only garbles a page the reader can already read.
+function native(l){var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++)if(find(n[i])===l)return true;return false}
+function mark(l){var m=d.getElementById('notranslate'),own=native(l);h.lang=l;
+if(own){h.setAttribute('translate','no');h.classList.add('notranslate')}else{h.removeAttribute('translate');h.classList.remove('notranslate')}
+if(own&&!m&&d.head){m=d.createElement('meta');m.id='notranslate';m.name='google';m.content='notranslate';d.head.appendChild(m)}else if(!own&&m)m.parentNode.removeChild(m)}
+mark(pick());
 var cur=null;
 function show(l){cur=l;var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
 var n=d.querySelectorAll('.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
 var b=d.querySelectorAll('[data-name]');for(var m=0;m<b.length;m++)b[m].textContent=labels[l].name;
 var p=d.querySelectorAll('a[data-page]');for(var q=0;q<p.length;q++)p[q].setAttribute('href',p[q].getAttribute('data-page')+'#'+l);
 var t=d.querySelector('.totop');if(t)t.setAttribute('aria-label',labels[l].top);
-h.lang=l;if(titles[l])d.title=titles[l]}
+mark(l);if(titles[l])d.title=titles[l]}
 function jump(){var id=decodeURIComponent(location.hash.slice(1));if(!id||isLang(id))return;var el=d.getElementById(id);if(el)el.scrollIntoView()}
 d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.langs a');if(!t)return;try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
 window.addEventListener('hashchange',function(){var id=location.hash.slice(1),l=find(id);if(!l)return;
@@ -175,7 +182,7 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else ini
 <p>Если вы включите напоминания в «Настройках», игра запланирует их на самом телефоне, по выбранному вами расписанию. Сервера уведомлений нет. На экране блокировки нет откровенных слов. Выключить напоминания можно в «Настройках» игры или в настройках телефона.</p>
 </section>
 <section class="sec" id="ru-s8"><h2><span>Свои паки карт</span></h2>
-<p>Тексты своих карт пишете вы. Они остаются на вашем телефоне, мы их не видим и не модерируем. Если вы сохраните пак в файл, этот файл окажется там, куда вы его положили, и дальше вы сами решаете, что с ним делать.</p>
+<p>Тексты своих карт вы пишете сами. Они остаются на вашем телефоне, мы их не видим и не модерируем. Если вы сохраните пак в файл, файл будет лежать там, куда вы его сохранили, и дальше вы сами решаете, что с ним делать.</p>
 </section>
 <section class="sec" id="ru-s9"><h2><span>Игра на расстоянии</span></h2>
 <p>В этом режиме игра показывает вам короткий код, а вы сами пересылаете его партнёру — например, в мессенджере. Игра при этом ничего не отправляет.</p>
