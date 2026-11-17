@@ -3,83 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#3c0a18">
 <meta name="referrer" content="no-referrer">
 <title>Terms of Use — Murashki</title>
-<style>:root{--bg:#faf6f4;--surface:#ffffff;--text:#231b20;--muted:#6b5d64;--accent:#a8264c;--line:#eadfe2;--pill:#f3e8eb}
-@media (prefers-color-scheme:dark){:root{--bg:#16111a;--surface:#1f1824;--text:#efe6ea;--muted:#b3a3ab;--accent:#f28aa8;--line:#352a3a;--pill:#2a2130}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-.wrap{max-width:44rem;margin:0 auto;padding:16px}
-header{padding:8px 0 4px}
-.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none}
-nav.langs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;padding:0;list-style:none}
-nav.langs a{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pill);color:var(--text);text-decoration:none;font-size:15px;min-height:36px;line-height:24px}
-nav.langs a[aria-current="true"]{background:var(--accent);color:var(--bg)}
-article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 20px 20px;margin:16px 0}
-h1{font-size:1.6em;line-height:1.25;margin:.8em 0 .5em}
-h2{font-size:1.2em;line-height:1.3;margin:1.6em 0 .4em}
-h3{font-size:1.05em;margin:1.3em 0 .3em}
-p,ul,ol{margin:.6em 0}
-ul,ol{padding-left:1.3em}
-li{margin:.3em 0}
-a{color:var(--accent);overflow-wrap:anywhere}
-code{font:.9em ui-monospace,Consolas,monospace;background:var(--pill);padding:1px 4px;border-radius:4px}
-.tagline{font-size:1.1em}
-.docs a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
-footer{color:var(--muted);font-size:14px;padding:8px 0 32px}
-footer a{color:var(--muted)}
+<link rel="icon" href="../assets/murashki-icon-96.png">
+<style>@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-Regular.ttf") format("truetype");font-weight:400;font-display:swap}@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-SemiBold.ttf") format("truetype");font-weight:600;font-display:swap}@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-Bold.ttf") format("truetype");font-weight:700;font-display:swap}@font-face{font-family:"Playfair Display";src:url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");font-weight:700;font-display:swap}:root{--g:clamp(16px,4vw,40px);--ft:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fd:"Playfair Display",Georgia,"Times New Roman",serif;--bg:#14070a;--text:#f7efe7;--body:#efe2dc;--muted:#d1bdb6;--line:rgba(212,175,55,.26);--gold:#d4af37;--gold-hi:#f4d992;--ink:#1c0a0e;--gold-fill:linear-gradient(180deg,#f4d992,#d4af37 60%,#a67c1f);--card:linear-gradient(160deg,rgba(121,21,45,.55),rgba(60,10,24,.55));--card-hi:radial-gradient(120% 140% at 0% 0%,#8f1a36,#3c0a18 70%)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}
+body{margin:0;color:var(--text);background:radial-gradient(80rem 40rem at 85% -10rem,rgba(232,90,154,.28),transparent 60%) no-repeat,radial-gradient(90rem 46rem at 10% -8rem,rgba(121,21,45,.95),rgba(60,10,24,.5) 45%,transparent 72%) no-repeat,var(--bg);font:400 1.0625rem/1.68 var(--ft);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,ul,ol{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(100% - 2*var(--g),74rem);margin-inline:auto}
 html.js article[data-lang]{display:none}
-html.js article[data-lang].active{display:block}</style>
+html.js article[data-lang].active{display:block}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:30;background:linear-gradient(90deg,#e85a9a,var(--gold-hi),var(--gold))}
+.top{position:sticky;top:0;z-index:20;background:rgba(20,7,10,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 16px;min-height:64px;padding:10px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:1.0625rem;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand img{width:32px;height:32px;border-radius:9px;flex:none}
+.langs{display:inline-flex;flex-wrap:wrap;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px}
+.langs a{display:inline-flex;align-items:center;min-height:34px;padding:0 11px;border-radius:999px;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--muted)}
+.langs a:hover{color:var(--text)}
+.langs a[aria-current="true"]{background:var(--gold);color:var(--ink)}
+.hero{padding:clamp(28px,6vw,72px) 0 clamp(20px,4vw,40px);text-align:center}
+.eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi)}
+.hero h1{max-width:52rem;margin:12px auto 18px;font-family:var(--fd);font-weight:700;font-size:clamp(1.85rem,6.4vw,4.25rem);line-height:1.08;color:var(--gold-hi);overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
+.dates,.switch{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.dates span{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted)}
+.switch{margin-top:22px}
+.switch a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+.switch a[aria-current="page"]{background:var(--gold-fill);border-color:transparent;color:var(--ink)}
+.layout{max-width:50rem;margin-inline:auto;padding-bottom:24px}
+.toc{margin-bottom:8px}
+.toc summary{cursor:pointer;list-style:none;padding:12px 0;text-align:center;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:"＋";margin-left:8px;font-weight:400}
+.toc details[open] summary::after{content:"－"}
+.toc ol{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(min(100%,14.5rem),1fr));list-style:none;margin:0;padding:0 0 8px}
+.toc a{display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.22);text-decoration:none;font-size:.92rem;line-height:1.35}
+.toc a:hover{border-color:var(--gold)}
+.toc .n{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(212,175,55,.16);color:var(--gold-hi);font-size:.8rem;font-weight:700;font-variant-numeric:tabular-nums}
+.badge{flex:none;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--gold-fill);color:var(--ink);font-family:var(--fd);font-size:1.05rem;font-weight:700}
+.sec,.card{border:1px solid var(--line);border-radius:22px;background:var(--card)}
+.sec{margin:16px 0;padding:22px clamp(18px,3vw,28px) 10px;color:var(--body)}
+.sec.summary,.card.hi{border-color:var(--gold);background:var(--card-hi)}
+.sec h2{display:flex;gap:.55em;align-items:baseline;font-family:var(--fd);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.25;color:var(--gold-hi)}
+.sec h2 .badge{transform:translateY(-.15em)}
+.doc p,.doc ul,.doc ol{margin:.75em 0}
+.doc ul,.doc ol{padding-left:1.35em}
+.doc li{margin:.4em 0}
+.doc li::marker{color:var(--gold)}
+.doc a{color:var(--gold-hi);overflow-wrap:anywhere;text-underline-offset:3px}
+.doc strong,.doc h3{color:#fff}
+.doc h3{margin:1.4em 0 .3em;font-size:1.05rem}
+.doc code{font:.9em ui-monospace,Consolas,monospace;padding:1px 5px;border-radius:5px;background:rgba(212,175,55,.14)}
+.doc-foot{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:40px;padding:22px 0 32px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.doc-foot a{color:var(--muted);text-underline-offset:3px;overflow-wrap:anywhere}
+.doc-foot a:hover{color:var(--text)}
+.totop{position:fixed;right:16px;bottom:16px;z-index:25;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--gold-fill);color:var(--ink);text-decoration:none;font-size:1.3rem;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.7);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.totop.on{opacity:1;pointer-events:auto}
+.app-icon{display:block;width:88px;height:88px;margin:0 auto 18px;border-radius:22px;box-shadow:0 18px 40px -16px rgba(0,0,0,.8)}
+.tagline{max-width:36rem;margin:0 auto;font-size:1.1rem;color:var(--muted)}
+.home{display:grid;gap:14px;max-width:50rem;margin:0 auto}
+.home h2{margin-top:6px;text-align:center;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+a.card{display:flex;align-items:center;gap:16px;padding:18px 22px;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.25;color:var(--gold-hi)}
+a.card:hover{border-color:var(--gold)}
+a.card .go{margin-left:auto;font-family:var(--ft);color:var(--gold)}
+.card.hi{padding:18px 22px;color:var(--body)}
+.card.hi a{color:var(--gold-hi);overflow-wrap:anywhere;text-underline-offset:3px}
+@media (max-width:479px){.brand span{display:none}.langs a{padding:0 9px}.top .wrap{flex-wrap:nowrap}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}</style>
 <script>(function(){
 var d=document,h=d.documentElement;h.className+=' js';
-var langs=["ru","en","es","pt-BR","de","fr"],titles={"ru": "Условия использования — Мурашки", "en": "Terms of Use — Murashki", "es": "Términos de uso — Murashki", "pt-BR": "Termos de Uso — Murashki", "de": "Nutzungsbedingungen — Murashki", "fr": "Conditions d'utilisation — Murashki"};
-function find(code){if(!code)return null;code=code.toLowerCase();
-for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===code)return langs[i];
-var base=code.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===base)return langs[j];return null}
+var langs=["ru", "en", "es", "pt-BR", "de", "fr"],titles={"ru": "Условия использования — Мурашки", "en": "Terms of Use — Murashki", "es": "Términos de uso — Murashki", "pt-BR": "Termos de Uso — Murashki", "de": "Nutzungsbedingungen — Murashki", "fr": "Conditions d'utilisation — Murashki"},labels={"ru": {"name": "Мурашки", "top": "Наверх"}, "en": {"name": "Murashki", "top": "Back to top"}, "es": {"name": "Murashki", "top": "Volver arriba"}, "pt-BR": {"name": "Murashki", "top": "Voltar ao topo"}, "de": {"name": "Murashki", "top": "Nach oben"}, "fr": {"name": "Murashki", "top": "Haut de page"}};
+function find(c){if(!c)return null;c=c.toLowerCase();for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===c)return langs[i];
+var b=c.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===b)return langs[j];return null}
+function isLang(c){for(var i=0;i<langs.length;i++)if(langs[i]===c)return true;return false}
 function saved(){try{return localStorage.getItem('lang')}catch(e){return null}}
 function pick(){var l=find(location.hash.slice(1));if(l)return l;l=find(saved());if(l)return l;
-var nav=navigator.languages||[navigator.language];for(var i=0;i<nav.length;i++){l=find(nav[i]);if(l)return l}return 'en'}
-function show(l){var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
-var n=d.querySelectorAll('nav.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
-var f=d.querySelectorAll('a[data-page]');for(var m=0;m<f.length;m++)f[m].setAttribute('href',f[m].getAttribute('data-page')+'#'+l);
+var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++){l=find(n[i]);if(l)return l}return 'en'}
+var cur=null;
+function show(l){cur=l;var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
+var n=d.querySelectorAll('.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
+var b=d.querySelectorAll('[data-name]');for(var m=0;m<b.length;m++)b[m].textContent=labels[l].name;
+var p=d.querySelectorAll('a[data-page]');for(var q=0;q<p.length;q++)p[q].setAttribute('href',p[q].getAttribute('data-page')+'#'+l);
+var t=d.querySelector('.totop');if(t)t.setAttribute('aria-label',labels[l].top);
 h.lang=l;if(titles[l])d.title=titles[l]}
-d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('nav.langs a');if(!t)return;
-try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
-window.addEventListener('hashchange',function(){var l=find(location.hash.slice(1));if(l){show(l);scrollTo(0,0)}});
-if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){show(pick())});else show(pick());
+function jump(){var id=decodeURIComponent(location.hash.slice(1));if(!id||isLang(id))return;var el=d.getElementById(id);if(el)el.scrollIntoView()}
+d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.langs a');if(!t)return;try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
+window.addEventListener('hashchange',function(){var id=location.hash.slice(1),l=find(id);if(!l)return;
+if(isLang(id)){show(l);scrollTo(0,0)}else if(l!==cur){show(l);jump()}});
+function progress(){var p=d.querySelector('.progress'),t=d.querySelector('.totop'),max=h.scrollHeight-innerHeight;
+if(p)p.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';if(t)t.classList.toggle('on',scrollY>700)}
+function init(){show(pick());if(matchMedia('(max-width:999px)').matches){var s=d.querySelectorAll('.toc details');for(var i=0;i<s.length;i++)s[i].removeAttribute('open')}
+jump();if(d.fonts&&d.fonts.ready)d.fonts.ready.then(jump);progress();addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress)}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else init();
 })();</script>
 </head>
 <body>
-<div class="wrap">
-<header>
-<a class="brand" href="../" data-page="../">Murashki · Мурашки</a>
-<nav class="langs" aria-label="Language">
-<a href="#ru" hreflang="ru" lang="ru">Русский</a>
-<a href="#en" hreflang="en" lang="en">English</a>
-<a href="#es" hreflang="es" lang="es">Español</a>
-<a href="#pt-BR" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-<a href="#de" hreflang="de" lang="de">Deutsch</a>
-<a href="#fr" hreflang="fr" lang="fr">Français</a>
-</nav>
-</header>
-<main>
-<article id="ru" data-lang="ru" lang="ru">
-<h1>Условия использования «Мурашек»</h1>
-<p>Вступают в силу: 14 ноября 2026 г.<br>
-Последнее обновление: 14 ноября 2026 г.</p>
-<h2>1. Что это за документ</h2>
+<div class="progress" aria-hidden="true"></div>
+<header class="top" id="top"><div class="wrap"><a class="brand" href="../" data-page="../"><img src="../assets/murashki-icon-96.png" alt=""><span data-name>Murashki</span></a><nav class="langs" aria-label="Language"><a href="#ru" hreflang="ru" lang="ru" title="Русский">RU</a><a href="#en" hreflang="en" lang="en" title="English">EN</a><a href="#es" hreflang="es" lang="es" title="Español">ES</a><a href="#pt-BR" hreflang="pt-BR" lang="pt-BR" title="Português (Brasil)">PT</a><a href="#de" hreflang="de" lang="de" title="Deutsch">DE</a><a href="#fr" hreflang="fr" lang="fr" title="Français">FR</a></nav></div></header>
+<main class="wrap">
+<article data-lang="ru" lang="ru">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Условия использования «Мурашек»</h1><div class="dates"><span>Вступают в силу: 14 ноября 2026 г.</span><span>Последнее обновление: 14 ноября 2026 г.</span></div><nav class="switch"><a href="../terms/#ru" aria-current="page">Условия использования</a><a href="../privacy/#ru">Политика конфиденциальности</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Содержание"><details open><summary>Содержание</summary><ol>
+<li><a href="#ru-s1"><span class="n">1</span><span>Что это за документ</span></a></li>
+<li><a href="#ru-s2"><span class="n">2</span><span>Только для взрослых</span></a></li>
+<li><a href="#ru-s3"><span class="n">3</span><span>Согласие и безопасность</span></a></li>
+<li><a href="#ru-s4"><span class="n">4</span><span>Это не совет врача или психолога</span></a></li>
+<li><a href="#ru-s5"><span class="n">5</span><span>Ответственность за то, что делают игроки</span></a></li>
+<li><a href="#ru-s6"><span class="n">6</span><span>Свои паки карт</span></a></li>
+<li><a href="#ru-s7"><span class="n">7</span><span>Игра на расстоянии</span></a></li>
+<li><a href="#ru-s8"><span class="n">8</span><span>Покупки, подписка и возвраты</span></a></li>
+<li><a href="#ru-s9"><span class="n">9</span><span>Права на игру</span></a></li>
+<li><a href="#ru-s10"><span class="n">10</span><span>Изменения игры и прекращение</span></a></li>
+<li><a href="#ru-s11"><span class="n">11</span><span>Без гарантий</span></a></li>
+<li><a href="#ru-s12"><span class="n">12</span><span>Ограничение ответственности</span></a></li>
+<li><a href="#ru-s13"><span class="n">13</span><span>Если вы установили игру из App Store</span></a></li>
+<li><a href="#ru-s14"><span class="n">14</span><span>Изменения условий</span></a></li>
+<li><a href="#ru-s15"><span class="n">15</span><span>Право и споры</span></a></li>
+<li><a href="#ru-s16"><span class="n">16</span><span>Контакты</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="ru-s1"><h2><span class="badge">1</span><span>Что это за документ</span></h2>
 <p>Это соглашение между вами и Soverion Games — независимым разработчиком из Израиля (дальше — «мы») об использовании игры «Мурашки». Устанавливая игру или играя в неё, вы принимаете эти условия. Если вы с ними не согласны, не пользуйтесь игрой и удалите её.</p>
 <p>Как игра обращается с данными, описано в <a href="https://soveriongames.github.io/murashki/privacy">политике конфиденциальности</a>. Если вы установили игру из магазина приложений, к вам применяются также правила этого магазина.</p>
-<h2>2. Только для взрослых</h2>
+</section>
+<section class="sec" id="ru-s2"><h2><span class="badge">2</span><span>Только для взрослых</span></h2>
 <ul>
 <li>Играть можно только тем, кому исполнилось 18 лет, — или больше, если в вашей стране совершеннолетие наступает позже.</li>
 <li>В игре есть откровенный контент: текстовые задания и вопросы об интимной близости и сексуальности. Изображений и видео в игре нет.</li>
 <li>Играйте только со взрослым партнёром. Не показывайте игру несовершеннолетним.</li>
 <li>Не пользуйтесь игрой там, где такой контент запрещён законом.</li>
 </ul>
-<h2>3. Согласие и безопасность</h2>
+</section>
+<section class="sec" id="ru-s3"><h2><span class="badge">3</span><span>Согласие и безопасность</span></h2>
 <p>Игра только предлагает задания текстом. Что делать, решаете вы и ваш партнёр.</p>
 <ul>
 <li><strong>Участие добровольное.</strong> Любое действие — только с ясного согласия обоих. Согласие можно отозвать в любой момент, даже посреди задания.</li>
@@ -89,19 +148,24 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Не выполняйте задания, которые могут навредить здоровью — вашему, партнёра или других людей. Учитывайте свои ограничения, аллергии и самочувствие.</li>
 <li>Соблюдайте закон: не вовлекайте посторонних и не делайте ничего интимного там, где вас могут увидеть другие.</li>
 </ul>
-<h2>4. Это не совет врача или психолога</h2>
+</section>
+<section class="sec" id="ru-s4"><h2><span class="badge">4</span><span>Это не совет врача или психолога</span></h2>
 <p>«Мурашки» — развлечение. Тексты игры не являются медицинской, сексологической, психологической или юридической консультацией и не заменяют специалиста. С вопросами о здоровье обращайтесь к врачу. Если в отношениях есть насилие или страх, обратитесь в службу помощи вашей страны.</p>
-<h2>5. Ответственность за то, что делают игроки</h2>
+</section>
+<section class="sec" id="ru-s5"><h2><span class="badge">5</span><span>Ответственность за то, что делают игроки</span></h2>
 <p>Игра не следит за тем, что происходит между игроками, и не может это контролировать. Вы сами отвечаете за свои действия и их последствия. В пределах, которые допускает применимый закон, мы не отвечаем за вред, травмы, ущерб и последствия того, что игроки делают друг с другом. Это не ограничивает ответственность, которую по закону ограничить нельзя (см. раздел 12).</p>
-<h2>6. Свои паки карт</h2>
+</section>
+<section class="sec" id="ru-s6"><h2><span class="badge">6</span><span>Свои паки карт</span></h2>
 <ul>
 <li>Тексты своих паков пишете вы. Они хранятся только на вашем телефоне. Мы их не видим, не проверяем и не модерируем.</li>
 <li>За содержание своих паков отвечаете вы. Нельзя создавать, загружать и распространять с их помощью то, что нарушает закон или чужие права: например, контент с участием несовершеннолетних, призывы к насилию или к действиям без согласия, чужие тексты без разрешения автора.</li>
 <li>Загружайте паки из файлов только из источников, которым доверяете. Если вы сохраните пак в файл и отдадите его кому-то, за эту передачу отвечаете вы.</li>
 </ul>
-<h2>7. Игра на расстоянии</h2>
+</section>
+<section class="sec" id="ru-s7"><h2><span class="badge">7</span><span>Игра на расстоянии</span></h2>
 <p>Код хода вы передаёте партнёру сами, через сторонний мессенджер или другой выбранный вами способ. К передаче применяются правила этого сервиса. Мы ничего не получаем и не отвечаем за доставку, сохранность и чтение сообщений в чужих сервисах. Отправляйте код только тому, кто согласился играть с вами.</p>
-<h2>8. Покупки, подписка и возвраты</h2>
+</section>
+<section class="sec" id="ru-s8"><h2><span class="badge">8</span><span>Покупки, подписка и возвраты</span></h2>
 <ul>
 <li>Часть игры бесплатна и работает без покупок и без подписки. Остальное открывают <strong>«Все уровни навсегда»</strong> (разовая покупка полной версии) или <strong>подписка на месяц</strong>: обе открывают одно и то же. Цена в вашей валюте показывается в магазине до оплаты.</li>
 <li>Покупки проходят только через магазин приложений (Google Play или App Store) по его правилам. Платёжные данные получает магазин, а не мы.</li>
@@ -116,14 +180,16 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li><strong>Промокоды</strong> выдаются только средствами магазинов (промокоды Google Play, коды предложений Apple) и действуют по их правилам. На деньги они не обмениваются.</li>
 <li><strong>«Сердечки»</strong> зарабатываются игрой и не продаются. Это не деньги: у них нет денежной стоимости, их нельзя обменять, продать или передать.</li>
 </ul>
-<h2>9. Права на игру</h2>
+</section>
+<section class="sec" id="ru-s9"><h2><span class="badge">9</span><span>Права на игру</span></h2>
 <ul>
 <li>Игра, тексты карт, сцены и другие тексты, оформление, иллюстрации, музыка, название и логотип принадлежат Soverion Games или используются по лицензии. Шрифты и другие сторонние материалы распространяются по своим лицензиям.</li>
 <li>Мы даём вам личное, некоммерческое, неисключительное и непередаваемое право пользоваться игрой на своих устройствах по этим условиям и правилам магазина.</li>
 <li>Нельзя: перепродавать игру или её содержимое; копировать и публиковать тексты карт и их подборки; распространять изменённые копии игры; обходить покупки; разбирать код игры, кроме случаев, которые прямо разрешает закон.</li>
 <li>Короткие цитаты в отзывах и обзорах — пожалуйста.</li>
 </ul>
-<h2>10. Изменения игры и прекращение</h2>
+</section>
+<section class="sec" id="ru-s10"><h2><span class="badge">10</span><span>Изменения игры и прекращение</span></h2>
 <ul>
 <li>Вы можете в любой момент перестать играть и удалить игру. Подписку отмените отдельно в магазине.</li>
 <li>Мы можем менять игру, добавлять и убирать функции, прекратить её развитие или распространение. Уже установленная игра работает без интернета, пока совместима с вашим устройством.</li>
@@ -131,12 +197,15 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Пользуясь игрой, вы соблюдаете и условия сторонних сервисов, которые для этого нужны: магазина приложений, оператора связи, мессенджера.</li>
 <li>Если вы существенно нарушите эти условия (например, начнёте продавать или публиковать содержимое игры), ваше право пользоваться игрой прекращается. Права, которые дают вам закон и правила магазина в отношении покупок, при этом сохраняются.</li>
 </ul>
-<h2>11. Без гарантий</h2>
+</section>
+<section class="sec" id="ru-s11"><h2><span class="badge">11</span><span>Без гарантий</span></h2>
 <p>Мы стараемся, чтобы игра работала хорошо, но предоставляем её «как есть». Мы не обещаем, что в ней не будет ошибок и что она будет работать на любом устройстве. Данные игры хранятся только на телефоне: на Android они не попадают в резервную копию, и при удалении игры или смене телефона прогресс пропадает.</p>
 <p>Если закон вашей страны даёт потребителю гарантию соответствия цифрового контента (например, в ЕС), эта гарантия и средства защиты по ней сохраняются; ничто в этом разделе их не ограничивает.</p>
-<h2>12. Ограничение ответственности</h2>
+</section>
+<section class="sec" id="ru-s12"><h2><span class="badge">12</span><span>Ограничение ответственности</span></h2>
 <p>В пределах, которые допускает применимый закон, наша общая ответственность перед вами ограничена суммой, которую вы заплатили за игру за последние 12 месяцев. В тех же пределах мы не отвечаем за косвенные убытки и упущенную выгоду. Ничто в этих условиях не ограничивает ответственность за умысел и грубую неосторожность, за вред жизни и здоровью по нашей вине и любую другую ответственность, которую по закону нельзя ограничить, и не лишает вас обязательных прав потребителя.</p>
-<h2>13. Если вы установили игру из App Store</h2>
+</section>
+<section class="sec" id="ru-s13"><h2><span class="badge">13</span><span>Если вы установили игру из App Store</span></h2>
 <ul>
 <li>Лицензию на игру из App Store регулирует <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">стандартное лицензионное соглашение Apple</a> (Licensed Application End User License Agreement). Эти условия его дополняют. Если они в чём-то расходятся, по вопросам лицензии действует соглашение Apple.</li>
 <li>Пользоваться игрой можно на устройствах Apple, которыми вы владеете или распоряжаетесь, по правилам использования App Store (включая «Семейный доступ», если он поддерживается).</li>
@@ -147,33 +216,56 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Вы подтверждаете, что не находитесь в стране, на которую распространяется эмбарго США или которую правительство США считает поддерживающей терроризм, и не входите в списки лиц, с которыми правительство США запрещает сделки.</li>
 <li>Apple и её дочерние компании — третьи лица, в пользу которых заключены эти условия: приняв их, вы даёте Apple право требовать их исполнения.</li>
 </ul>
-<h2>14. Изменения условий</h2>
+</section>
+<section class="sec" id="ru-s14"><h2><span class="badge">14</span><span>Изменения условий</span></h2>
 <p>Мы меняем условия только по понятным причинам: изменился закон или правила магазинов, в игре появились или пропали функции, нужно исправить неточность. Когда условия меняются, на этой странице меняется дата последнего обновления. О существенных изменениях мы сообщим в описании обновления приложения в магазине не позже чем за 30 дней до того, как они начнут действовать, — кроме изменений, которых срочно требует закон. Если вы продолжаете пользоваться игрой после этого срока, вы принимаете новые условия. Если не согласны — прекратите пользоваться игрой и отмените подписку: следующий период оплачиваться не будет.</p>
-<h2>15. Право и споры</h2>
+</section>
+<section class="sec" id="ru-s15"><h2><span class="badge">15</span><span>Право и споры</span></h2>
 <ul>
 <li>Эти условия регулируются правом Государства Израиль. Это не лишает вас обязательной защиты потребителей, которую дают законы страны, где вы живёте.</li>
 <li>Вы можете обратиться в суд своей страны, если её закон даёт вам такое право, или в компетентный суд Израиля. Мы не ограничиваем ваш выбор суда.</li>
 <li>Если что-то пошло не так, напишите нам — мы ответим и постараемся решить вопрос в течение 30 дней. Это не обязательный шаг перед обращением в суд. Вопросы оплаты и возвратов решает магазин.</li>
 <li>Если какое-то положение условий окажется недействительным, остальные продолжают действовать.</li>
 </ul>
-<h2>16. Контакты</h2>
+</section>
+<section class="sec" id="ru-s16"><h2><span class="badge">16</span><span>Контакты</span></h2>
 <p>Soverion Games (Израиль), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#ru">Условия использования</a><a href="../privacy/#ru">Политика конфиденциальности</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Наверх</a></footer></div></div>
 </article>
-<article id="en" data-lang="en" lang="en">
-<h1>Murashki Terms of Use</h1>
-<p>Effective: November 14, 2026<br>
-Last updated: November 14, 2026</p>
-<h2>1. What this document is</h2>
+<article data-lang="en" lang="en">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Murashki Terms of Use</h1><div class="dates"><span>Effective: November 14, 2026</span><span>Last updated: November 14, 2026</span></div><nav class="switch"><a href="../terms/#en" aria-current="page">Terms of Use</a><a href="../privacy/#en">Privacy Policy</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><ol>
+<li><a href="#en-s1"><span class="n">1</span><span>What this document is</span></a></li>
+<li><a href="#en-s2"><span class="n">2</span><span>Adults only</span></a></li>
+<li><a href="#en-s3"><span class="n">3</span><span>Consent and safety</span></a></li>
+<li><a href="#en-s4"><span class="n">4</span><span>This is not medical or psychological advice</span></a></li>
+<li><a href="#en-s5"><span class="n">5</span><span>Responsibility for what players do</span></a></li>
+<li><a href="#en-s6"><span class="n">6</span><span>Custom card packs</span></a></li>
+<li><a href="#en-s7"><span class="n">7</span><span>Remote play</span></a></li>
+<li><a href="#en-s8"><span class="n">8</span><span>Purchases, subscription, and refunds</span></a></li>
+<li><a href="#en-s9"><span class="n">9</span><span>Rights in the game</span></a></li>
+<li><a href="#en-s10"><span class="n">10</span><span>Changes to the game and termination</span></a></li>
+<li><a href="#en-s11"><span class="n">11</span><span>No warranties</span></a></li>
+<li><a href="#en-s12"><span class="n">12</span><span>Limitation of liability</span></a></li>
+<li><a href="#en-s13"><span class="n">13</span><span>If you installed the game from the App Store</span></a></li>
+<li><a href="#en-s14"><span class="n">14</span><span>Changes to these terms</span></a></li>
+<li><a href="#en-s15"><span class="n">15</span><span>Governing law and disputes</span></a></li>
+<li><a href="#en-s16"><span class="n">16</span><span>Contact</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="en-s1"><h2><span class="badge">1</span><span>What this document is</span></h2>
 <p>This is an agreement between you and Soverion Games, an independent developer based in Israel ("we"), about your use of the game Murashki. By installing or playing the game, you accept these terms. If you don't agree with them, don't use the game and delete it.</p>
 <p>How the game handles data is described in the <a href="https://soveriongames.github.io/murashki/privacy">Privacy Policy</a>. If you installed the game from an app store, that store's rules also apply to you.</p>
-<h2>2. Adults only</h2>
+</section>
+<section class="sec" id="en-s2"><h2><span class="badge">2</span><span>Adults only</span></h2>
 <ul>
 <li>You may play only if you are at least 18 years old, or older if the age of majority in your country is higher.</li>
 <li>The game contains explicit content: text prompts and questions about intimacy and sexuality. There are no images or videos in the game.</li>
 <li>Play only with an adult partner. Do not show the game to minors.</li>
 <li>Do not use the game where such content is prohibited by law.</li>
 </ul>
-<h2>3. Consent and safety</h2>
+</section>
+<section class="sec" id="en-s3"><h2><span class="badge">3</span><span>Consent and safety</span></h2>
 <p>The game only suggests prompts as text. What to do is up to you and your partner.</p>
 <ul>
 <li><strong>Taking part is voluntary.</strong> Do anything only with the clear consent of both of you. Consent can be withdrawn at any moment, even in the middle of a prompt.</li>
@@ -183,19 +275,24 @@ Last updated: November 14, 2026</p>
 <li>Do not do any prompt that could harm anyone's health, whether yours, your partner's, or anyone else's. Take your own limits, allergies, and well-being into account.</li>
 <li>Follow the law: do not involve other people, and do not do anything intimate where others can see you.</li>
 </ul>
-<h2>4. This is not medical or psychological advice</h2>
+</section>
+<section class="sec" id="en-s4"><h2><span class="badge">4</span><span>This is not medical or psychological advice</span></h2>
 <p>Murashki is entertainment. The game's texts are not medical, sexological, psychological, or legal advice and do not replace a professional. For health questions, see a doctor. If there is violence or fear in your relationship, contact a support service in your country.</p>
-<h2>5. Responsibility for what players do</h2>
+</section>
+<section class="sec" id="en-s5"><h2><span class="badge">5</span><span>Responsibility for what players do</span></h2>
 <p>The game does not monitor and cannot control what happens between players. You are responsible for your own actions and their consequences. To the extent permitted by applicable law, we are not liable for harm, injury, damage, or consequences of what players do to each other. This does not limit any liability that cannot be limited by law (see section 12).</p>
-<h2>6. Custom card packs</h2>
+</section>
+<section class="sec" id="en-s6"><h2><span class="badge">6</span><span>Custom card packs</span></h2>
 <ul>
 <li>You write the texts of your own packs. They are stored only on your phone. We do not see, check, or moderate them.</li>
 <li>You are responsible for the content of your own packs. You must not use them to create, upload, or distribute anything that breaks the law or other people's rights: for example, content involving minors, calls to violence or to acts without consent, or other people's texts without the author's permission.</li>
 <li>Load packs from files only from sources you trust. If you save a pack to a file and give it to someone, you are responsible for that transfer.</li>
 </ul>
-<h2>7. Remote play</h2>
+</section>
+<section class="sec" id="en-s7"><h2><span class="badge">7</span><span>Remote play</span></h2>
 <p>You pass the turn code to your partner yourself, through a third-party messenger or another method you choose. That service's rules apply to the transfer. We receive nothing and are not responsible for the delivery, safety, or reading of messages in other people's services. Send the code only to someone who has agreed to play with you.</p>
-<h2>8. Purchases, subscription, and refunds</h2>
+</section>
+<section class="sec" id="en-s8"><h2><span class="badge">8</span><span>Purchases, subscription, and refunds</span></h2>
 <ul>
 <li>Part of the game is free and works without any purchase or subscription. The rest is unlocked by <strong>"All levels forever"</strong> (a one-time purchase of the full version) or a <strong>monthly subscription</strong>: both unlock the same content. The price in your currency is shown in the store before you pay.</li>
 <li>Purchases are made only through the app store (Google Play or App Store) under its rules. The store receives your payment details, not us.</li>
@@ -210,14 +307,16 @@ Last updated: November 14, 2026</p>
 <li><strong>Promo codes</strong> are issued only through the stores' own tools (Google Play promo codes, Apple offer codes) and follow their rules. They cannot be exchanged for money.</li>
 <li><strong>"Hearts"</strong> are earned by playing and are not sold. They are not money: they have no monetary value and cannot be exchanged, sold, or transferred.</li>
 </ul>
-<h2>9. Rights in the game</h2>
+</section>
+<section class="sec" id="en-s9"><h2><span class="badge">9</span><span>Rights in the game</span></h2>
 <ul>
 <li>The game, the card texts, scenes and other texts, design, illustrations, music, name, and logo belong to Soverion Games or are used under license. Fonts and other third-party materials are distributed under their own licenses.</li>
 <li>We grant you a personal, non-commercial, non-exclusive, non-transferable right to use the game on your own devices under these terms and the store's rules.</li>
 <li>You may not: resell the game or its contents; copy or publish card texts or collections of them; distribute modified copies of the game; bypass purchases; or decompile the game's code, except where the law expressly allows it.</li>
 <li>Short quotes in reviews and write-ups are welcome.</li>
 </ul>
-<h2>10. Changes to the game and termination</h2>
+</section>
+<section class="sec" id="en-s10"><h2><span class="badge">10</span><span>Changes to the game and termination</span></h2>
 <ul>
 <li>You can stop playing and delete the game at any time. Cancel the subscription separately in the store.</li>
 <li>We may change the game, add and remove features, or stop developing or distributing it. A game that is already installed works without the internet for as long as it is compatible with your device.</li>
@@ -225,12 +324,15 @@ Last updated: November 14, 2026</p>
 <li>When you use the game, you also comply with the terms of the third-party services needed for it: the app store, your mobile carrier, and the messenger.</li>
 <li>If you materially breach these terms (for example, you start selling or publishing the game's content), your right to use the game ends. The rights that the law and the store's rules give you regarding purchases remain.</li>
 </ul>
-<h2>11. No warranties</h2>
+</section>
+<section class="sec" id="en-s11"><h2><span class="badge">11</span><span>No warranties</span></h2>
 <p>We try to make the game work well, but we provide it "as is". We do not promise that it will be free of errors or that it will work on every device. Game data is stored only on your phone: on Android it is not included in backups, and if you delete the game or change phones, your progress is lost.</p>
 <p>If the law of your country gives consumers a guarantee of conformity for digital content (for example, in the EU), that guarantee and the remedies under it remain; nothing in this section limits them.</p>
-<h2>12. Limitation of liability</h2>
+</section>
+<section class="sec" id="en-s12"><h2><span class="badge">12</span><span>Limitation of liability</span></h2>
 <p>To the extent permitted by applicable law, our total liability to you is limited to the amount you paid for the game in the last 12 months. To the same extent, we are not liable for indirect losses or lost profits. Nothing in these terms limits liability for intent and gross negligence, for harm to life and health caused by our fault, or any other liability that cannot be limited by law, and nothing takes away your mandatory consumer rights.</p>
-<h2>13. If you installed the game from the App Store</h2>
+</section>
+<section class="sec" id="en-s13"><h2><span class="badge">13</span><span>If you installed the game from the App Store</span></h2>
 <ul>
 <li>The license for the game from the App Store is governed by <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple's standard license agreement</a> (Licensed Application End User License Agreement). These terms supplement it. If they conflict, Apple's agreement prevails on license matters.</li>
 <li>You may use the game on Apple devices that you own or control, under the App Store usage rules (including "Family Sharing", where supported).</li>
@@ -241,33 +343,56 @@ Last updated: November 14, 2026</p>
 <li>You confirm that you are not located in a country subject to a U.S. government embargo or designated by the U.S. government as a "terrorist-supporting" country, and that you are not on any U.S. government list of prohibited parties.</li>
 <li>Apple and its subsidiaries are third-party beneficiaries of these terms: by accepting them, you give Apple the right to enforce them.</li>
 </ul>
-<h2>14. Changes to these terms</h2>
+</section>
+<section class="sec" id="en-s14"><h2><span class="badge">14</span><span>Changes to these terms</span></h2>
 <p>We change the terms only for clear reasons: the law or the stores' rules changed, features were added to or removed from the game, or an inaccuracy needs correcting. When the terms change, the last-updated date on this page changes. We will announce material changes in the app's update notes in the store at least 30 days before they take effect, except for changes the law urgently requires. If you keep using the game after that date, you accept the new terms. If you don't agree, stop using the game and cancel your subscription: the next period will not be charged.</p>
-<h2>15. Governing law and disputes</h2>
+</section>
+<section class="sec" id="en-s15"><h2><span class="badge">15</span><span>Governing law and disputes</span></h2>
 <ul>
 <li>These terms are governed by the law of the State of Israel. This does not take away the mandatory consumer protection given by the laws of the country where you live.</li>
 <li>You may go to the courts of your own country if its law gives you that right, or to a competent court in Israel. We do not restrict your choice of court.</li>
 <li>If something goes wrong, write to us. We will reply and try to resolve the matter within 30 days. This is not a required step before going to court. Payment and refund questions are handled by the store.</li>
 <li>If any provision of these terms is found invalid, the rest remain in force.</li>
 </ul>
-<h2>16. Contact</h2>
+</section>
+<section class="sec" id="en-s16"><h2><span class="badge">16</span><span>Contact</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#en">Terms of Use</a><a href="../privacy/#en">Privacy Policy</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Back to top</a></footer></div></div>
 </article>
-<article id="es" data-lang="es" lang="es">
-<h1>Términos de uso de Murashki</h1>
-<p>Entran en vigor: 14 de noviembre de 2026<br>
-Última actualización: 14 de noviembre de 2026</p>
-<h2>1. Qué es este documento</h2>
+<article data-lang="es" lang="es">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Términos de uso de Murashki</h1><div class="dates"><span>Entran en vigor: 14 de noviembre de 2026</span><span>Última actualización: 14 de noviembre de 2026</span></div><nav class="switch"><a href="../terms/#es" aria-current="page">Términos de uso</a><a href="../privacy/#es">Política de privacidad</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Contenido"><details open><summary>Contenido</summary><ol>
+<li><a href="#es-s1"><span class="n">1</span><span>Qué es este documento</span></a></li>
+<li><a href="#es-s2"><span class="n">2</span><span>Solo para adultos</span></a></li>
+<li><a href="#es-s3"><span class="n">3</span><span>Consentimiento y seguridad</span></a></li>
+<li><a href="#es-s4"><span class="n">4</span><span>Esto no es consejo médico ni psicológico</span></a></li>
+<li><a href="#es-s5"><span class="n">5</span><span>Responsabilidad por lo que hacen los jugadores</span></a></li>
+<li><a href="#es-s6"><span class="n">6</span><span>Packs de cartas propios</span></a></li>
+<li><a href="#es-s7"><span class="n">7</span><span>Juego a distancia</span></a></li>
+<li><a href="#es-s8"><span class="n">8</span><span>Compras, suscripción y reembolsos</span></a></li>
+<li><a href="#es-s9"><span class="n">9</span><span>Derechos sobre el juego</span></a></li>
+<li><a href="#es-s10"><span class="n">10</span><span>Cambios en el juego y fin del uso</span></a></li>
+<li><a href="#es-s11"><span class="n">11</span><span>Sin garantías</span></a></li>
+<li><a href="#es-s12"><span class="n">12</span><span>Limitación de responsabilidad</span></a></li>
+<li><a href="#es-s13"><span class="n">13</span><span>Si instalaste el juego desde App Store</span></a></li>
+<li><a href="#es-s14"><span class="n">14</span><span>Cambios en los términos</span></a></li>
+<li><a href="#es-s15"><span class="n">15</span><span>Ley aplicable y conflictos</span></a></li>
+<li><a href="#es-s16"><span class="n">16</span><span>Contacto</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="es-s1"><h2><span class="badge">1</span><span>Qué es este documento</span></h2>
 <p>Este es un acuerdo entre tú y Soverion Games, un desarrollador independiente de Israel («nosotros»), sobre el uso del juego Murashki. Al instalar el juego o jugar, aceptas estos términos. Si no estás de acuerdo con ellos, no uses el juego y elimínalo.</p>
 <p>Cómo trata el juego los datos se describe en la <a href="https://soveriongames.github.io/murashki/privacy">política de privacidad</a>. Si instalaste el juego desde una tienda de aplicaciones, también se te aplican las reglas de esa tienda.</p>
-<h2>2. Solo para adultos</h2>
+</section>
+<section class="sec" id="es-s2"><h2><span class="badge">2</span><span>Solo para adultos</span></h2>
 <ul>
 <li>Solo pueden jugar quienes tengan 18 años cumplidos, o más si en tu país la mayoría de edad llega más tarde.</li>
 <li>El juego contiene contenido explícito: retos y preguntas en texto sobre intimidad y sexualidad. En el juego no hay imágenes ni vídeos.</li>
 <li>Juega solo con una pareja adulta. No muestres el juego a menores de edad.</li>
 <li>No uses el juego donde la ley prohíba este tipo de contenido.</li>
 </ul>
-<h2>3. Consentimiento y seguridad</h2>
+</section>
+<section class="sec" id="es-s3"><h2><span class="badge">3</span><span>Consentimiento y seguridad</span></h2>
 <p>El juego solo propone retos en texto. Lo que hagáis lo decidís tú y tu pareja.</p>
 <ul>
 <li><strong>La participación es voluntaria.</strong> Haz cualquier cosa solo con el consentimiento claro de los dos. El consentimiento se puede retirar en cualquier momento, incluso en mitad de un reto.</li>
@@ -277,19 +402,24 @@ Last updated: November 14, 2026</p>
 <li>No hagas retos que puedan dañar la salud, la tuya, la de tu pareja o la de otras personas. Ten en cuenta tus límites, alergias y estado de salud.</li>
 <li>Cumple la ley: no involucres a terceros y no hagas nada íntimo donde otras personas puedan verte.</li>
 </ul>
-<h2>4. Esto no es consejo médico ni psicológico</h2>
+</section>
+<section class="sec" id="es-s4"><h2><span class="badge">4</span><span>Esto no es consejo médico ni psicológico</span></h2>
 <p>Murashki es entretenimiento. Los textos del juego no son asesoramiento médico, sexológico, psicológico ni jurídico y no sustituyen a un profesional. Para dudas de salud, acude a un médico. Si en tu relación hay violencia o miedo, contacta con un servicio de ayuda de tu país.</p>
-<h2>5. Responsabilidad por lo que hacen los jugadores</h2>
+</section>
+<section class="sec" id="es-s5"><h2><span class="badge">5</span><span>Responsabilidad por lo que hacen los jugadores</span></h2>
 <p>El juego no vigila ni puede controlar lo que ocurre entre los jugadores. Eres responsable de tus actos y de sus consecuencias. Dentro de los límites que permita la ley aplicable, no respondemos por daños, lesiones, perjuicios ni consecuencias de lo que los jugadores hagan entre sí. Esto no limita la responsabilidad que la ley no permite limitar (consulta la sección 12).</p>
-<h2>6. Packs de cartas propios</h2>
+</section>
+<section class="sec" id="es-s6"><h2><span class="badge">6</span><span>Packs de cartas propios</span></h2>
 <ul>
 <li>Los textos de tus packs los escribes tú. Se guardan solo en tu teléfono. Nosotros no los vemos, no los revisamos ni los moderamos.</li>
 <li>Eres responsable del contenido de tus packs. No puedes usarlos para crear, subir ni distribuir nada que infrinja la ley o los derechos de otras personas: por ejemplo, contenido con menores de edad, incitación a la violencia o a actos sin consentimiento, o textos ajenos sin permiso del autor.</li>
 <li>Carga packs desde archivos solo de fuentes en las que confíes. Si guardas un pack en un archivo y se lo das a alguien, esa entrega es responsabilidad tuya.</li>
 </ul>
-<h2>7. Juego a distancia</h2>
+</section>
+<section class="sec" id="es-s7"><h2><span class="badge">7</span><span>Juego a distancia</span></h2>
 <p>El código de turno se lo pasas tú a tu pareja, mediante una aplicación de mensajería de terceros u otro medio que elijas. A ese envío se le aplican las reglas de ese servicio. Nosotros no recibimos nada y no respondemos de la entrega, la conservación ni la lectura de los mensajes en servicios ajenos. Envía el código solo a quien haya aceptado jugar contigo.</p>
-<h2>8. Compras, suscripción y reembolsos</h2>
+</section>
+<section class="sec" id="es-s8"><h2><span class="badge">8</span><span>Compras, suscripción y reembolsos</span></h2>
 <ul>
 <li>Una parte del juego es gratuita y funciona sin compras ni suscripción. El resto se desbloquea con <strong>«Todos los niveles para siempre»</strong> (compra única de la versión completa) o con una <strong>suscripción mensual</strong>: ambas abren lo mismo. El precio en tu moneda se muestra en la tienda antes de pagar.</li>
 <li>Las compras se hacen solo a través de la tienda de aplicaciones (Google Play o App Store) y según sus reglas. Los datos de pago los recibe la tienda, no nosotros.</li>
@@ -304,14 +434,16 @@ Last updated: November 14, 2026</p>
 <li><strong>Los códigos promocionales</strong> se emiten solo con las herramientas de las tiendas (códigos promocionales de Google Play, códigos de oferta de Apple) y se rigen por sus reglas. No se pueden canjear por dinero.</li>
 <li><strong>Los «Corazones»</strong> se ganan jugando y no se venden. No son dinero: no tienen valor monetario y no se pueden canjear, vender ni transferir.</li>
 </ul>
-<h2>9. Derechos sobre el juego</h2>
+</section>
+<section class="sec" id="es-s9"><h2><span class="badge">9</span><span>Derechos sobre el juego</span></h2>
 <ul>
 <li>El juego, los textos de las cartas, las escenas y otros textos, el diseño, las ilustraciones, la música, el nombre y el logotipo pertenecen a Soverion Games o se usan con licencia. Las fuentes tipográficas y otros materiales de terceros se distribuyen con sus propias licencias.</li>
 <li>Te concedemos un derecho personal, no comercial, no exclusivo e intransferible a usar el juego en tus dispositivos según estos términos y las reglas de la tienda.</li>
 <li>No está permitido: revender el juego o su contenido; copiar y publicar los textos de las cartas y sus colecciones; distribuir copias modificadas del juego; eludir las compras; ni descompilar el código del juego, salvo en los casos que la ley permita expresamente.</li>
 <li>Las citas breves en reseñas y análisis son bienvenidas.</li>
 </ul>
-<h2>10. Cambios en el juego y fin del uso</h2>
+</section>
+<section class="sec" id="es-s10"><h2><span class="badge">10</span><span>Cambios en el juego y fin del uso</span></h2>
 <ul>
 <li>Puedes dejar de jugar y eliminar el juego en cualquier momento. La suscripción se cancela aparte, en la tienda.</li>
 <li>Podemos cambiar el juego, añadir y quitar funciones, o dejar de desarrollarlo o distribuirlo. Un juego ya instalado funciona sin internet mientras sea compatible con tu dispositivo.</li>
@@ -319,12 +451,15 @@ Last updated: November 14, 2026</p>
 <li>Al usar el juego, cumples también los términos de los servicios de terceros necesarios para ello: la tienda de aplicaciones, el operador de telefonía y la aplicación de mensajería.</li>
 <li>Si incumples de forma grave estos términos (por ejemplo, si empiezas a vender o publicar el contenido del juego), tu derecho a usar el juego termina. Los derechos que te dan la ley y las reglas de la tienda respecto a las compras se mantienen.</li>
 </ul>
-<h2>11. Sin garantías</h2>
+</section>
+<section class="sec" id="es-s11"><h2><span class="badge">11</span><span>Sin garantías</span></h2>
 <p>Nos esforzamos para que el juego funcione bien, pero lo ofrecemos «tal cual». No prometemos que no tenga errores ni que funcione en cualquier dispositivo. Los datos del juego se guardan solo en el teléfono: en Android no entran en la copia de seguridad, y si eliminas el juego o cambias de teléfono, el progreso se pierde.</p>
 <p>Si la ley de tu país da a los consumidores una garantía de conformidad de los contenidos digitales (por ejemplo, en la UE), esa garantía y los remedios que de ella se derivan se mantienen; nada de esta sección los limita.</p>
-<h2>12. Limitación de responsabilidad</h2>
+</section>
+<section class="sec" id="es-s12"><h2><span class="badge">12</span><span>Limitación de responsabilidad</span></h2>
 <p>Dentro de los límites que permita la ley aplicable, nuestra responsabilidad total ante ti queda limitada a la cantidad que hayas pagado por el juego en los últimos 12 meses. En esos mismos límites, no respondemos de daños indirectos ni de lucro cesante. Nada en estos términos limita la responsabilidad por dolo y negligencia grave, por daños a la vida y la salud causados por nuestra culpa, ni cualquier otra responsabilidad que la ley no permita limitar, ni te priva de tus derechos obligatorios como consumidor.</p>
-<h2>13. Si instalaste el juego desde App Store</h2>
+</section>
+<section class="sec" id="es-s13"><h2><span class="badge">13</span><span>Si instalaste el juego desde App Store</span></h2>
 <ul>
 <li>La licencia del juego descargado de App Store se rige por el <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">contrato de licencia estándar de Apple</a> (Licensed Application End User License Agreement). Estos términos lo complementan. Si difieren en algo, en cuestiones de licencia prevalece el contrato de Apple.</li>
 <li>Puedes usar el juego en dispositivos Apple de tu propiedad o que controles, según las reglas de uso de App Store (incluido «En familia», si está disponible).</li>
@@ -335,33 +470,56 @@ Last updated: November 14, 2026</p>
 <li>Confirmas que no te encuentras en un país sujeto a un embargo del gobierno de EE. UU. ni que este considere promotor del terrorismo, y que no figuras en ninguna lista del gobierno de EE. UU. de personas con las que se prohíben las transacciones.</li>
 <li>Apple y sus filiales son terceros beneficiarios de estos términos: al aceptarlos, das a Apple el derecho a exigir su cumplimiento.</li>
 </ul>
-<h2>14. Cambios en los términos</h2>
+</section>
+<section class="sec" id="es-s14"><h2><span class="badge">14</span><span>Cambios en los términos</span></h2>
 <p>Cambiamos los términos solo por motivos claros: ha cambiado la ley o las reglas de las tiendas, han aparecido o desaparecido funciones del juego, o hay que corregir una imprecisión. Cuando los términos cambian, cambia la fecha de última actualización en esta página. Los cambios importantes los comunicaremos en la descripción de la actualización de la app en la tienda con al menos 30 días de antelación a su entrada en vigor, salvo los cambios que la ley exija con urgencia. Si sigues usando el juego pasado ese plazo, aceptas los nuevos términos. Si no estás de acuerdo, deja de usar el juego y cancela la suscripción: el siguiente periodo no se cobrará.</p>
-<h2>15. Ley aplicable y conflictos</h2>
+</section>
+<section class="sec" id="es-s15"><h2><span class="badge">15</span><span>Ley aplicable y conflictos</span></h2>
 <ul>
 <li>Estos términos se rigen por el derecho del Estado de Israel. Esto no te priva de la protección obligatoria del consumidor que te dan las leyes del país donde vives.</li>
 <li>Puedes acudir a los tribunales de tu país si su ley te da ese derecho, o a un tribunal competente de Israel. No limitamos tu elección de tribunal.</li>
 <li>Si algo sale mal, escríbenos: te responderemos e intentaremos resolverlo en un plazo de 30 días. Este no es un paso obligatorio antes de acudir a los tribunales. Las cuestiones de pago y reembolso las resuelve la tienda.</li>
 <li>Si alguna disposición de los términos resultara inválida, las demás siguen en vigor.</li>
 </ul>
-<h2>16. Contacto</h2>
+</section>
+<section class="sec" id="es-s16"><h2><span class="badge">16</span><span>Contacto</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#es">Términos de uso</a><a href="../privacy/#es">Política de privacidad</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Volver arriba</a></footer></div></div>
 </article>
-<article id="pt-BR" data-lang="pt-BR" lang="pt-BR">
-<h1>Termos de Uso de Murashki</h1>
-<p>Em vigor desde: 14 de novembro de 2026<br>
-Última atualização: 14 de novembro de 2026</p>
-<h2>1. Do que se trata este documento</h2>
+<article data-lang="pt-BR" lang="pt-BR">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Termos de Uso de Murashki</h1><div class="dates"><span>Em vigor desde: 14 de novembro de 2026</span><span>Última atualização: 14 de novembro de 2026</span></div><nav class="switch"><a href="../terms/#pt-BR" aria-current="page">Termos de Uso</a><a href="../privacy/#pt-BR">Política de Privacidade</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Conteúdo"><details open><summary>Conteúdo</summary><ol>
+<li><a href="#pt-BR-s1"><span class="n">1</span><span>Do que se trata este documento</span></a></li>
+<li><a href="#pt-BR-s2"><span class="n">2</span><span>Somente para adultos</span></a></li>
+<li><a href="#pt-BR-s3"><span class="n">3</span><span>Consentimento e segurança</span></a></li>
+<li><a href="#pt-BR-s4"><span class="n">4</span><span>Isto não é aconselhamento médico ou psicológico</span></a></li>
+<li><a href="#pt-BR-s5"><span class="n">5</span><span>Responsabilidade pelo que os jogadores fazem</span></a></li>
+<li><a href="#pt-BR-s6"><span class="n">6</span><span>Pacotes de cartas próprios</span></a></li>
+<li><a href="#pt-BR-s7"><span class="n">7</span><span>Jogo à distância</span></a></li>
+<li><a href="#pt-BR-s8"><span class="n">8</span><span>Compras, assinatura e reembolsos</span></a></li>
+<li><a href="#pt-BR-s9"><span class="n">9</span><span>Direitos sobre o jogo</span></a></li>
+<li><a href="#pt-BR-s10"><span class="n">10</span><span>Mudanças no jogo e encerramento</span></a></li>
+<li><a href="#pt-BR-s11"><span class="n">11</span><span>Sem garantias</span></a></li>
+<li><a href="#pt-BR-s12"><span class="n">12</span><span>Limitação de responsabilidade</span></a></li>
+<li><a href="#pt-BR-s13"><span class="n">13</span><span>Se você instalou o jogo pela App Store</span></a></li>
+<li><a href="#pt-BR-s14"><span class="n">14</span><span>Mudanças nos termos</span></a></li>
+<li><a href="#pt-BR-s15"><span class="n">15</span><span>Lei aplicável e disputas</span></a></li>
+<li><a href="#pt-BR-s16"><span class="n">16</span><span>Contato</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="pt-BR-s1"><h2><span class="badge">1</span><span>Do que se trata este documento</span></h2>
 <p>Este é um acordo entre você e a Soverion Games, desenvolvedora independente de Israel (daqui em diante, "nós"), sobre o uso do jogo Murashki. Ao instalar ou jogar o jogo, você aceita estes termos. Se não concordar com eles, não use o jogo e desinstale-o.</p>
 <p>Como o jogo lida com dados está descrito na <a href="https://soveriongames.github.io/murashki/privacy">política de privacidade</a>. Se você instalou o jogo por uma loja de aplicativos, as regras dessa loja também se aplicam a você.</p>
-<h2>2. Somente para adultos</h2>
+</section>
+<section class="sec" id="pt-BR-s2"><h2><span class="badge">2</span><span>Somente para adultos</span></h2>
 <ul>
 <li>Só pode jogar quem tem 18 anos ou mais — ou mais, se na sua região a maioridade começa depois.</li>
 <li>O jogo tem conteúdo explícito: tarefas e perguntas em texto sobre intimidade e sexualidade. Não há imagens nem vídeos no jogo.</li>
 <li>Jogue apenas com um(a) parceiro(a) adulto(a). Não mostre o jogo a menores de idade.</li>
 <li>Não use o jogo onde esse tipo de conteúdo é proibido por lei.</li>
 </ul>
-<h2>3. Consentimento e segurança</h2>
+</section>
+<section class="sec" id="pt-BR-s3"><h2><span class="badge">3</span><span>Consentimento e segurança</span></h2>
 <p>O jogo apenas sugere tarefas em texto. O que fazer é decisão sua e do seu parceiro ou da sua parceira.</p>
 <ul>
 <li><strong>A participação é voluntária.</strong> Qualquer ação só com o consentimento claro de ambos. O consentimento pode ser retirado a qualquer momento, até no meio de uma tarefa.</li>
@@ -371,19 +529,24 @@ Last updated: November 14, 2026</p>
 <li>Não faça tarefas que possam prejudicar a saúde — a sua, a do parceiro ou a de outras pessoas. Leve em conta seus limites, alergias e seu bem-estar.</li>
 <li>Respeite a lei: não envolva terceiros e não faça nada íntimo em lugares onde outras pessoas possam ver.</li>
 </ul>
-<h2>4. Isto não é aconselhamento médico ou psicológico</h2>
+</section>
+<section class="sec" id="pt-BR-s4"><h2><span class="badge">4</span><span>Isto não é aconselhamento médico ou psicológico</span></h2>
 <p>Murashki é entretenimento. Os textos do jogo não são aconselhamento médico, sexológico, psicológico nem jurídico e não substituem um profissional. Para dúvidas de saúde, procure um médico. Se há violência ou medo no seu relacionamento, procure um serviço de ajuda do seu país.</p>
-<h2>5. Responsabilidade pelo que os jogadores fazem</h2>
+</section>
+<section class="sec" id="pt-BR-s5"><h2><span class="badge">5</span><span>Responsabilidade pelo que os jogadores fazem</span></h2>
 <p>O jogo não acompanha o que acontece entre os jogadores e não pode controlar isso. Você é responsável pelos seus atos e pelas consequências deles. Dentro do que a lei aplicável permite, não respondemos por danos, lesões, prejuízos e consequências do que os jogadores fazem entre si. Isso não limita a responsabilidade que, por lei, não pode ser limitada (veja a seção 12).</p>
-<h2>6. Pacotes de cartas próprios</h2>
+</section>
+<section class="sec" id="pt-BR-s6"><h2><span class="badge">6</span><span>Pacotes de cartas próprios</span></h2>
 <ul>
 <li>Os textos dos seus pacotes são escritos por você. Eles ficam guardados apenas no seu celular. Nós não os vemos, não os verificamos e não os moderamos.</li>
 <li>Você é responsável pelo conteúdo dos seus pacotes. Não é permitido criar, carregar nem distribuir com eles nada que viole a lei ou direitos de terceiros: por exemplo, conteúdo envolvendo menores de idade, incitação à violência ou a atos sem consentimento, ou textos de outras pessoas sem a permissão do autor.</li>
 <li>Carregue pacotes de arquivos apenas de fontes em que você confia. Se você salvar um pacote em um arquivo e entregá-lo a alguém, a responsabilidade por essa entrega é sua.</li>
 </ul>
-<h2>7. Jogo à distância</h2>
+</section>
+<section class="sec" id="pt-BR-s7"><h2><span class="badge">7</span><span>Jogo à distância</span></h2>
 <p>Você mesmo envia o código da vez ao parceiro ou à parceira, por um mensageiro de terceiros ou outro meio que escolher. As regras desse serviço se aplicam ao envio. Não recebemos nada e não respondemos pela entrega, pela guarda ou pela leitura das mensagens em serviços de terceiros. Envie o código somente a quem concordou em jogar com você.</p>
-<h2>8. Compras, assinatura e reembolsos</h2>
+</section>
+<section class="sec" id="pt-BR-s8"><h2><span class="badge">8</span><span>Compras, assinatura e reembolsos</span></h2>
 <ul>
 <li>Parte do jogo é gratuita e funciona sem compras e sem assinatura. O restante é liberado por <strong>"Todos os níveis para sempre"</strong> (compra única da versão completa) ou por uma <strong>assinatura mensal</strong>: as duas liberam o mesmo conteúdo. O preço na sua moeda é mostrado na loja antes do pagamento.</li>
 <li>As compras são feitas somente pela loja de aplicativos (Google Play ou App Store), conforme as regras dela. Quem recebe os dados de pagamento é a loja, não nós.</li>
@@ -398,14 +561,16 @@ Last updated: November 14, 2026</p>
 <li><strong>Os códigos promocionais</strong> são emitidos somente pelos meios das lojas (códigos promocionais do Google Play, códigos de oferta da Apple) e seguem as regras delas. Não podem ser trocados por dinheiro.</li>
 <li><strong>Os "Corações"</strong> são ganhos jogando e não são vendidos. Não são dinheiro: não têm valor monetário e não podem ser trocados, vendidos nem transferidos.</li>
 </ul>
-<h2>9. Direitos sobre o jogo</h2>
+</section>
+<section class="sec" id="pt-BR-s9"><h2><span class="badge">9</span><span>Direitos sobre o jogo</span></h2>
 <ul>
 <li>O jogo, os textos das cartas, as cenas e outros textos, o design, as ilustrações, a música, o nome e o logotipo pertencem à Soverion Games ou são usados sob licença. Fontes e outros materiais de terceiros são distribuídos sob as licenças próprias deles.</li>
 <li>Damos a você o direito pessoal, não comercial, não exclusivo e intransferível de usar o jogo nos seus dispositivos, conforme estes termos e as regras da loja.</li>
 <li>Não é permitido: revender o jogo ou o conteúdo dele; copiar e publicar os textos das cartas e coletâneas deles; distribuir cópias modificadas do jogo; contornar as compras; fazer engenharia reversa do código do jogo, exceto nos casos que a lei permitir expressamente.</li>
 <li>Citações curtas em avaliações e resenhas — fique à vontade.</li>
 </ul>
-<h2>10. Mudanças no jogo e encerramento</h2>
+</section>
+<section class="sec" id="pt-BR-s10"><h2><span class="badge">10</span><span>Mudanças no jogo e encerramento</span></h2>
 <ul>
 <li>Você pode parar de jogar e desinstalar o jogo a qualquer momento. Cancele a assinatura separadamente, na loja.</li>
 <li>Podemos mudar o jogo, adicionar e remover funções, encerrar seu desenvolvimento ou sua distribuição. O jogo já instalado funciona sem internet enquanto for compatível com o seu dispositivo.</li>
@@ -413,12 +578,15 @@ Last updated: November 14, 2026</p>
 <li>Ao usar o jogo, você também respeita os termos dos serviços de terceiros necessários para isso: a loja de aplicativos, a operadora de telefonia, o mensageiro.</li>
 <li>Se você violar estes termos de forma grave (por exemplo, passar a vender ou publicar o conteúdo do jogo), seu direito de usar o jogo termina. Os direitos que a lei e as regras da loja garantem a você sobre as compras permanecem.</li>
 </ul>
-<h2>11. Sem garantias</h2>
+</section>
+<section class="sec" id="pt-BR-s11"><h2><span class="badge">11</span><span>Sem garantias</span></h2>
 <p>Nos esforçamos para que o jogo funcione bem, mas o fornecemos "no estado em que se encontra". Não prometemos que ele não terá erros nem que funcionará em qualquer dispositivo. Os dados do jogo ficam apenas no celular: no Android, eles não entram no backup, e, se você desinstalar o jogo ou trocar de celular, o progresso é perdido.</p>
 <p>Se a lei do seu país dá ao consumidor uma garantia de conformidade do conteúdo digital (por exemplo, na UE), essa garantia e os meios de defesa dela continuam valendo; nada nesta seção os limita.</p>
-<h2>12. Limitação de responsabilidade</h2>
+</section>
+<section class="sec" id="pt-BR-s12"><h2><span class="badge">12</span><span>Limitação de responsabilidade</span></h2>
 <p>Dentro do que a lei aplicável permite, nossa responsabilidade total perante você fica limitada ao valor que você pagou pelo jogo nos últimos 12 meses. Dentro desses mesmos limites, não respondemos por danos indiretos nem por lucros cessantes. Nada nestes termos limita a responsabilidade por dolo e culpa grave, por danos à vida e à saúde causados por nós e qualquer outra responsabilidade que a lei não permita limitar, nem retira de você os direitos obrigatórios de consumidor.</p>
-<h2>13. Se você instalou o jogo pela App Store</h2>
+</section>
+<section class="sec" id="pt-BR-s13"><h2><span class="badge">13</span><span>Se você instalou o jogo pela App Store</span></h2>
 <ul>
 <li>A licença do jogo pela App Store é regida pelo <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">contrato de licença padrão da Apple</a> (Licensed Application End User License Agreement). Estes termos o complementam. Se houver divergência, em questões de licença vale o contrato da Apple.</li>
 <li>Você pode usar o jogo em dispositivos Apple que sejam seus ou que você controle, conforme as regras de uso da App Store (inclusive o "Compartilhamento Familiar", se houver suporte).</li>
@@ -429,33 +597,56 @@ Last updated: November 14, 2026</p>
 <li>Você confirma que não está em um país sujeito a embargo dos EUA ou que o governo dos EUA considere apoiador do terrorismo, e que não consta nas listas de pessoas com quem o governo dos EUA proíbe negócios.</li>
 <li>A Apple e suas subsidiárias são terceiras beneficiárias destes termos: ao aceitá-los, você dá à Apple o direito de exigir o cumprimento deles.</li>
 </ul>
-<h2>14. Mudanças nos termos</h2>
+</section>
+<section class="sec" id="pt-BR-s14"><h2><span class="badge">14</span><span>Mudanças nos termos</span></h2>
 <p>Só mudamos os termos por motivos compreensíveis: a lei ou as regras das lojas mudaram, o jogo ganhou ou perdeu funções, ou é preciso corrigir uma imprecisão. Quando os termos mudam, a data da última atualização nesta página é alterada. Avisaremos sobre mudanças importantes na descrição da atualização do aplicativo na loja com pelo menos 30 dias de antecedência do início da vigência — exceto mudanças que a lei exija com urgência. Se você continuar usando o jogo depois desse prazo, aceita os novos termos. Se não concordar, pare de usar o jogo e cancele a assinatura: o período seguinte não será cobrado.</p>
-<h2>15. Lei aplicável e disputas</h2>
+</section>
+<section class="sec" id="pt-BR-s15"><h2><span class="badge">15</span><span>Lei aplicável e disputas</span></h2>
 <ul>
 <li>Estes termos são regidos pelo direito do Estado de Israel. Isso não retira de você a proteção obrigatória de consumidor que as leis do país onde você mora lhe dão.</li>
 <li>Você pode recorrer à justiça do seu país, se a lei dele lhe der esse direito, ou ao tribunal competente de Israel. Não limitamos a sua escolha de foro.</li>
 <li>Se algo der errado, escreva para nós — responderemos e tentaremos resolver a questão em até 30 dias. Isso não é uma etapa obrigatória antes de recorrer à justiça. Questões de pagamento e reembolso são resolvidas pela loja.</li>
 <li>Se alguma disposição dos termos for considerada inválida, as demais continuam em vigor.</li>
 </ul>
-<h2>16. Contato</h2>
+</section>
+<section class="sec" id="pt-BR-s16"><h2><span class="badge">16</span><span>Contato</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#pt-BR">Termos de Uso</a><a href="../privacy/#pt-BR">Política de Privacidade</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Voltar ao topo</a></footer></div></div>
 </article>
-<article id="de" data-lang="de" lang="de">
-<h1>Nutzungsbedingungen für Murashki</h1>
-<p>Gültig ab: 14. November 2026<br>
-Zuletzt aktualisiert: 14. November 2026</p>
-<h2>1. Worum es in diesem Dokument geht</h2>
+<article data-lang="de" lang="de">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Nutzungsbedingungen für Murashki</h1><div class="dates"><span>Gültig ab: 14. November 2026</span><span>Zuletzt aktualisiert: 14. November 2026</span></div><nav class="switch"><a href="../terms/#de" aria-current="page">Nutzungsbedingungen</a><a href="../privacy/#de">Datenschutzerklärung</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Inhalt"><details open><summary>Inhalt</summary><ol>
+<li><a href="#de-s1"><span class="n">1</span><span>Worum es in diesem Dokument geht</span></a></li>
+<li><a href="#de-s2"><span class="n">2</span><span>Nur für Erwachsene</span></a></li>
+<li><a href="#de-s3"><span class="n">3</span><span>Einvernehmen und Sicherheit</span></a></li>
+<li><a href="#de-s4"><span class="n">4</span><span>Das ist kein ärztlicher oder psychologischer Rat</span></a></li>
+<li><a href="#de-s5"><span class="n">5</span><span>Verantwortung für das Handeln der Spielenden</span></a></li>
+<li><a href="#de-s6"><span class="n">6</span><span>Eigene Kartenpakete</span></a></li>
+<li><a href="#de-s7"><span class="n">7</span><span>Spielen auf Distanz</span></a></li>
+<li><a href="#de-s8"><span class="n">8</span><span>Käufe, Abo und Rückerstattungen</span></a></li>
+<li><a href="#de-s9"><span class="n">9</span><span>Rechte am Spiel</span></a></li>
+<li><a href="#de-s10"><span class="n">10</span><span>Änderungen am Spiel und Beendigung</span></a></li>
+<li><a href="#de-s11"><span class="n">11</span><span>Keine Gewähr</span></a></li>
+<li><a href="#de-s12"><span class="n">12</span><span>Haftungsbeschränkung</span></a></li>
+<li><a href="#de-s13"><span class="n">13</span><span>Wenn du das Spiel über den App Store installiert hast</span></a></li>
+<li><a href="#de-s14"><span class="n">14</span><span>Änderungen der Bedingungen</span></a></li>
+<li><a href="#de-s15"><span class="n">15</span><span>Recht und Streitigkeiten</span></a></li>
+<li><a href="#de-s16"><span class="n">16</span><span>Kontakt</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="de-s1"><h2><span class="badge">1</span><span>Worum es in diesem Dokument geht</span></h2>
 <p>Dies ist eine Vereinbarung zwischen dir und Soverion Games, einem unabhängigen Entwickler aus Israel (im Folgenden „wir“), über die Nutzung des Spiels Murashki. Wenn du das Spiel installierst oder spielst, akzeptierst du diese Bedingungen. Wenn du nicht einverstanden bist, nutze das Spiel nicht und deinstalliere es.</p>
 <p>Wie das Spiel mit Daten umgeht, steht in der <a href="https://soveriongames.github.io/murashki/privacy">Datenschutzerklärung</a>. Wenn du das Spiel über einen App-Store installiert hast, gelten für dich außerdem die Regeln dieses Stores.</p>
-<h2>2. Nur für Erwachsene</h2>
+</section>
+<section class="sec" id="de-s2"><h2><span class="badge">2</span><span>Nur für Erwachsene</span></h2>
 <ul>
 <li>Spielen darf nur, wer mindestens 18 Jahre alt ist – oder älter, wenn die Volljährigkeit in deinem Land später eintritt.</li>
 <li>Das Spiel enthält explizite Inhalte: Textaufgaben und Fragen zu Intimität und Sexualität. Bilder und Videos gibt es im Spiel nicht.</li>
 <li>Spiele nur mit einer erwachsenen Partnerin oder einem erwachsenen Partner. Zeige das Spiel keinen Minderjährigen.</li>
 <li>Nutze das Spiel nicht dort, wo solche Inhalte gesetzlich verboten sind.</li>
 </ul>
-<h2>3. Einvernehmen und Sicherheit</h2>
+</section>
+<section class="sec" id="de-s3"><h2><span class="badge">3</span><span>Einvernehmen und Sicherheit</span></h2>
 <p>Das Spiel schlägt nur Aufgaben in Textform vor. Was ihr tut, entscheidet ihr beide.</p>
 <ul>
 <li><strong>Die Teilnahme ist freiwillig.</strong> Jede Handlung nur mit dem klaren Einverständnis beider. Das Einverständnis kann jederzeit zurückgenommen werden, auch mitten in einer Aufgabe.</li>
@@ -465,19 +656,24 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Führe keine Aufgaben aus, die der Gesundheit schaden können – deiner, der deiner Partnerin oder deines Partners oder anderer Menschen. Berücksichtige deine Grenzen, Allergien und dein Befinden.</li>
 <li>Halte dich an das Gesetz: Beziehe keine Außenstehenden ein und tu nichts Intimes dort, wo andere euch sehen können.</li>
 </ul>
-<h2>4. Das ist kein ärztlicher oder psychologischer Rat</h2>
+</section>
+<section class="sec" id="de-s4"><h2><span class="badge">4</span><span>Das ist kein ärztlicher oder psychologischer Rat</span></h2>
 <p>Murashki ist Unterhaltung. Die Texte des Spiels sind keine medizinische, sexualtherapeutische, psychologische oder rechtliche Beratung und ersetzen keine Fachperson. Bei Gesundheitsfragen wende dich an eine Ärztin oder einen Arzt. Wenn es in deiner Beziehung Gewalt oder Angst gibt, wende dich an eine Hilfsstelle in deinem Land.</p>
-<h2>5. Verantwortung für das Handeln der Spielenden</h2>
+</section>
+<section class="sec" id="de-s5"><h2><span class="badge">5</span><span>Verantwortung für das Handeln der Spielenden</span></h2>
 <p>Das Spiel überwacht nicht, was zwischen den Spielenden passiert, und kann es auch nicht kontrollieren. Du bist selbst für dein Handeln und dessen Folgen verantwortlich. Soweit das anwendbare Recht es zulässt, haften wir nicht für Schäden, Verletzungen, Verluste und Folgen dessen, was Spielende miteinander tun. Das schränkt keine Haftung ein, die sich gesetzlich nicht einschränken lässt (siehe Abschnitt 12).</p>
-<h2>6. Eigene Kartenpakete</h2>
+</section>
+<section class="sec" id="de-s6"><h2><span class="badge">6</span><span>Eigene Kartenpakete</span></h2>
 <ul>
 <li>Die Texte deiner eigenen Pakete schreibst du. Sie werden nur auf deinem Handy gespeichert. Wir sehen sie nicht, prüfen sie nicht und moderieren sie nicht.</li>
 <li>Für den Inhalt deiner Pakete bist du verantwortlich. Du darfst damit nichts erstellen, hochladen oder verbreiten, was gegen Gesetze oder Rechte anderer verstößt: zum Beispiel Inhalte mit Minderjährigen, Aufrufe zu Gewalt oder zu Handlungen ohne Einverständnis, fremde Texte ohne Erlaubnis der Urheberin oder des Urhebers.</li>
 <li>Lade Pakete aus Dateien nur aus Quellen, denen du vertraust. Wenn du ein Paket in einer Datei speicherst und an jemanden weitergibst, bist du für diese Weitergabe verantwortlich.</li>
 </ul>
-<h2>7. Spielen auf Distanz</h2>
+</section>
+<section class="sec" id="de-s7"><h2><span class="badge">7</span><span>Spielen auf Distanz</span></h2>
 <p>Den Zugcode gibst du selbst an deine Partnerin oder deinen Partner weiter, über einen Messenger eines Drittanbieters oder einen anderen Weg deiner Wahl. Für die Übermittlung gelten die Regeln dieses Dienstes. Wir erhalten nichts und haften nicht für Zustellung, Aufbewahrung und Lesen von Nachrichten in fremden Diensten. Sende den Code nur an jemanden, der zugestimmt hat, mit dir zu spielen.</p>
-<h2>8. Käufe, Abo und Rückerstattungen</h2>
+</section>
+<section class="sec" id="de-s8"><h2><span class="badge">8</span><span>Käufe, Abo und Rückerstattungen</span></h2>
 <ul>
 <li>Ein Teil des Spiels ist kostenlos und funktioniert ohne Käufe und ohne Abo. Der Rest wird mit <strong>„Alle Stufen für immer“</strong> (Einmalkauf der Vollversion) oder mit einem <strong>Monatsabo</strong> freigeschaltet: Beide schalten dasselbe frei. Der Preis in deiner Währung wird vor der Zahlung im Store angezeigt.</li>
 <li>Käufe laufen ausschließlich über den App-Store (Google Play oder App Store) nach dessen Regeln. Die Zahlungsdaten erhält der Store, nicht wir.</li>
@@ -492,14 +688,16 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li><strong>Promocodes</strong> werden nur über die Mittel der Stores ausgegeben (Promocodes von Google Play, Angebotscodes von Apple) und gelten nach deren Regeln. Sie lassen sich nicht in Geld umtauschen.</li>
 <li><strong>„Herzen“</strong> verdienst du durchs Spielen, sie werden nicht verkauft. Sie sind kein Geld: Sie haben keinen Geldwert und lassen sich weder tauschen noch verkaufen oder übertragen.</li>
 </ul>
-<h2>9. Rechte am Spiel</h2>
+</section>
+<section class="sec" id="de-s9"><h2><span class="badge">9</span><span>Rechte am Spiel</span></h2>
 <ul>
 <li>Das Spiel, die Kartentexte, Szenen und andere Texte, die Gestaltung, Illustrationen, Musik, der Name und das Logo gehören Soverion Games oder werden unter Lizenz verwendet. Schriften und andere Materialien von Dritten unterliegen ihren eigenen Lizenzen.</li>
 <li>Wir räumen dir das persönliche, nicht kommerzielle, nicht ausschließliche und nicht übertragbare Recht ein, das Spiel auf deinen Geräten nach diesen Bedingungen und den Regeln des Stores zu nutzen.</li>
 <li>Nicht erlaubt sind: das Spiel oder seine Inhalte weiterzuverkaufen; Kartentexte und Zusammenstellungen davon zu kopieren und zu veröffentlichen; veränderte Kopien des Spiels zu verbreiten; Käufe zu umgehen; den Code des Spiels zu zerlegen, außer in Fällen, die das Gesetz ausdrücklich erlaubt.</li>
 <li>Kurze Zitate in Bewertungen und Rezensionen – gern.</li>
 </ul>
-<h2>10. Änderungen am Spiel und Beendigung</h2>
+</section>
+<section class="sec" id="de-s10"><h2><span class="badge">10</span><span>Änderungen am Spiel und Beendigung</span></h2>
 <ul>
 <li>Du kannst jederzeit aufhören zu spielen und das Spiel deinstallieren. Das Abo kündigst du separat im Store.</li>
 <li>Wir dürfen das Spiel ändern, Funktionen hinzufügen und entfernen sowie die Entwicklung oder den Vertrieb einstellen. Ein bereits installiertes Spiel funktioniert ohne Internet, solange es mit deinem Gerät kompatibel ist.</li>
@@ -507,12 +705,15 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Wenn du das Spiel nutzt, hältst du auch die Bedingungen der dafür nötigen Drittdienste ein: des App-Stores, des Mobilfunkanbieters, des Messengers.</li>
 <li>Wenn du diese Bedingungen erheblich verletzt (zum Beispiel Inhalte des Spiels verkaufst oder veröffentlichst), endet dein Recht, das Spiel zu nutzen. Rechte, die dir Gesetz und Store-Regeln bei Käufen einräumen, bleiben dabei bestehen.</li>
 </ul>
-<h2>11. Keine Gewähr</h2>
+</section>
+<section class="sec" id="de-s11"><h2><span class="badge">11</span><span>Keine Gewähr</span></h2>
 <p>Wir geben uns Mühe, dass das Spiel gut läuft, stellen es aber „wie besehen“ zur Verfügung. Wir versprechen nicht, dass es fehlerfrei ist oder auf jedem Gerät läuft. Die Spieldaten liegen nur auf dem Handy: Unter Android sind sie nicht in der Sicherung enthalten, und beim Deinstallieren des Spiels oder beim Wechsel des Handys geht der Fortschritt verloren.</p>
 <p>Wenn das Recht deines Landes Verbrauchern eine Gewährleistung für die Vertragsmäßigkeit digitaler Inhalte gibt (zum Beispiel in der EU), bleiben diese Gewährleistung und die Rechtsbehelfe daraus bestehen; nichts in diesem Abschnitt schränkt sie ein.</p>
-<h2>12. Haftungsbeschränkung</h2>
+</section>
+<section class="sec" id="de-s12"><h2><span class="badge">12</span><span>Haftungsbeschränkung</span></h2>
 <p>Soweit das anwendbare Recht es zulässt, ist unsere Gesamthaftung dir gegenüber auf den Betrag begrenzt, den du in den letzten 12 Monaten für das Spiel bezahlt hast. In denselben Grenzen haften wir nicht für indirekte Schäden und entgangenen Gewinn. Nichts in diesen Bedingungen schränkt die Haftung für Vorsatz und grobe Fahrlässigkeit, für Schäden an Leben und Gesundheit durch unser Verschulden und jede andere Haftung ein, die sich gesetzlich nicht beschränken lässt, und es nimmt dir keine zwingenden Verbraucherrechte.</p>
-<h2>13. Wenn du das Spiel über den App Store installiert hast</h2>
+</section>
+<section class="sec" id="de-s13"><h2><span class="badge">13</span><span>Wenn du das Spiel über den App Store installiert hast</span></h2>
 <ul>
 <li>Die Lizenz für das Spiel aus dem App Store richtet sich nach dem <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard-Lizenzvertrag von Apple</a> (Licensed Application End User License Agreement). Diese Bedingungen ergänzen ihn. Wenn sie sich widersprechen, gilt bei Lizenzfragen der Vertrag von Apple.</li>
 <li>Du darfst das Spiel auf Apple-Geräten nutzen, die dir gehören oder über die du verfügst, nach den Nutzungsregeln des App Stores (einschließlich „Familienfreigabe“, sofern unterstützt).</li>
@@ -523,33 +724,56 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Du bestätigst, dass du dich nicht in einem Land befindest, für das ein Embargo der USA gilt oder das die US-Regierung als Unterstützer des Terrorismus einstuft, und dass du nicht auf Listen von Personen stehst, mit denen die US-Regierung Geschäfte verbietet.</li>
 <li>Apple und die Tochtergesellschaften von Apple sind Drittbegünstigte dieser Bedingungen: Mit deiner Zustimmung gibst du Apple das Recht, ihre Einhaltung zu verlangen.</li>
 </ul>
-<h2>14. Änderungen der Bedingungen</h2>
+</section>
+<section class="sec" id="de-s14"><h2><span class="badge">14</span><span>Änderungen der Bedingungen</span></h2>
 <p>Wir ändern die Bedingungen nur aus nachvollziehbaren Gründen: Das Gesetz oder die Regeln der Stores haben sich geändert, im Spiel sind Funktionen hinzugekommen oder weggefallen, oder eine Ungenauigkeit muss korrigiert werden. Wenn sich die Bedingungen ändern, ändert sich auf dieser Seite das Datum der letzten Aktualisierung. Über wesentliche Änderungen informieren wir in der Beschreibung des App-Updates im Store spätestens 30 Tage, bevor sie gelten – außer bei Änderungen, die das Gesetz dringend verlangt. Wenn du das Spiel nach Ablauf dieser Frist weiter nutzt, akzeptierst du die neuen Bedingungen. Wenn du nicht einverstanden bist, hör auf, das Spiel zu nutzen, und kündige das Abo: Der nächste Zeitraum wird dann nicht abgebucht.</p>
-<h2>15. Recht und Streitigkeiten</h2>
+</section>
+<section class="sec" id="de-s15"><h2><span class="badge">15</span><span>Recht und Streitigkeiten</span></h2>
 <ul>
 <li>Für diese Bedingungen gilt das Recht des Staates Israel. Das nimmt dir nicht den zwingenden Verbraucherschutz, den dir die Gesetze deines Wohnlandes geben.</li>
 <li>Du kannst vor einem Gericht deines Landes klagen, wenn dein Recht dir das erlaubt, oder vor einem zuständigen Gericht in Israel. Wir schränken deine Gerichtswahl nicht ein.</li>
 <li>Wenn etwas schiefgeht, schreib uns – wir antworten und versuchen, die Sache innerhalb von 30 Tagen zu klären. Das ist kein verpflichtender Schritt vor einer Klage. Fragen zu Zahlung und Rückerstattung klärt der Store.</li>
 <li>Sollte eine Bestimmung dieser Bedingungen unwirksam sein, bleiben die übrigen in Kraft.</li>
 </ul>
-<h2>16. Kontakt</h2>
+</section>
+<section class="sec" id="de-s16"><h2><span class="badge">16</span><span>Kontakt</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#de">Nutzungsbedingungen</a><a href="../privacy/#de">Datenschutzerklärung</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Nach oben</a></footer></div></div>
 </article>
-<article id="fr" data-lang="fr" lang="fr">
-<h1>Conditions d'utilisation de Murashki</h1>
-<p>Entrent en vigueur le : 14 novembre 2026<br>
-Dernière mise à jour : 14 novembre 2026</p>
-<h2>1. De quoi s'agit-il</h2>
+<article data-lang="fr" lang="fr">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Conditions d'utilisation de Murashki</h1><div class="dates"><span>Entrent en vigueur le : 14 novembre 2026</span><span>Dernière mise à jour : 14 novembre 2026</span></div><nav class="switch"><a href="../terms/#fr" aria-current="page">Conditions d&#x27;utilisation</a><a href="../privacy/#fr">Politique de confidentialité</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Sommaire"><details open><summary>Sommaire</summary><ol>
+<li><a href="#fr-s1"><span class="n">1</span><span>De quoi s'agit-il</span></a></li>
+<li><a href="#fr-s2"><span class="n">2</span><span>Réservé aux adultes</span></a></li>
+<li><a href="#fr-s3"><span class="n">3</span><span>Consentement et sécurité</span></a></li>
+<li><a href="#fr-s4"><span class="n">4</span><span>Ce n'est pas un avis médical ou psychologique</span></a></li>
+<li><a href="#fr-s5"><span class="n">5</span><span>Responsabilité quant à ce que font les joueurs</span></a></li>
+<li><a href="#fr-s6"><span class="n">6</span><span>Vos propres paquets de cartes</span></a></li>
+<li><a href="#fr-s7"><span class="n">7</span><span>Jeu à distance</span></a></li>
+<li><a href="#fr-s8"><span class="n">8</span><span>Achats, abonnement et remboursements</span></a></li>
+<li><a href="#fr-s9"><span class="n">9</span><span>Droits sur le jeu</span></a></li>
+<li><a href="#fr-s10"><span class="n">10</span><span>Modifications du jeu et fin de l'utilisation</span></a></li>
+<li><a href="#fr-s11"><span class="n">11</span><span>Absence de garanties</span></a></li>
+<li><a href="#fr-s12"><span class="n">12</span><span>Limitation de responsabilité</span></a></li>
+<li><a href="#fr-s13"><span class="n">13</span><span>Si vous avez installé le jeu depuis l'App Store</span></a></li>
+<li><a href="#fr-s14"><span class="n">14</span><span>Modification des conditions</span></a></li>
+<li><a href="#fr-s15"><span class="n">15</span><span>Droit applicable et litiges</span></a></li>
+<li><a href="#fr-s16"><span class="n">16</span><span>Contact</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec" id="fr-s1"><h2><span class="badge">1</span><span>De quoi s'agit-il</span></h2>
 <p>Il s'agit d'un accord entre vous et Soverion Games, développeur indépendant établi en Israël (ci-après « nous ») concernant l'utilisation du jeu Murashki. En installant le jeu ou en y jouant, vous acceptez les présentes conditions. Si vous ne les acceptez pas, n'utilisez pas le jeu et supprimez-le.</p>
 <p>La manière dont le jeu traite les données est décrite dans la <a href="https://soveriongames.github.io/murashki/privacy">politique de confidentialité</a>. Si vous avez installé le jeu depuis une boutique d'applications, les règles de cette boutique s'appliquent également à vous.</p>
-<h2>2. Réservé aux adultes</h2>
+</section>
+<section class="sec" id="fr-s2"><h2><span class="badge">2</span><span>Réservé aux adultes</span></h2>
 <ul>
 <li>Seules les personnes âgées d'au moins 18 ans peuvent jouer, ou davantage si la majorité est plus tardive dans votre pays.</li>
 <li>Le jeu contient du contenu explicite : des défis et des questions écrits sur l'intimité et la sexualité. Il n'y a ni images ni vidéos.</li>
 <li>Ne jouez qu'avec un partenaire adulte. Ne montrez pas le jeu à des mineurs.</li>
 <li>N'utilisez pas le jeu là où un tel contenu est interdit par la loi.</li>
 </ul>
-<h2>3. Consentement et sécurité</h2>
+</section>
+<section class="sec" id="fr-s3"><h2><span class="badge">3</span><span>Consentement et sécurité</span></h2>
 <p>Le jeu se contente de proposer des défis sous forme de texte. C'est vous et votre partenaire qui décidez de ce que vous faites.</p>
 <ul>
 <li><strong>La participation est volontaire.</strong> Toute action requiert le consentement clair des deux personnes. Le consentement peut être retiré à tout moment, même au milieu d'un défi.</li>
@@ -559,19 +783,24 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>N'exécutez pas de défis susceptibles de nuire à la santé, la vôtre, celle de votre partenaire ou celle d'autrui. Tenez compte de vos limites, de vos allergies et de votre état de santé.</li>
 <li>Respectez la loi : n'impliquez pas de tiers et ne faites rien d'intime là où d'autres personnes pourraient vous voir.</li>
 </ul>
-<h2>4. Ce n'est pas un avis médical ou psychologique</h2>
+</section>
+<section class="sec" id="fr-s4"><h2><span class="badge">4</span><span>Ce n'est pas un avis médical ou psychologique</span></h2>
 <p>Murashki est un divertissement. Les textes du jeu ne constituent pas un conseil médical, sexologique, psychologique ou juridique et ne remplacent pas un professionnel. Pour toute question de santé, adressez-vous à un médecin. Si votre relation est marquée par la violence ou la peur, contactez un service d'aide de votre pays.</p>
-<h2>5. Responsabilité quant à ce que font les joueurs</h2>
+</section>
+<section class="sec" id="fr-s5"><h2><span class="badge">5</span><span>Responsabilité quant à ce que font les joueurs</span></h2>
 <p>Le jeu ne surveille pas ce qui se passe entre les joueurs et ne peut pas le contrôler. Vous êtes responsable de vos actes et de leurs conséquences. Dans les limites autorisées par la loi applicable, nous ne sommes pas responsables des préjudices, blessures, dommages et conséquences de ce que les joueurs se font entre eux. Cela ne limite pas la responsabilité que la loi interdit de limiter (voir la section 12).</p>
-<h2>6. Vos propres paquets de cartes</h2>
+</section>
+<section class="sec" id="fr-s6"><h2><span class="badge">6</span><span>Vos propres paquets de cartes</span></h2>
 <ul>
 <li>Vous rédigez vous-même les textes de vos paquets. Ils sont stockés uniquement sur votre téléphone. Nous ne les voyons pas, ne les vérifions pas et ne les modérons pas.</li>
 <li>Vous êtes responsable du contenu de vos paquets. Il est interdit de créer, de téléverser ou de diffuser par ce biais ce qui enfreint la loi ou les droits d'autrui : par exemple, du contenu impliquant des mineurs, des appels à la violence ou à des actes sans consentement, ou des textes d'autrui sans l'autorisation de leur auteur.</li>
 <li>Ne chargez des paquets à partir de fichiers que si leur source vous inspire confiance. Si vous enregistrez un paquet dans un fichier et le remettez à quelqu'un, vous êtes responsable de cette transmission.</li>
 </ul>
-<h2>7. Jeu à distance</h2>
+</section>
+<section class="sec" id="fr-s7"><h2><span class="badge">7</span><span>Jeu à distance</span></h2>
 <p>Vous transmettez vous-même le code du tour à votre partenaire, via une messagerie tierce ou tout autre moyen de votre choix. Les règles de ce service s'appliquent à la transmission. Nous ne recevons rien et ne sommes pas responsables de la livraison, de la conservation ni de la lecture des messages dans des services tiers. N'envoyez le code qu'à une personne qui a accepté de jouer avec vous.</p>
-<h2>8. Achats, abonnement et remboursements</h2>
+</section>
+<section class="sec" id="fr-s8"><h2><span class="badge">8</span><span>Achats, abonnement et remboursements</span></h2>
 <ul>
 <li>Une partie du jeu est gratuite et fonctionne sans achat ni abonnement. Le reste se débloque avec <strong>« Tous les niveaux à vie »</strong> (achat unique de la version complète) ou avec <strong>un abonnement mensuel</strong> : les deux débloquent la même chose. Le prix dans votre devise s'affiche dans la boutique avant le paiement.</li>
 <li>Les achats passent uniquement par la boutique d'applications (Google Play ou App Store), selon ses règles. Les données de paiement sont reçues par la boutique, pas par nous.</li>
@@ -586,14 +815,16 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li><strong>Les codes promo</strong> sont délivrés uniquement par les moyens des boutiques (codes promotionnels Google Play, codes d'offre Apple) et sont soumis à leurs règles. Ils ne sont pas échangeables contre de l'argent.</li>
 <li><strong>Les « Cœurs »</strong> se gagnent en jouant et ne sont pas vendus. Ce n'est pas de l'argent : ils n'ont aucune valeur monétaire et ne peuvent être ni échangés, ni vendus, ni transférés.</li>
 </ul>
-<h2>9. Droits sur le jeu</h2>
+</section>
+<section class="sec" id="fr-s9"><h2><span class="badge">9</span><span>Droits sur le jeu</span></h2>
 <ul>
 <li>Le jeu, les textes des cartes, les scènes et autres textes, la mise en forme, les illustrations, la musique, le nom et le logo appartiennent à Soverion Games ou sont utilisés sous licence. Les polices et autres éléments tiers sont soumis à leurs propres licences.</li>
 <li>Nous vous accordons un droit personnel, non commercial, non exclusif et non transférable d'utiliser le jeu sur vos appareils, conformément aux présentes conditions et aux règles de la boutique.</li>
 <li>Il est interdit de : revendre le jeu ou son contenu ; copier et publier les textes des cartes et leurs sélections ; diffuser des copies modifiées du jeu ; contourner les achats ; décompiler le code du jeu, sauf dans les cas expressément autorisés par la loi.</li>
 <li>Les courtes citations dans des avis et des critiques sont les bienvenues.</li>
 </ul>
-<h2>10. Modifications du jeu et fin de l'utilisation</h2>
+</section>
+<section class="sec" id="fr-s10"><h2><span class="badge">10</span><span>Modifications du jeu et fin de l'utilisation</span></h2>
 <ul>
 <li>Vous pouvez à tout moment cesser de jouer et supprimer le jeu. Résiliez l'abonnement séparément dans la boutique.</li>
 <li>Nous pouvons modifier le jeu, ajouter et retirer des fonctionnalités, arrêter son développement ou sa distribution. Un jeu déjà installé fonctionne sans internet tant qu'il reste compatible avec votre appareil.</li>
@@ -601,12 +832,15 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>En utilisant le jeu, vous respectez aussi les conditions des services tiers nécessaires à cet usage : la boutique d'applications, l'opérateur de téléphonie, la messagerie.</li>
 <li>Si vous enfreignez gravement les présentes conditions (par exemple en vendant ou en publiant le contenu du jeu), votre droit d'utiliser le jeu prend fin. Les droits que la loi et les règles de la boutique vous reconnaissent en matière d'achats subsistent.</li>
 </ul>
-<h2>11. Absence de garanties</h2>
+</section>
+<section class="sec" id="fr-s11"><h2><span class="badge">11</span><span>Absence de garanties</span></h2>
 <p>Nous nous efforçons de faire en sorte que le jeu fonctionne bien, mais nous le fournissons « en l'état ». Nous ne promettons pas qu'il sera exempt d'erreurs ni qu'il fonctionnera sur tous les appareils. Les données du jeu sont stockées uniquement sur le téléphone : sur Android, elles ne sont pas incluses dans la sauvegarde, et en cas de suppression du jeu ou de changement de téléphone, la progression est perdue.</p>
 <p>Si la loi de votre pays accorde au consommateur une garantie de conformité du contenu numérique (par exemple dans l'UE), cette garantie et les recours qui s'y rattachent demeurent ; rien dans la présente section ne les limite.</p>
-<h2>12. Limitation de responsabilité</h2>
+</section>
+<section class="sec" id="fr-s12"><h2><span class="badge">12</span><span>Limitation de responsabilité</span></h2>
 <p>Dans les limites autorisées par la loi applicable, notre responsabilité totale envers vous est limitée au montant que vous avez payé pour le jeu au cours des 12 derniers mois. Dans les mêmes limites, nous ne répondons pas des dommages indirects ni du manque à gagner. Rien dans les présentes conditions ne limite la responsabilité en cas de faute intentionnelle ou de négligence grave, de dommage à la vie ou à la santé causé par notre faute, ni toute autre responsabilité que la loi interdit de limiter, et rien ne vous prive des droits impératifs du consommateur.</p>
-<h2>13. Si vous avez installé le jeu depuis l'App Store</h2>
+</section>
+<section class="sec" id="fr-s13"><h2><span class="badge">13</span><span>Si vous avez installé le jeu depuis l'App Store</span></h2>
 <ul>
 <li>La licence du jeu obtenu sur l'App Store est régie par le <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">contrat de licence standard d'Apple</a> (Licensed Application End User License Agreement). Les présentes conditions le complètent. En cas de divergence, pour les questions de licence, le contrat d'Apple prévaut.</li>
 <li>Vous pouvez utiliser le jeu sur les appareils Apple que vous possédez ou contrôlez, selon les règles d'utilisation de l'App Store (y compris le « Partage familial », s'il est pris en charge).</li>
@@ -617,20 +851,24 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>Vous confirmez que vous ne vous trouvez pas dans un pays soumis à un embargo des États-Unis ou considéré par le gouvernement américain comme soutenant le terrorisme, et que vous ne figurez pas sur les listes de personnes avec lesquelles le gouvernement américain interdit de traiter.</li>
 <li>Apple et ses filiales sont des tiers bénéficiaires des présentes conditions : en les acceptant, vous donnez à Apple le droit d'en exiger l'exécution.</li>
 </ul>
-<h2>14. Modification des conditions</h2>
+</section>
+<section class="sec" id="fr-s14"><h2><span class="badge">14</span><span>Modification des conditions</span></h2>
 <p>Nous ne modifions les conditions que pour des raisons compréhensibles : la loi ou les règles des boutiques ont changé, des fonctionnalités sont apparues ou ont disparu dans le jeu, une imprécision doit être corrigée. Lorsque les conditions changent, la date de dernière mise à jour change sur cette page. Nous vous informerons des modifications importantes dans la description de la mise à jour de l'application dans la boutique, au plus tard 30 jours avant leur entrée en vigueur, sauf pour les modifications que la loi impose en urgence. Si vous continuez à utiliser le jeu après ce délai, vous acceptez les nouvelles conditions. Si vous ne les acceptez pas, cessez d'utiliser le jeu et résiliez l'abonnement : la période suivante ne sera pas facturée.</p>
-<h2>15. Droit applicable et litiges</h2>
+</section>
+<section class="sec" id="fr-s15"><h2><span class="badge">15</span><span>Droit applicable et litiges</span></h2>
 <ul>
 <li>Les présentes conditions sont régies par le droit de l'État d'Israël. Cela ne vous prive pas de la protection impérative des consommateurs que vous confèrent les lois du pays où vous vivez.</li>
 <li>Vous pouvez saisir le tribunal de votre pays si sa loi vous en donne le droit, ou le tribunal compétent d'Israël. Nous ne limitons pas votre choix de tribunal.</li>
 <li>Si quelque chose ne va pas, écrivez-nous : nous vous répondrons et nous efforcerons de régler la question sous 30 jours. Ce n'est pas une étape obligatoire avant de saisir un tribunal. Les questions de paiement et de remboursement sont réglées par la boutique.</li>
 <li>Si une disposition des conditions est jugée invalide, les autres restent en vigueur.</li>
 </ul>
-<h2>16. Contact</h2>
+</section>
+<section class="sec" id="fr-s16"><h2><span class="badge">16</span><span>Contact</span></h2>
 <p>Soverion Games (Israël), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#fr">Conditions d&#x27;utilisation</a><a href="../privacy/#fr">Politique de confidentialité</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Haut de page</a></footer></div></div>
 </article>
 </main>
-<footer>© Soverion Games · <a href="../terms/" data-page="../terms/">Terms</a> · <a href="../privacy/" data-page="../privacy/">Privacy</a> · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></footer>
-</div>
+<a class="totop" href="#top" aria-label="Back to top">↑</a>
 </body>
 </html>

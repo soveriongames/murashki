@@ -3,82 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#3c0a18">
 <meta name="referrer" content="no-referrer">
 <title>Privacy Policy — Murashki</title>
-<style>:root{--bg:#faf6f4;--surface:#ffffff;--text:#231b20;--muted:#6b5d64;--accent:#a8264c;--line:#eadfe2;--pill:#f3e8eb}
-@media (prefers-color-scheme:dark){:root{--bg:#16111a;--surface:#1f1824;--text:#efe6ea;--muted:#b3a3ab;--accent:#f28aa8;--line:#352a3a;--pill:#2a2130}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-.wrap{max-width:44rem;margin:0 auto;padding:16px}
-header{padding:8px 0 4px}
-.brand{font-weight:700;letter-spacing:.02em;color:var(--accent);text-decoration:none}
-nav.langs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px;padding:0;list-style:none}
-nav.langs a{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--pill);color:var(--text);text-decoration:none;font-size:15px;min-height:36px;line-height:24px}
-nav.langs a[aria-current="true"]{background:var(--accent);color:var(--bg)}
-article{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 20px 20px;margin:16px 0}
-h1{font-size:1.6em;line-height:1.25;margin:.8em 0 .5em}
-h2{font-size:1.2em;line-height:1.3;margin:1.6em 0 .4em}
-h3{font-size:1.05em;margin:1.3em 0 .3em}
-p,ul,ol{margin:.6em 0}
-ul,ol{padding-left:1.3em}
-li{margin:.3em 0}
-a{color:var(--accent);overflow-wrap:anywhere}
-code{font:.9em ui-monospace,Consolas,monospace;background:var(--pill);padding:1px 4px;border-radius:4px}
-.tagline{font-size:1.1em}
-.docs a{display:block;padding:14px 16px;margin:10px 0;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-weight:600}
-footer{color:var(--muted);font-size:14px;padding:8px 0 32px}
-footer a{color:var(--muted)}
+<link rel="icon" href="../assets/murashki-icon-96.png">
+<style>@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-Regular.ttf") format("truetype");font-weight:400;font-display:swap}@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-SemiBold.ttf") format("truetype");font-weight:600;font-display:swap}@font-face{font-family:"Inter";src:url("../assets/fonts/Inter-Bold.ttf") format("truetype");font-weight:700;font-display:swap}@font-face{font-family:"Playfair Display";src:url("../assets/fonts/PlayfairDisplay-Bold.ttf") format("truetype");font-weight:700;font-display:swap}:root{--g:clamp(16px,4vw,40px);--ft:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--fd:"Playfair Display",Georgia,"Times New Roman",serif;--bg:#14070a;--text:#f7efe7;--body:#efe2dc;--muted:#d1bdb6;--line:rgba(212,175,55,.26);--gold:#d4af37;--gold-hi:#f4d992;--ink:#1c0a0e;--gold-fill:linear-gradient(180deg,#f4d992,#d4af37 60%,#a67c1f);--card:linear-gradient(160deg,rgba(121,21,45,.55),rgba(60,10,24,.55));--card-hi:radial-gradient(120% 140% at 0% 0%,#8f1a36,#3c0a18 70%)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:84px;background:var(--bg)}
+body{margin:0;color:var(--text);background:radial-gradient(80rem 40rem at 85% -10rem,rgba(232,90,154,.28),transparent 60%) no-repeat,radial-gradient(90rem 46rem at 10% -8rem,rgba(121,21,45,.95),rgba(60,10,24,.5) 45%,transparent 72%) no-repeat,var(--bg);font:400 1.0625rem/1.68 var(--ft);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,p,ul,ol{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(100% - 2*var(--g),74rem);margin-inline:auto}
 html.js article[data-lang]{display:none}
-html.js article[data-lang].active{display:block}</style>
+html.js article[data-lang].active{display:block}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:30;background:linear-gradient(90deg,#e85a9a,var(--gold-hi),var(--gold))}
+.top{position:sticky;top:0;z-index:20;background:rgba(20,7,10,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 16px;min-height:64px;padding:10px 0}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:1.0625rem;font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand img{width:32px;height:32px;border-radius:9px;flex:none}
+.langs{display:inline-flex;flex-wrap:wrap;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px}
+.langs a{display:inline-flex;align-items:center;min-height:34px;padding:0 11px;border-radius:999px;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--muted)}
+.langs a:hover{color:var(--text)}
+.langs a[aria-current="true"]{background:var(--gold);color:var(--ink)}
+.hero{padding:clamp(28px,6vw,72px) 0 clamp(20px,4vw,40px);text-align:center}
+.eyebrow{font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-hi)}
+.hero h1{max-width:52rem;margin:12px auto 18px;font-family:var(--fd);font-weight:700;font-size:clamp(1.85rem,6.4vw,4.25rem);line-height:1.08;color:var(--gold-hi);overflow-wrap:break-word;-webkit-hyphens:auto;hyphens:auto}
+.dates,.switch{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.dates span{padding:6px 12px;border:1px solid var(--line);border-radius:999px;font-size:.85rem;color:var(--muted)}
+.switch{margin-top:22px}
+.switch a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem}
+.switch a[aria-current="page"]{background:var(--gold-fill);border-color:transparent;color:var(--ink)}
+.layout{max-width:50rem;margin-inline:auto;padding-bottom:24px}
+.toc{margin-bottom:8px}
+.toc summary{cursor:pointer;list-style:none;padding:12px 0;text-align:center;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:"＋";margin-left:8px;font-weight:400}
+.toc details[open] summary::after{content:"－"}
+.toc ol{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(min(100%,14.5rem),1fr));list-style:none;margin:0;padding:0 0 8px}
+.toc a{display:flex;align-items:center;gap:10px;min-height:52px;padding:8px 12px;border:1px solid var(--line);border-radius:14px;background:rgba(0,0,0,.22);text-decoration:none;font-size:.92rem;line-height:1.35}
+.toc a:hover{border-color:var(--gold)}
+.toc .n{flex:none;display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:rgba(212,175,55,.16);color:var(--gold-hi);font-size:.8rem;font-weight:700;font-variant-numeric:tabular-nums}
+.badge{flex:none;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--gold-fill);color:var(--ink);font-family:var(--fd);font-size:1.05rem;font-weight:700}
+.sec,.card{border:1px solid var(--line);border-radius:22px;background:var(--card)}
+.sec{margin:16px 0;padding:22px clamp(18px,3vw,28px) 10px;color:var(--body)}
+.sec.summary,.card.hi{border-color:var(--gold);background:var(--card-hi)}
+.sec h2{display:flex;gap:.55em;align-items:baseline;font-family:var(--fd);font-weight:700;font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.25;color:var(--gold-hi)}
+.sec h2 .badge{transform:translateY(-.15em)}
+.doc p,.doc ul,.doc ol{margin:.75em 0}
+.doc ul,.doc ol{padding-left:1.35em}
+.doc li{margin:.4em 0}
+.doc li::marker{color:var(--gold)}
+.doc a{color:var(--gold-hi);overflow-wrap:anywhere;text-underline-offset:3px}
+.doc strong,.doc h3{color:#fff}
+.doc h3{margin:1.4em 0 .3em;font-size:1.05rem}
+.doc code{font:.9em ui-monospace,Consolas,monospace;padding:1px 5px;border-radius:5px;background:rgba(212,175,55,.14)}
+.doc-foot{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:40px;padding:22px 0 32px;border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}
+.doc-foot a{color:var(--muted);text-underline-offset:3px;overflow-wrap:anywhere}
+.doc-foot a:hover{color:var(--text)}
+.totop{position:fixed;right:16px;bottom:16px;z-index:25;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--gold-fill);color:var(--ink);text-decoration:none;font-size:1.3rem;font-weight:700;box-shadow:0 12px 30px -10px rgba(0,0,0,.7);opacity:0;pointer-events:none;transition:opacity .2s ease}
+.totop.on{opacity:1;pointer-events:auto}
+.app-icon{display:block;width:88px;height:88px;margin:0 auto 18px;border-radius:22px;box-shadow:0 18px 40px -16px rgba(0,0,0,.8)}
+.tagline{max-width:36rem;margin:0 auto;font-size:1.1rem;color:var(--muted)}
+.home{display:grid;gap:14px;max-width:50rem;margin:0 auto}
+.home h2{margin-top:6px;text-align:center;font-size:.8125rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+a.card{display:flex;align-items:center;gap:16px;padding:18px 22px;text-decoration:none;font-family:var(--fd);font-weight:700;font-size:clamp(1.2rem,2.4vw,1.45rem);line-height:1.25;color:var(--gold-hi)}
+a.card:hover{border-color:var(--gold)}
+a.card .go{margin-left:auto;font-family:var(--ft);color:var(--gold)}
+.card.hi{padding:18px 22px;color:var(--body)}
+.card.hi a{color:var(--gold-hi);overflow-wrap:anywhere;text-underline-offset:3px}
+@media (max-width:479px){.brand span{display:none}.langs a{padding:0 9px}.top .wrap{flex-wrap:nowrap}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}</style>
 <script>(function(){
 var d=document,h=d.documentElement;h.className+=' js';
-var langs=["ru","en","es","pt-BR","de","fr"],titles={"ru": "Политика конфиденциальности — Мурашки", "en": "Privacy Policy — Murashki", "es": "Política de privacidad — Murashki", "pt-BR": "Política de Privacidade — Murashki", "de": "Datenschutzerklärung — Murashki", "fr": "Politique de confidentialité — Murashki"};
-function find(code){if(!code)return null;code=code.toLowerCase();
-for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===code)return langs[i];
-var base=code.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===base)return langs[j];return null}
+var langs=["ru", "en", "es", "pt-BR", "de", "fr"],titles={"ru": "Политика конфиденциальности — Мурашки", "en": "Privacy Policy — Murashki", "es": "Política de privacidad — Murashki", "pt-BR": "Política de Privacidade — Murashki", "de": "Datenschutzerklärung — Murashki", "fr": "Politique de confidentialité — Murashki"},labels={"ru": {"name": "Мурашки", "top": "Наверх"}, "en": {"name": "Murashki", "top": "Back to top"}, "es": {"name": "Murashki", "top": "Volver arriba"}, "pt-BR": {"name": "Murashki", "top": "Voltar ao topo"}, "de": {"name": "Murashki", "top": "Nach oben"}, "fr": {"name": "Murashki", "top": "Haut de page"}};
+function find(c){if(!c)return null;c=c.toLowerCase();for(var i=0;i<langs.length;i++)if(langs[i].toLowerCase()===c)return langs[i];
+var b=c.split('-')[0];for(var j=0;j<langs.length;j++)if(langs[j].toLowerCase().split('-')[0]===b)return langs[j];return null}
+function isLang(c){for(var i=0;i<langs.length;i++)if(langs[i]===c)return true;return false}
 function saved(){try{return localStorage.getItem('lang')}catch(e){return null}}
 function pick(){var l=find(location.hash.slice(1));if(l)return l;l=find(saved());if(l)return l;
-var nav=navigator.languages||[navigator.language];for(var i=0;i<nav.length;i++){l=find(nav[i]);if(l)return l}return 'en'}
-function show(l){var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
-var n=d.querySelectorAll('nav.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
-var f=d.querySelectorAll('a[data-page]');for(var m=0;m<f.length;m++)f[m].setAttribute('href',f[m].getAttribute('data-page')+'#'+l);
+var n=navigator.languages||[navigator.language];for(var i=0;i<n.length;i++){l=find(n[i]);if(l)return l}return 'en'}
+var cur=null;
+function show(l){cur=l;var a=d.querySelectorAll('article[data-lang]');for(var i=0;i<a.length;i++)a[i].classList.toggle('active',a[i].getAttribute('data-lang')===l);
+var n=d.querySelectorAll('.langs a');for(var k=0;k<n.length;k++)n[k].setAttribute('aria-current',n[k].getAttribute('hreflang')===l?'true':'false');
+var b=d.querySelectorAll('[data-name]');for(var m=0;m<b.length;m++)b[m].textContent=labels[l].name;
+var p=d.querySelectorAll('a[data-page]');for(var q=0;q<p.length;q++)p[q].setAttribute('href',p[q].getAttribute('data-page')+'#'+l);
+var t=d.querySelector('.totop');if(t)t.setAttribute('aria-label',labels[l].top);
 h.lang=l;if(titles[l])d.title=titles[l]}
-d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('nav.langs a');if(!t)return;
-try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
-window.addEventListener('hashchange',function(){var l=find(location.hash.slice(1));if(l){show(l);scrollTo(0,0)}});
-if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){show(pick())});else show(pick());
+function jump(){var id=decodeURIComponent(location.hash.slice(1));if(!id||isLang(id))return;var el=d.getElementById(id);if(el)el.scrollIntoView()}
+d.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.langs a');if(!t)return;try{localStorage.setItem('lang',t.getAttribute('hreflang'))}catch(x){}});
+window.addEventListener('hashchange',function(){var id=location.hash.slice(1),l=find(id);if(!l)return;
+if(isLang(id)){show(l);scrollTo(0,0)}else if(l!==cur){show(l);jump()}});
+function progress(){var p=d.querySelector('.progress'),t=d.querySelector('.totop'),max=h.scrollHeight-innerHeight;
+if(p)p.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';if(t)t.classList.toggle('on',scrollY>700)}
+function init(){show(pick());if(matchMedia('(max-width:999px)').matches){var s=d.querySelectorAll('.toc details');for(var i=0;i<s.length;i++)s[i].removeAttribute('open')}
+jump();if(d.fonts&&d.fonts.ready)d.fonts.ready.then(jump);progress();addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress)}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else init();
 })();</script>
 </head>
 <body>
-<div class="wrap">
-<header>
-<a class="brand" href="../" data-page="../">Murashki · Мурашки</a>
-<nav class="langs" aria-label="Language">
-<a href="#ru" hreflang="ru" lang="ru">Русский</a>
-<a href="#en" hreflang="en" lang="en">English</a>
-<a href="#es" hreflang="es" lang="es">Español</a>
-<a href="#pt-BR" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
-<a href="#de" hreflang="de" lang="de">Deutsch</a>
-<a href="#fr" hreflang="fr" lang="fr">Français</a>
-</nav>
-</header>
-<main>
-<article id="ru" data-lang="ru" lang="ru">
-<h1>Политика конфиденциальности «Мурашек»</h1>
-<p>Вступает в силу: 14 ноября 2026 г.<br>
-Последнее обновление: 14 ноября 2026 г.</p>
-<h2>Коротко</h2>
+<div class="progress" aria-hidden="true"></div>
+<header class="top" id="top"><div class="wrap"><a class="brand" href="../" data-page="../"><img src="../assets/murashki-icon-96.png" alt=""><span data-name>Murashki</span></a><nav class="langs" aria-label="Language"><a href="#ru" hreflang="ru" lang="ru" title="Русский">RU</a><a href="#en" hreflang="en" lang="en" title="English">EN</a><a href="#es" hreflang="es" lang="es" title="Español">ES</a><a href="#pt-BR" hreflang="pt-BR" lang="pt-BR" title="Português (Brasil)">PT</a><a href="#de" hreflang="de" lang="de" title="Deutsch">DE</a><a href="#fr" hreflang="fr" lang="fr" title="Français">FR</a></nav></div></header>
+<main class="wrap">
+<article data-lang="ru" lang="ru">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Политика конфиденциальности «Мурашек»</h1><div class="dates"><span>Вступает в силу: 14 ноября 2026 г.</span><span>Последнее обновление: 14 ноября 2026 г.</span></div><nav class="switch"><a href="../terms/#ru">Условия использования</a><a href="../privacy/#ru" aria-current="page">Политика конфиденциальности</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Содержание"><details open><summary>Содержание</summary><ol>
+<li><a href="#ru-s1"><span class="n">1</span><span>Коротко</span></a></li>
+<li><a href="#ru-s2"><span class="n">2</span><span>Кто мы</span></a></li>
+<li><a href="#ru-s3"><span class="n">3</span><span>Что игра хранит на вашем телефоне</span></a></li>
+<li><a href="#ru-s4"><span class="n">4</span><span>Чего игра не делает</span></a></li>
+<li><a href="#ru-s5"><span class="n">5</span><span>Покупки и подписка</span></a></li>
+<li><a href="#ru-s6"><span class="n">6</span><span>Резервные копии и новый телефон</span></a></li>
+<li><a href="#ru-s7"><span class="n">7</span><span>Напоминания</span></a></li>
+<li><a href="#ru-s8"><span class="n">8</span><span>Свои паки карт</span></a></li>
+<li><a href="#ru-s9"><span class="n">9</span><span>Игра на расстоянии</span></a></li>
+<li><a href="#ru-s10"><span class="n">10</span><span>Сайт с документами</span></a></li>
+<li><a href="#ru-s11"><span class="n">11</span><span>Письма в поддержку</span></a></li>
+<li><a href="#ru-s12"><span class="n">12</span><span>Сколько хранятся данные и как их удалить</span></a></li>
+<li><a href="#ru-s13"><span class="n">13</span><span>Ваши права</span></a></li>
+<li><a href="#ru-s14"><span class="n">14</span><span>Дети</span></a></li>
+<li><a href="#ru-s15"><span class="n">15</span><span>Безопасность</span></a></li>
+<li><a href="#ru-s16"><span class="n">16</span><span>Изменения политики</span></a></li>
+<li><a href="#ru-s17"><span class="n">17</span><span>Контакты</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="ru-s1"><h2><span>Коротко</span></h2>
 <ul>
 <li>«Мурашки» — игра для взрослых пар (18+). Аккаунтов, регистрации и входа нет.</li>
 <li>Всё, что вы вводите в игре, хранится только на вашем телефоне. Мы этих данных не получаем и не видим: у нас нет сервера, куда они могли бы попасть.</li>
 <li>В игре нет аналитики, рекламы, рекламных идентификаторов, трекинга и отчётов о сбоях.</li>
 <li>В интернет игра выходит только ради покупок через магазин приложений и когда вы сами открываете ссылку.</li>
 </ul>
-<h2>Кто мы</h2>
+</section>
+<section class="sec" id="ru-s2"><h2><span>Кто мы</span></h2>
 <p>Игру «Мурашки» разрабатывает и выпускает Soverion Games — независимый разработчик из Израиля (дальше — «мы»). Мы отвечаем за обработку данных, о которой говорится в этой политике. По любым вопросам о данных и об этой политике пишите на <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>Что игра хранит на вашем телефоне</h2>
+</section>
+<section class="sec" id="ru-s3"><h2><span>Что игра хранит на вашем телефоне</span></h2>
 <p>Чтобы игра работала, она сохраняет данные во внутренней папке приложения. Другие приложения эту папку не видят.</p>
 <ul>
 <li>Имена игроков и пол — чтобы подставлять их в тексты заданий. Уровень, очки, «сердечки», история показанных карт.</li>
@@ -90,7 +150,8 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 </ul>
 <p>Эти данные не отправляются ни нам, ни кому-либо ещё. Хранить их на телефоне необходимо, чтобы работала игра, которую вы сами установили; ничего лишнего игра не сохраняет.</p>
 <p>Вход по отпечатку пальца или по лицу проверяет сама система телефона (Android или iOS). Игра не получает ни отпечаток, ни изображение лица — только ответ «подтверждено» или «нет».</p>
-<h2>Чего игра не делает</h2>
+</section>
+<section class="sec" id="ru-s4"><h2><span>Чего игра не делает</span></h2>
 <ul>
 <li>Не собирает аналитику и статистику использования, в ней нет сторонних SDK аналитики. Встроенная аналитика и отчёты движка Unity выключены.</li>
 <li>Не показывает рекламу и не читает рекламный идентификатор (Advertising ID, IDFA).</li>
@@ -99,19 +160,24 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Не принимает о вас автоматических решений и не составляет профилей.</li>
 <li>Не просит доступ к камере, микрофону, местоположению, контактам и фото. К файлу игра получает доступ, только когда вы сами выбираете его в системном окне, чтобы загрузить или сохранить свой пак.</li>
 </ul>
-<h2>Покупки и подписка</h2>
+</section>
+<section class="sec" id="ru-s5"><h2><span>Покупки и подписка</span></h2>
 <p>Полную версию и подписку продаёт магазин приложений, из которого вы установили игру (Google Play или App Store). Оплату проводит магазин. Он получает ваши платёжные данные и данные учётной записи и обрабатывает их по своим правилам: <a href="https://policies.google.com/privacy">политика Google</a>, <a href="https://www.apple.com/legal/privacy/">политика Apple</a>. Мы ваших платёжных данных не получаем.</p>
 <p>Игре магазин сообщает только, какие покупки есть у вашей учётной записи, — чтобы открыть оплаченные уровни. Нам как разработчику магазин показывает обобщённую статистику: число установок и продаж по странам, оценки и отзывы, которые вы публикуете сами. По этой статистике нельзя узнать, кто вы и что вы делаете в игре.</p>
-<h2>Резервные копии и новый телефон</h2>
+</section>
+<section class="sec" id="ru-s6"><h2><span>Резервные копии и новый телефон</span></h2>
 <ul>
 <li><strong>Android.</strong> Данные игры исключены из резервной копии Google и из переноса на новый телефон. На новом телефоне игра начинается с чистого листа, а покупки возвращаются кнопкой «Восстановить покупки».</li>
 <li><strong>iPhone и iPad.</strong> Файлы игры входят в резервную копию iCloud или компьютера, если она у вас включена. Такую копию хранит Apple (или ваш компьютер) по своим правилам; у нас доступа к ней нет.</li>
 </ul>
-<h2>Напоминания</h2>
+</section>
+<section class="sec" id="ru-s7"><h2><span>Напоминания</span></h2>
 <p>Если вы включите напоминания в «Настройках», игра запланирует их на самом телефоне, по выбранному вами расписанию. Сервера уведомлений нет. На экране блокировки нет откровенных слов. Выключить напоминания можно в «Настройках» игры или в настройках телефона.</p>
-<h2>Свои паки карт</h2>
+</section>
+<section class="sec" id="ru-s8"><h2><span>Свои паки карт</span></h2>
 <p>Тексты своих карт пишете вы. Они остаются на вашем телефоне, мы их не видим и не модерируем. Если вы сохраните пак в файл, этот файл окажется там, куда вы его положили, и дальше вы сами решаете, что с ним делать.</p>
-<h2>Игра на расстоянии</h2>
+</section>
+<section class="sec" id="ru-s9"><h2><span>Игра на расстоянии</span></h2>
 <p>В этом режиме игра показывает вам короткий код, а вы сами пересылаете его партнёру — например, в мессенджере. Игра при этом ничего не отправляет.</p>
 <ul>
 <li><strong>Что внутри кода:</strong> номера желаний и ваши ответы (в «Совпадениях желаний»), номер задания и отметка «сделано» или «нет» (в отчёте), уровень и случайный номер кода. Имён, пола, стоп-листа и истории в коде нет.</li>
@@ -120,9 +186,11 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li>Кнопка «Скопировать» кладёт код в буфер обмена. Буфер игра читает, только когда вы нажимаете «Вставить из буфера».</li>
 <li>Сами коды и ответы игра не сохраняет. Она запоминает только короткие служебные ключи кодов, чтобы не начислять «сердечки» дважды.</li>
 </ul>
-<h2>Сайт с документами</h2>
+</section>
+<section class="sec" id="ru-s10"><h2><span>Сайт с документами</span></h2>
 <p>Эта политика и условия использования лежат на сайте, который размещён на GitHub Pages. На сайте нет cookie, счётчиков и скриптов слежения. GitHub, как любой хостинг, может технически записывать IP-адреса посетителей для защиты от атак — по <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">своей политике</a>.</p>
-<h2>Письма в поддержку</h2>
+</section>
+<section class="sec" id="ru-s11"><h2><span>Письма в поддержку</span></h2>
 <p>Это единственный случай, когда ваши данные попадают к нам.</p>
 <ul>
 <li><strong>Что мы получаем:</strong> адрес почты, имя (если оно указано в письме), текст письма и вложения.</li>
@@ -132,7 +200,8 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li><strong>Сколько храним:</strong> пока решаем вопрос и не дольше 12 месяцев после последнего письма в переписке, если закон не требует хранить дольше (например, при споре о покупке). Попросите — удалим раньше.</li>
 <li><strong>Пожалуйста, не присылайте</strong> подробности интимной жизни, фотографии, платёжные данные и пароли: для ответа они не нужны. Если пришлёте, используем их только для ответа и удалим вместе с перепиской.</li>
 </ul>
-<h2>Сколько хранятся данные и как их удалить</h2>
+</section>
+<section class="sec" id="ru-s12"><h2><span>Сколько хранятся данные и как их удалить</span></h2>
 <p>Данные игры хранятся на вашем телефоне, пока вы их не удалите сами одним из способов ниже.</p>
 <ul>
 <li><strong>«Сбросить игру»</strong> в «Настройках» удаляет очки и прогресс.</li>
@@ -140,37 +209,63 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',function(){sho
 <li><strong>Удаление приложения</strong> удаляет все его данные с телефона. На iPhone копия может остаться в резервной копии iCloud — её можно удалить в настройках iCloud.</li>
 <li>Историю покупок хранит магазин; удалить или получить её можно через магазин.</li>
 </ul>
-<h2>Ваши права</h2>
+</section>
+<section class="sec" id="ru-s13"><h2><span>Ваши права</span></h2>
 <p>Законы о персональных данных — израильский закон о защите частной жизни (Privacy Protection Law, 5741-1981), GDPR в Европейском союзе, UK GDPR, законы США (например, CCPA/CPRA в Калифорнии) и другие — дают вам право узнать, какие данные о вас есть, получить их копию, исправить, удалить, ограничить обработку или возразить против неё, отозвать согласие и пожаловаться в надзорный орган.</p>
 <p>Данных игры у нас нет, поэтому выдать их копию или удалить что-то на своей стороне мы не можем — там просто ничего нет. Все данные игры лежат на вашем телефоне, и распоряжаетесь ими вы: смотрите и меняете в игре, удаляете способами из раздела выше.</p>
 <p>У нас могут оказаться только ваши письма в поддержку. По ним вы можете воспользоваться всеми правами выше, включая получение копии в удобном формате: напишите нам с того же адреса, и мы пришлём копию, исправим, ограничим использование или удалим переписку. Отвечаем в течение 30 дней — на языке вашего письма или на английском.</p>
 <p>Представителя в Европейском союзе мы не назначали: письма в поддержку мы обрабатываем лишь эпизодически (ст. 27(2)(a) GDPR).</p>
 <p>Мы не продаём персональные данные, не передаём их для рекламы и никому не раскрываем — ни в смысле CCPA/CPRA, ни в каком-либо другом.</p>
 <p>Если вы считаете, что ваши права нарушены, напишите нам. Вы также вправе обратиться в надзорный орган вашей страны, а в Израиле — в Управление по защите частной жизни (Privacy Protection Authority) при Министерстве юстиции.</p>
-<h2>Дети</h2>
+</section>
+<section class="sec" id="ru-s14"><h2><span>Дети</span></h2>
 <p>«Мурашки» предназначены только для людей старше 18 лет. При первом запуске игра просит подтвердить возраст. Игра не рассчитана на детей и подростков (в том числе младше 13 лет, а в ЕС — младше 16) и ни о ком не собирает данные — в том числе о детях. Если мы узнаем, что нам написал ребёнок, мы удалим его письмо и не будем его использовать. Если игрой воспользовался ребёнок, родитель может удалить приложение; ограничить установку помогает родительский контроль магазина.</p>
-<h2>Безопасность</h2>
+</section>
+<section class="sec" id="ru-s15"><h2><span>Безопасность</span></h2>
 <p>PIN-код хранится только в виде хеша со случайной солью. Функция «Скрывать в «Недавних»» прячет экран игры в списке приложений, а на Android ещё и запрещает снимки и запись экрана игры. Но тот, у кого есть доступ к вашему разблокированному телефону, может открыть игру, если защита входа выключена, — поэтому советуем блокировку экрана телефона и PIN-код в игре.</p>
-<h2>Изменения политики</h2>
+</section>
+<section class="sec" id="ru-s16"><h2><span>Изменения политики</span></h2>
 <p>Если мы изменим политику, на этой странице поменяется дата последнего обновления. О существенных изменениях мы расскажем в описании обновления приложения в магазине. Если игра когда-нибудь начнёт собирать какие-то данные, мы сначала обновим эту политику и, где это нужно по закону, спросим ваше согласие в самой игре.</p>
-<h2>Контакты</h2>
+</section>
+<section class="sec" id="ru-s17"><h2><span>Контакты</span></h2>
 <p>Soverion Games (Израиль), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Условия использования: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#ru">Условия использования</a><a href="../privacy/#ru">Политика конфиденциальности</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Наверх</a></footer></div></div>
 </article>
-<article id="en" data-lang="en" lang="en">
-<h1>Murashki Privacy Policy</h1>
-<p>Effective: November 14, 2026<br>
-Last updated: November 14, 2026</p>
-<h2>In short</h2>
+<article data-lang="en" lang="en">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Murashki Privacy Policy</h1><div class="dates"><span>Effective: November 14, 2026</span><span>Last updated: November 14, 2026</span></div><nav class="switch"><a href="../terms/#en">Terms of Use</a><a href="../privacy/#en" aria-current="page">Privacy Policy</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Contents"><details open><summary>Contents</summary><ol>
+<li><a href="#en-s1"><span class="n">1</span><span>In short</span></a></li>
+<li><a href="#en-s2"><span class="n">2</span><span>Who we are</span></a></li>
+<li><a href="#en-s3"><span class="n">3</span><span>What the game stores on your phone</span></a></li>
+<li><a href="#en-s4"><span class="n">4</span><span>What the game does not do</span></a></li>
+<li><a href="#en-s5"><span class="n">5</span><span>Purchases and subscription</span></a></li>
+<li><a href="#en-s6"><span class="n">6</span><span>Backups and a new phone</span></a></li>
+<li><a href="#en-s7"><span class="n">7</span><span>Reminders</span></a></li>
+<li><a href="#en-s8"><span class="n">8</span><span>Custom card packs</span></a></li>
+<li><a href="#en-s9"><span class="n">9</span><span>Remote play</span></a></li>
+<li><a href="#en-s10"><span class="n">10</span><span>Website with the documents</span></a></li>
+<li><a href="#en-s11"><span class="n">11</span><span>Support emails</span></a></li>
+<li><a href="#en-s12"><span class="n">12</span><span>How long data is kept and how to delete it</span></a></li>
+<li><a href="#en-s13"><span class="n">13</span><span>Your rights</span></a></li>
+<li><a href="#en-s14"><span class="n">14</span><span>Children</span></a></li>
+<li><a href="#en-s15"><span class="n">15</span><span>Security</span></a></li>
+<li><a href="#en-s16"><span class="n">16</span><span>Changes to this policy</span></a></li>
+<li><a href="#en-s17"><span class="n">17</span><span>Contact</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="en-s1"><h2><span>In short</span></h2>
 <ul>
 <li>Murashki is a game for adult couples (18+). There are no accounts, sign-up, or sign-in.</li>
 <li>Everything you enter in the game is stored only on your phone. We don't receive or see this data: we have no server where it could end up.</li>
 <li>The game has no analytics, ads, advertising identifiers, tracking, or crash reports.</li>
 <li>The game goes online only for purchases through the app store and when you open a link yourself.</li>
 </ul>
-<h2>Who we are</h2>
+</section>
+<section class="sec" id="en-s2"><h2><span>Who we are</span></h2>
 <p>The game Murashki is developed and published by Soverion Games, an independent developer based in Israel ("we"). We are responsible for the data processing described in this policy. For any questions about data and this policy, write to <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>What the game stores on your phone</h2>
+</section>
+<section class="sec" id="en-s3"><h2><span>What the game stores on your phone</span></h2>
 <p>To work, the game saves data in the app's internal folder. Other apps can't see this folder.</p>
 <ul>
 <li>Player names and gender, to put them into the prompt texts. Level, points, hearts, and the history of cards shown.</li>
@@ -182,7 +277,8 @@ Last updated: November 14, 2026</p>
 </ul>
 <p>This data is not sent to us or to anyone else. It has to be stored on your phone for the game you installed yourself to work; the game saves nothing extra.</p>
 <p>Fingerprint or face sign-in is checked by the phone's own system (Android or iOS). The game receives neither your fingerprint nor an image of your face, only the answer "confirmed" or "not confirmed".</p>
-<h2>What the game does not do</h2>
+</section>
+<section class="sec" id="en-s4"><h2><span>What the game does not do</span></h2>
 <ul>
 <li>It does not collect analytics or usage statistics, and it has no third-party analytics SDKs. The Unity engine's built-in analytics and reports are turned off.</li>
 <li>It does not show ads and does not read the advertising identifier (Advertising ID, IDFA).</li>
@@ -191,19 +287,24 @@ Last updated: November 14, 2026</p>
 <li>It makes no automated decisions about you and builds no profiles.</li>
 <li>It does not ask for access to the camera, microphone, location, contacts, or photos. The game gets access to a file only when you pick it yourself in the system dialog, to load or save your own pack.</li>
 </ul>
-<h2>Purchases and subscription</h2>
+</section>
+<section class="sec" id="en-s5"><h2><span>Purchases and subscription</span></h2>
 <p>The full version and the subscription are sold by the app store you installed the game from (Google Play or App Store). The store processes the payment. It receives your payment details and account data and handles them under its own rules: <a href="https://policies.google.com/privacy">Google's policy</a>, <a href="https://www.apple.com/legal/privacy/">Apple's policy</a>. We do not receive your payment details.</p>
 <p>The store tells the game only which purchases your account has, so that the paid levels can be unlocked. As the developer, we see aggregate statistics from the store: the number of installs and sales by country, and ratings and reviews that you post yourself. These statistics can't tell who you are or what you do in the game.</p>
-<h2>Backups and a new phone</h2>
+</section>
+<section class="sec" id="en-s6"><h2><span>Backups and a new phone</span></h2>
 <ul>
 <li><strong>Android.</strong> Game data is excluded from Google backup and from transfer to a new phone. On a new phone the game starts with a clean slate, and purchases come back with the "Restore purchases" button.</li>
 <li><strong>iPhone and iPad.</strong> The game's files are included in an iCloud or computer backup, if you have one turned on. Apple (or your computer) keeps that backup under its own rules; we have no access to it.</li>
 </ul>
-<h2>Reminders</h2>
+</section>
+<section class="sec" id="en-s7"><h2><span>Reminders</span></h2>
 <p>If you turn on reminders in "Settings", the game schedules them on the phone itself, on the schedule you choose. There is no notification server. There are no explicit words on the lock screen. You can turn reminders off in the game's "Settings" or in your phone's settings.</p>
-<h2>Custom card packs</h2>
+</section>
+<section class="sec" id="en-s8"><h2><span>Custom card packs</span></h2>
 <p>You write the texts of your own cards. They stay on your phone, and we don't see or moderate them. If you save a pack to a file, that file ends up wherever you put it, and from there you decide what to do with it.</p>
-<h2>Remote play</h2>
+</section>
+<section class="sec" id="en-s9"><h2><span>Remote play</span></h2>
 <p>In this mode the game shows you a short code, and you send it to your partner yourself, for example in a messenger. The game sends nothing in the process.</p>
 <ul>
 <li><strong>What is inside the code:</strong> wish numbers and your answers (in "Wish Match"), the prompt number and a "done" or "not done" mark (in the report), the level, and a random code number. The code contains no names, gender, no-go list, or history.</li>
@@ -212,9 +313,11 @@ Last updated: November 14, 2026</p>
 <li>The "Copy" button puts the code on the clipboard. The game reads the clipboard only when you tap "Paste from Clipboard".</li>
 <li>The game does not save the codes or answers themselves. It remembers only short service keys of the codes, so that hearts aren't awarded twice.</li>
 </ul>
-<h2>Website with the documents</h2>
+</section>
+<section class="sec" id="en-s10"><h2><span>Website with the documents</span></h2>
 <p>This policy and the terms of use are hosted on a website on GitHub Pages. The site has no cookies, counters, or tracking scripts. GitHub, like any host, may technically log visitors' IP addresses to protect against attacks, under <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">its own policy</a>.</p>
-<h2>Support emails</h2>
+</section>
+<section class="sec" id="en-s11"><h2><span>Support emails</span></h2>
 <p>This is the only case where your data reaches us.</p>
 <ul>
 <li><strong>What we receive:</strong> your email address, your name (if it is in the message), the text of the message, and attachments.</li>
@@ -224,7 +327,8 @@ Last updated: November 14, 2026</p>
 <li><strong>How long we keep them:</strong> while we are resolving the question and no longer than 12 months after the last message in the thread, unless the law requires us to keep them longer (for example, in a dispute over a purchase). Ask, and we will delete them sooner.</li>
 <li><strong>Please do not send</strong> details of your intimate life, photos, payment details, or passwords: we don't need them to reply. If you send them anyway, we will use them only to reply and delete them along with the correspondence.</li>
 </ul>
-<h2>How long data is kept and how to delete it</h2>
+</section>
+<section class="sec" id="en-s12"><h2><span>How long data is kept and how to delete it</span></h2>
 <p>The game's data stays on your phone until you delete it yourself using one of the methods below.</p>
 <ul>
 <li><strong>"Reset game"</strong> in "Settings" deletes points and progress.</li>
@@ -232,37 +336,63 @@ Last updated: November 14, 2026</p>
 <li><strong>Uninstalling the app</strong> removes all its data from the phone. On iPhone a copy may remain in an iCloud backup; you can delete it in iCloud settings.</li>
 <li>Purchase history is kept by the store; you can delete or obtain it through the store.</li>
 </ul>
-<h2>Your rights</h2>
+</section>
+<section class="sec" id="en-s13"><h2><span>Your rights</span></h2>
 <p>Personal data laws, such as the Israeli Privacy Protection Law, 5741-1981, the GDPR in the European Union, the UK GDPR, U.S. laws (for example, CCPA/CPRA in California), and others, give you the right to know what data exists about you, get a copy, correct it, delete it, restrict or object to its processing, withdraw consent, and complain to a supervisory authority.</p>
 <p>We hold no game data about you, so we can't provide a copy of it or delete anything on our side: there is simply nothing there. All of the game's data is on your phone and you control it: view and change it in the game, and delete it using the methods in the section above.</p>
 <p>The only thing we may hold is your support emails. For them you can use all the rights above, including getting a copy in a convenient format: write to us from the same address, and we will send you a copy, correct it, restrict its use, or delete the correspondence. We reply within 30 days, in the language of your email or in English.</p>
 <p>We have not appointed a representative in the European Union: we handle support emails only occasionally (Art. 27(2)(a) GDPR).</p>
 <p>We do not sell personal data, do not share it for advertising, and do not disclose it to anyone, whether under CCPA/CPRA or otherwise.</p>
 <p>If you believe your rights have been violated, write to us. You may also contact the supervisory authority in your country, and in Israel the Privacy Protection Authority at the Ministry of Justice.</p>
-<h2>Children</h2>
+</section>
+<section class="sec" id="en-s14"><h2><span>Children</span></h2>
 <p>Murashki is intended only for people over 18. On first launch the game asks you to confirm your age. The game is not designed for children and teenagers (including anyone under 13, or under 16 in the EU) and collects data about no one, including children. If we learn that a child has written to us, we will delete the message and will not use it. If a child has used the game, a parent can delete the app; the store's parental controls help restrict installation.</p>
-<h2>Security</h2>
+</section>
+<section class="sec" id="en-s15"><h2><span>Security</span></h2>
 <p>The PIN is stored only as a hash with a random salt. The "Hide in Recents" feature hides the game's screen in the app switcher, and on Android it also blocks screenshots and screen recording of the game. But anyone with access to your unlocked phone can open the game if sign-in protection is off, so we recommend a phone screen lock and a PIN in the game.</p>
-<h2>Changes to this policy</h2>
+</section>
+<section class="sec" id="en-s16"><h2><span>Changes to this policy</span></h2>
 <p>If we change the policy, the last-updated date on this page will change. We will announce material changes in the app's update notes in the store. If the game ever starts collecting any data, we will first update this policy and, where the law requires, ask for your consent in the game itself.</p>
-<h2>Contact</h2>
+</section>
+<section class="sec" id="en-s17"><h2><span>Contact</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Terms of Use: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#en">Terms of Use</a><a href="../privacy/#en">Privacy Policy</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Back to top</a></footer></div></div>
 </article>
-<article id="es" data-lang="es" lang="es">
-<h1>Política de privacidad de Murashki</h1>
-<p>Entra en vigor: 14 de noviembre de 2026<br>
-Última actualización: 14 de noviembre de 2026</p>
-<h2>En resumen</h2>
+<article data-lang="es" lang="es">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Política de privacidad de Murashki</h1><div class="dates"><span>Entra en vigor: 14 de noviembre de 2026</span><span>Última actualización: 14 de noviembre de 2026</span></div><nav class="switch"><a href="../terms/#es">Términos de uso</a><a href="../privacy/#es" aria-current="page">Política de privacidad</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Contenido"><details open><summary>Contenido</summary><ol>
+<li><a href="#es-s1"><span class="n">1</span><span>En resumen</span></a></li>
+<li><a href="#es-s2"><span class="n">2</span><span>Quiénes somos</span></a></li>
+<li><a href="#es-s3"><span class="n">3</span><span>Qué guarda el juego en tu teléfono</span></a></li>
+<li><a href="#es-s4"><span class="n">4</span><span>Lo que el juego no hace</span></a></li>
+<li><a href="#es-s5"><span class="n">5</span><span>Compras y suscripción</span></a></li>
+<li><a href="#es-s6"><span class="n">6</span><span>Copias de seguridad y teléfono nuevo</span></a></li>
+<li><a href="#es-s7"><span class="n">7</span><span>Recordatorios</span></a></li>
+<li><a href="#es-s8"><span class="n">8</span><span>Packs de cartas propios</span></a></li>
+<li><a href="#es-s9"><span class="n">9</span><span>Juego a distancia</span></a></li>
+<li><a href="#es-s10"><span class="n">10</span><span>Sitio web con los documentos</span></a></li>
+<li><a href="#es-s11"><span class="n">11</span><span>Correos al soporte</span></a></li>
+<li><a href="#es-s12"><span class="n">12</span><span>Cuánto se conservan los datos y cómo eliminarlos</span></a></li>
+<li><a href="#es-s13"><span class="n">13</span><span>Tus derechos</span></a></li>
+<li><a href="#es-s14"><span class="n">14</span><span>Menores</span></a></li>
+<li><a href="#es-s15"><span class="n">15</span><span>Seguridad</span></a></li>
+<li><a href="#es-s16"><span class="n">16</span><span>Cambios en la política</span></a></li>
+<li><a href="#es-s17"><span class="n">17</span><span>Contacto</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="es-s1"><h2><span>En resumen</span></h2>
 <ul>
 <li>Murashki es un juego para parejas adultas (18+). No hay cuentas, registro ni inicio de sesión.</li>
 <li>Todo lo que introduces en el juego se guarda solo en tu teléfono. Nosotros no recibimos ni vemos esos datos: no tenemos ningún servidor al que pudieran llegar.</li>
 <li>El juego no tiene analítica, publicidad, identificadores publicitarios, seguimiento ni informes de fallos.</li>
 <li>El juego se conecta a internet solo para las compras a través de la tienda de aplicaciones y cuando tú mismo abres un enlace.</li>
 </ul>
-<h2>Quiénes somos</h2>
+</section>
+<section class="sec" id="es-s2"><h2><span>Quiénes somos</span></h2>
 <p>El juego Murashki lo desarrolla y publica Soverion Games, un desarrollador independiente de Israel («nosotros»). Somos responsables del tratamiento de datos descrito en esta política. Para cualquier duda sobre los datos y esta política, escribe a <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>Qué guarda el juego en tu teléfono</h2>
+</section>
+<section class="sec" id="es-s3"><h2><span>Qué guarda el juego en tu teléfono</span></h2>
 <p>Para funcionar, el juego guarda datos en la carpeta interna de la aplicación. Otras aplicaciones no ven esa carpeta.</p>
 <ul>
 <li>Los nombres de los jugadores y el género, para insertarlos en los textos de los retos. El nivel, los puntos, los corazones y el historial de cartas mostradas.</li>
@@ -274,7 +404,8 @@ Last updated: November 14, 2026</p>
 </ul>
 <p>Estos datos no se envían ni a nosotros ni a nadie más. Hace falta guardarlos en tu teléfono para que funcione el juego que instalaste tú mismo; el juego no guarda nada de más.</p>
 <p>El acceso con huella dactilar o con el rostro lo comprueba el propio sistema del teléfono (Android o iOS). El juego no recibe ni la huella ni la imagen del rostro, solo la respuesta «confirmado» o «no».</p>
-<h2>Lo que el juego no hace</h2>
+</section>
+<section class="sec" id="es-s4"><h2><span>Lo que el juego no hace</span></h2>
 <ul>
 <li>No recopila analítica ni estadísticas de uso, y no incluye SDK de analítica de terceros. La analítica y los informes integrados del motor Unity están desactivados.</li>
 <li>No muestra publicidad y no lee el identificador publicitario (Advertising ID, IDFA).</li>
@@ -283,19 +414,24 @@ Last updated: November 14, 2026</p>
 <li>No toma decisiones automatizadas sobre ti ni elabora perfiles.</li>
 <li>No pide acceso a la cámara, el micrófono, la ubicación, los contactos ni las fotos. El juego accede a un archivo solo cuando tú lo eliges en la ventana del sistema, para cargar o guardar tu propio pack.</li>
 </ul>
-<h2>Compras y suscripción</h2>
+</section>
+<section class="sec" id="es-s5"><h2><span>Compras y suscripción</span></h2>
 <p>La versión completa y la suscripción las vende la tienda de aplicaciones desde la que instalaste el juego (Google Play o App Store). El pago lo procesa la tienda. Ella recibe tus datos de pago y de la cuenta y los trata según sus propias reglas: <a href="https://policies.google.com/privacy">política de Google</a>, <a href="https://www.apple.com/legal/privacy/">política de Apple</a>. Nosotros no recibimos tus datos de pago.</p>
 <p>La tienda le comunica al juego solo qué compras tiene tu cuenta, para abrir los niveles pagados. A nosotros, como desarrolladores, la tienda nos muestra estadísticas agregadas: número de instalaciones y ventas por país, y las valoraciones y reseñas que publiques tú mismo. Con esas estadísticas no se puede saber quién eres ni qué haces en el juego.</p>
-<h2>Copias de seguridad y teléfono nuevo</h2>
+</section>
+<section class="sec" id="es-s6"><h2><span>Copias de seguridad y teléfono nuevo</span></h2>
 <ul>
 <li><strong>Android.</strong> Los datos del juego están excluidos de la copia de seguridad de Google y de la transferencia a un teléfono nuevo. En un teléfono nuevo el juego empieza de cero y las compras se recuperan con el botón «Restaurar compras».</li>
 <li><strong>iPhone y iPad.</strong> Los archivos del juego se incluyen en la copia de seguridad de iCloud o del ordenador, si la tienes activada. Esa copia la guarda Apple (o tu ordenador) según sus propias reglas; nosotros no tenemos acceso a ella.</li>
 </ul>
-<h2>Recordatorios</h2>
+</section>
+<section class="sec" id="es-s7"><h2><span>Recordatorios</span></h2>
 <p>Si activas los recordatorios en «Ajustes», el juego los programa en el propio teléfono, con el horario que elijas. No hay servidor de notificaciones. En la pantalla de bloqueo no aparecen palabras explícitas. Puedes desactivar los recordatorios en «Ajustes» del juego o en los ajustes del teléfono.</p>
-<h2>Packs de cartas propios</h2>
+</section>
+<section class="sec" id="es-s8"><h2><span>Packs de cartas propios</span></h2>
 <p>Los textos de tus cartas los escribes tú. Se quedan en tu teléfono, y nosotros no los vemos ni los moderamos. Si guardas un pack en un archivo, ese archivo queda donde lo hayas puesto, y a partir de ahí decides tú qué hacer con él.</p>
-<h2>Juego a distancia</h2>
+</section>
+<section class="sec" id="es-s9"><h2><span>Juego a distancia</span></h2>
 <p>En este modo el juego te muestra un código corto y tú mismo se lo reenvías a tu pareja, por ejemplo, por una aplicación de mensajería. El juego no envía nada.</p>
 <ul>
 <li><strong>Qué hay dentro del código:</strong> los números de los deseos y tus respuestas (en «Deseos en común»), el número del reto y la marca «hecho» o «no» (en el informe), el nivel y un número de código aleatorio. En el código no hay nombres, género, lista de límites ni historial.</li>
@@ -304,9 +440,11 @@ Last updated: November 14, 2026</p>
 <li>El botón «Copiar» pone el código en el portapapeles. El juego lee el portapapeles solo cuando pulsas «Pegar del portapapeles».</li>
 <li>El juego no guarda los códigos ni las respuestas en sí. Solo recuerda unas claves de servicio cortas de los códigos, para no dar corazones dos veces.</li>
 </ul>
-<h2>Sitio web con los documentos</h2>
+</section>
+<section class="sec" id="es-s10"><h2><span>Sitio web con los documentos</span></h2>
 <p>Esta política y los términos de uso están en un sitio alojado en GitHub Pages. El sitio no tiene cookies, contadores ni scripts de seguimiento. GitHub, como cualquier alojamiento, puede registrar técnicamente las direcciones IP de los visitantes para protegerse de ataques, según <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">su propia política</a>.</p>
-<h2>Correos al soporte</h2>
+</section>
+<section class="sec" id="es-s11"><h2><span>Correos al soporte</span></h2>
 <p>Es el único caso en que tus datos llegan a nosotros.</p>
 <ul>
 <li><strong>Qué recibimos:</strong> tu dirección de correo, tu nombre (si aparece en el mensaje), el texto del mensaje y los archivos adjuntos.</li>
@@ -316,7 +454,8 @@ Last updated: November 14, 2026</p>
 <li><strong>Cuánto los conservamos:</strong> mientras resolvemos la consulta y no más de 12 meses después del último mensaje de la conversación, salvo que la ley exija conservarlos más tiempo (por ejemplo, en una disputa por una compra). Si lo pides, los eliminamos antes.</li>
 <li><strong>Por favor, no envíes</strong> detalles de tu vida íntima, fotos, datos de pago ni contraseñas: no hacen falta para responderte. Si los envías, los usaremos solo para responderte y los eliminaremos junto con la correspondencia.</li>
 </ul>
-<h2>Cuánto se conservan los datos y cómo eliminarlos</h2>
+</section>
+<section class="sec" id="es-s12"><h2><span>Cuánto se conservan los datos y cómo eliminarlos</span></h2>
 <p>Los datos del juego se guardan en tu teléfono hasta que los elimines tú mismo con uno de los métodos siguientes.</p>
 <ul>
 <li><strong>«Reiniciar juego»</strong> en «Ajustes» elimina los puntos y el progreso.</li>
@@ -324,37 +463,63 @@ Last updated: November 14, 2026</p>
 <li><strong>Desinstalar la aplicación</strong> elimina todos sus datos del teléfono. En iPhone puede quedar una copia en la copia de seguridad de iCloud; puedes eliminarla en los ajustes de iCloud.</li>
 <li>El historial de compras lo guarda la tienda; puedes eliminarlo u obtenerlo a través de la tienda.</li>
 </ul>
-<h2>Tus derechos</h2>
+</section>
+<section class="sec" id="es-s13"><h2><span>Tus derechos</span></h2>
 <p>Las leyes de protección de datos personales (la ley israelí de protección de la privacidad, Privacy Protection Law, 5741-1981, el GDPR en la Unión Europea, el UK GDPR, leyes de EE. UU. como CCPA/CPRA en California y otras) te dan derecho a saber qué datos hay sobre ti, obtener una copia, corregirlos, eliminarlos, limitar su tratamiento u oponerte a él, retirar el consentimiento y presentar una reclamación ante una autoridad de control.</p>
 <p>Nosotros no tenemos datos del juego sobre ti, así que no podemos entregarte una copia de ellos ni eliminar nada de nuestro lado: allí simplemente no hay nada. Todos los datos del juego están en tu teléfono y los gestionas tú: los ves y los cambias en el juego y los eliminas con los métodos de la sección anterior.</p>
 <p>Lo único que podemos tener son tus correos al soporte. Respecto a ellos puedes ejercer todos los derechos anteriores, incluida la obtención de una copia en un formato cómodo: escríbenos desde la misma dirección y te enviaremos una copia, corregiremos los datos, limitaremos su uso o eliminaremos la correspondencia. Respondemos en un plazo de 30 días, en el idioma de tu correo o en inglés.</p>
 <p>No hemos designado un representante en la Unión Europea: tratamos los correos de soporte solo de forma ocasional (art. 27(2)(a) del GDPR).</p>
 <p>No vendemos datos personales, no los compartimos con fines publicitarios y no se los revelamos a nadie, ni según CCPA/CPRA ni en ningún otro sentido.</p>
 <p>Si crees que tus derechos han sido vulnerados, escríbenos. También puedes acudir a la autoridad de control de tu país y, en Israel, a la Privacy Protection Authority del Ministerio de Justicia.</p>
-<h2>Menores</h2>
+</section>
+<section class="sec" id="es-s14"><h2><span>Menores</span></h2>
 <p>Murashki está destinado solo a personas mayores de 18 años. En el primer inicio el juego te pide confirmar tu edad. El juego no está pensado para menores ni adolescentes (incluidos los menores de 13 años y, en la UE, de 16) y no recopila datos de nadie, tampoco de menores. Si sabemos que nos ha escrito un menor, eliminaremos su mensaje y no lo usaremos. Si un menor ha usado el juego, su madre, padre o tutor puede eliminar la aplicación; el control parental de la tienda ayuda a restringir la instalación.</p>
-<h2>Seguridad</h2>
+</section>
+<section class="sec" id="es-s15"><h2><span>Seguridad</span></h2>
 <p>El PIN se guarda solo en forma de hash con una sal aleatoria. La función «Ocultar en «Recientes»» oculta la pantalla del juego en la lista de aplicaciones y, en Android, además impide las capturas y la grabación de pantalla del juego. Pero quien tenga acceso a tu teléfono desbloqueado podrá abrir el juego si la protección de acceso está desactivada, por eso te recomendamos el bloqueo de pantalla del teléfono y un PIN en el juego.</p>
-<h2>Cambios en la política</h2>
+</section>
+<section class="sec" id="es-s16"><h2><span>Cambios en la política</span></h2>
 <p>Si cambiamos la política, cambiará la fecha de última actualización en esta página. Los cambios importantes los comunicaremos en la descripción de la actualización de la app en la tienda. Si algún día el juego empieza a recopilar algún dato, primero actualizaremos esta política y, cuando la ley lo exija, te pediremos el consentimiento en el propio juego.</p>
-<h2>Contacto</h2>
+</section>
+<section class="sec" id="es-s17"><h2><span>Contacto</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Términos de uso: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#es">Términos de uso</a><a href="../privacy/#es">Política de privacidad</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Volver arriba</a></footer></div></div>
 </article>
-<article id="pt-BR" data-lang="pt-BR" lang="pt-BR">
-<h1>Política de Privacidade de Murashki</h1>
-<p>Em vigor desde: 14 de novembro de 2026<br>
-Última atualização: 14 de novembro de 2026</p>
-<h2>Resumo</h2>
+<article data-lang="pt-BR" lang="pt-BR">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Política de Privacidade de Murashki</h1><div class="dates"><span>Em vigor desde: 14 de novembro de 2026</span><span>Última atualização: 14 de novembro de 2026</span></div><nav class="switch"><a href="../terms/#pt-BR">Termos de Uso</a><a href="../privacy/#pt-BR" aria-current="page">Política de Privacidade</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Conteúdo"><details open><summary>Conteúdo</summary><ol>
+<li><a href="#pt-BR-s1"><span class="n">1</span><span>Resumo</span></a></li>
+<li><a href="#pt-BR-s2"><span class="n">2</span><span>Quem somos</span></a></li>
+<li><a href="#pt-BR-s3"><span class="n">3</span><span>O que o jogo guarda no seu celular</span></a></li>
+<li><a href="#pt-BR-s4"><span class="n">4</span><span>O que o jogo não faz</span></a></li>
+<li><a href="#pt-BR-s5"><span class="n">5</span><span>Compras e assinatura</span></a></li>
+<li><a href="#pt-BR-s6"><span class="n">6</span><span>Backups e celular novo</span></a></li>
+<li><a href="#pt-BR-s7"><span class="n">7</span><span>Lembretes</span></a></li>
+<li><a href="#pt-BR-s8"><span class="n">8</span><span>Pacotes de cartas próprios</span></a></li>
+<li><a href="#pt-BR-s9"><span class="n">9</span><span>Jogo à distância</span></a></li>
+<li><a href="#pt-BR-s10"><span class="n">10</span><span>Site com os documentos</span></a></li>
+<li><a href="#pt-BR-s11"><span class="n">11</span><span>Mensagens ao suporte</span></a></li>
+<li><a href="#pt-BR-s12"><span class="n">12</span><span>Por quanto tempo guardamos os dados e como excluí-los</span></a></li>
+<li><a href="#pt-BR-s13"><span class="n">13</span><span>Seus direitos</span></a></li>
+<li><a href="#pt-BR-s14"><span class="n">14</span><span>Crianças</span></a></li>
+<li><a href="#pt-BR-s15"><span class="n">15</span><span>Segurança</span></a></li>
+<li><a href="#pt-BR-s16"><span class="n">16</span><span>Mudanças na política</span></a></li>
+<li><a href="#pt-BR-s17"><span class="n">17</span><span>Contato</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="pt-BR-s1"><h2><span>Resumo</span></h2>
 <ul>
 <li>Murashki é um jogo para casais adultos (18+). Não há contas, cadastro nem login.</li>
 <li>Tudo o que você digita no jogo fica guardado apenas no seu celular. Nós não recebemos nem vemos esses dados: não temos um servidor para onde eles pudessem ir.</li>
 <li>O jogo não tem análise de uso, publicidade, identificadores de publicidade, rastreamento nem relatórios de falhas.</li>
 <li>O jogo só acessa a internet para compras pela loja de aplicativos e quando você mesmo abre um link.</li>
 </ul>
-<h2>Quem somos</h2>
+</section>
+<section class="sec" id="pt-BR-s2"><h2><span>Quem somos</span></h2>
 <p>O jogo Murashki é desenvolvido e publicado pela Soverion Games, desenvolvedora independente de Israel (daqui em diante, "nós"). Somos responsáveis pelo tratamento de dados descrito nesta política. Para qualquer dúvida sobre dados e sobre esta política, escreva para <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>O que o jogo guarda no seu celular</h2>
+</section>
+<section class="sec" id="pt-BR-s3"><h2><span>O que o jogo guarda no seu celular</span></h2>
 <p>Para funcionar, o jogo salva dados na pasta interna do aplicativo. Outros aplicativos não enxergam essa pasta.</p>
 <ul>
 <li>Nomes e gênero dos jogadores — para inserir nos textos das tarefas. Nível, pontos, "Corações", histórico das cartas mostradas.</li>
@@ -366,7 +531,8 @@ Last updated: November 14, 2026</p>
 </ul>
 <p>Esses dados não são enviados a nós nem a mais ninguém. Guardá-los no celular é necessário para que funcione o jogo que você mesmo instalou; o jogo não salva nada além do necessário.</p>
 <p>O acesso por impressão digital ou por rosto é verificado pelo próprio sistema do celular (Android ou iOS). O jogo não recebe a impressão digital nem a imagem do rosto — apenas a resposta "confirmado" ou "não".</p>
-<h2>O que o jogo não faz</h2>
+</section>
+<section class="sec" id="pt-BR-s4"><h2><span>O que o jogo não faz</span></h2>
 <ul>
 <li>Não coleta análise nem estatísticas de uso, e não há SDKs de análise de terceiros nele. A análise e os relatórios integrados do motor Unity estão desativados.</li>
 <li>Não exibe publicidade e não lê o identificador de publicidade (Advertising ID, IDFA).</li>
@@ -375,19 +541,24 @@ Last updated: November 14, 2026</p>
 <li>Não toma decisões automatizadas sobre você nem cria perfis.</li>
 <li>Não pede acesso à câmera, ao microfone, à localização, aos contatos e às fotos. O jogo só acessa um arquivo quando você mesmo o escolhe na janela do sistema, para carregar ou salvar um pacote seu.</li>
 </ul>
-<h2>Compras e assinatura</h2>
+</section>
+<section class="sec" id="pt-BR-s5"><h2><span>Compras e assinatura</span></h2>
 <p>A versão completa e a assinatura são vendidas pela loja de aplicativos de onde você instalou o jogo (Google Play ou App Store). O pagamento é feito pela loja. Ela recebe seus dados de pagamento e da conta e os trata conforme as regras dela: <a href="https://policies.google.com/privacy">política do Google</a>, <a href="https://www.apple.com/legal/privacy/">política da Apple</a>. Nós não recebemos seus dados de pagamento.</p>
 <p>A loja informa ao jogo apenas quais compras existem na sua conta — para liberar os níveis pagos. A nós, como desenvolvedores, a loja mostra estatísticas gerais: número de instalações e vendas por país, notas e avaliações que você mesmo publica. Com essas estatísticas não é possível saber quem você é nem o que você faz no jogo.</p>
-<h2>Backups e celular novo</h2>
+</section>
+<section class="sec" id="pt-BR-s6"><h2><span>Backups e celular novo</span></h2>
 <ul>
 <li><strong>Android.</strong> Os dados do jogo ficam fora do backup do Google e da transferência para um celular novo. No celular novo, o jogo começa do zero, e as compras voltam com o botão "Restaurar compras".</li>
 <li><strong>iPhone e iPad.</strong> Os arquivos do jogo entram no backup do iCloud ou do computador, se você o tiver ativado. Esse backup é guardado pela Apple (ou pelo seu computador) conforme as regras dela; nós não temos acesso a ele.</li>
 </ul>
-<h2>Lembretes</h2>
+</section>
+<section class="sec" id="pt-BR-s7"><h2><span>Lembretes</span></h2>
 <p>Se você ativar os lembretes em "Configurações", o jogo os agenda no próprio celular, no horário que você escolheu. Não há servidor de notificações. Na tela de bloqueio não aparecem palavras explícitas. Você pode desativar os lembretes em "Configurações" do jogo ou nas configurações do celular.</p>
-<h2>Pacotes de cartas próprios</h2>
+</section>
+<section class="sec" id="pt-BR-s8"><h2><span>Pacotes de cartas próprios</span></h2>
 <p>Os textos das suas cartas são escritos por você. Eles ficam no seu celular, e nós não os vemos nem os moderamos. Se você salvar um pacote em um arquivo, esse arquivo fica onde você o colocou, e, dali em diante, cabe a você decidir o que fazer com ele.</p>
-<h2>Jogo à distância</h2>
+</section>
+<section class="sec" id="pt-BR-s9"><h2><span>Jogo à distância</span></h2>
 <p>Nesse modo, o jogo mostra um código curto, e você mesmo o envia ao parceiro ou à parceira — por exemplo, por um mensageiro. O jogo não envia nada por conta própria.</p>
 <ul>
 <li><strong>O que há dentro do código:</strong> números dos desejos e suas respostas (em "Desejos em comum"), número da tarefa e a marca "feito" ou "não" (no relatório), nível e um número aleatório do código. Nomes, gênero, lista de limites e histórico não estão no código.</li>
@@ -396,9 +567,11 @@ Last updated: November 14, 2026</p>
 <li>O botão "Copiar" coloca o código na área de transferência. O jogo só lê a área de transferência quando você toca em "Colar da área de transferência".</li>
 <li>O jogo não guarda os códigos nem as respostas. Ele memoriza apenas chaves de serviço curtas dos códigos, para não conceder "Corações" duas vezes.</li>
 </ul>
-<h2>Site com os documentos</h2>
+</section>
+<section class="sec" id="pt-BR-s10"><h2><span>Site com os documentos</span></h2>
 <p>Esta política e os termos de uso estão em um site hospedado no GitHub Pages. O site não tem cookies, contadores nem scripts de rastreamento. O GitHub, como qualquer hospedagem, pode registrar tecnicamente os endereços IP dos visitantes para proteção contra ataques — conforme a <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">política dele</a>.</p>
-<h2>Mensagens ao suporte</h2>
+</section>
+<section class="sec" id="pt-BR-s11"><h2><span>Mensagens ao suporte</span></h2>
 <p>Este é o único caso em que seus dados chegam até nós.</p>
 <ul>
 <li><strong>O que recebemos:</strong> o endereço de e-mail, o nome (se estiver na mensagem), o texto da mensagem e os anexos.</li>
@@ -408,7 +581,8 @@ Last updated: November 14, 2026</p>
 <li><strong>Por quanto tempo guardamos:</strong> enquanto resolvemos a questão e por no máximo 12 meses após a última mensagem da conversa, a menos que a lei exija guardar por mais tempo (por exemplo, em caso de disputa sobre uma compra). Se você pedir, apagamos antes.</li>
 <li><strong>Por favor, não envie</strong> detalhes da vida íntima, fotos, dados de pagamento nem senhas: não são necessários para a resposta. Se você enviar, vamos usá-los somente para responder e apagá-los junto com a conversa.</li>
 </ul>
-<h2>Por quanto tempo guardamos os dados e como excluí-los</h2>
+</section>
+<section class="sec" id="pt-BR-s12"><h2><span>Por quanto tempo guardamos os dados e como excluí-los</span></h2>
 <p>Os dados do jogo ficam no seu celular até você mesmo excluí-los por um dos meios abaixo.</p>
 <ul>
 <li><strong>"Reiniciar jogo"</strong> em "Configurações" apaga os pontos e o progresso.</li>
@@ -416,37 +590,63 @@ Last updated: November 14, 2026</p>
 <li><strong>Desinstalar o aplicativo</strong> apaga todos os dados dele do celular. No iPhone, uma cópia pode permanecer no backup do iCloud — você pode excluí-la nas configurações do iCloud.</li>
 <li>O histórico de compras fica com a loja; você pode excluí-lo ou obtê-lo pela loja.</li>
 </ul>
-<h2>Seus direitos</h2>
+</section>
+<section class="sec" id="pt-BR-s13"><h2><span>Seus direitos</span></h2>
 <p>As leis de proteção de dados pessoais — a lei israelense de proteção da privacidade (Privacy Protection Law, 5741-1981), o GDPR na União Europeia, o UK GDPR, leis dos EUA (por exemplo, o CCPA/CPRA na Califórnia), a LGPD no Brasil e outras — dão a você o direito de saber quais dados sobre você existem, obter uma cópia deles, corrigi-los, excluí-los, restringir o tratamento ou se opor a ele, retirar o consentimento e reclamar a uma autoridade de supervisão.</p>
 <p>Nós não temos os dados do jogo, então não podemos fornecer uma cópia deles nem excluir algo do nosso lado — simplesmente não há nada lá. Todos os dados do jogo estão no seu celular, e quem decide sobre eles é você: veja e altere no jogo, exclua pelos meios da seção acima.</p>
 <p>Só podemos ter as suas mensagens ao suporte. Em relação a elas, você pode exercer todos os direitos acima, inclusive obter uma cópia em formato conveniente: escreva para nós do mesmo endereço, e enviaremos a cópia, corrigiremos, restringiremos o uso ou excluiremos a conversa. Respondemos em até 30 dias, no idioma da sua mensagem ou em inglês.</p>
 <p>Não designamos um representante na União Europeia: tratamos as mensagens ao suporte apenas de forma ocasional (art. 27(2)(a) GDPR).</p>
 <p>Não vendemos dados pessoais, não os repassamos para publicidade e não os divulgamos a ninguém — nem no sentido do CCPA/CPRA, nem em qualquer outro.</p>
 <p>Se você acha que seus direitos foram violados, escreva para nós. Você também tem o direito de recorrer à autoridade de supervisão do seu país e, em Israel, à Autoridade de Proteção da Privacidade (Privacy Protection Authority), do Ministério da Justiça.</p>
-<h2>Crianças</h2>
+</section>
+<section class="sec" id="pt-BR-s14"><h2><span>Crianças</span></h2>
 <p>Murashki é destinado apenas a pessoas com mais de 18 anos. Na primeira vez que abre o jogo, ele pede que você confirme sua idade. O jogo não foi feito para crianças e adolescentes (inclusive menores de 13 anos e, na UE, menores de 16) e não coleta dados de ninguém — nem de crianças. Se soubermos que uma criança nos escreveu, apagaremos a mensagem e não a usaremos. Se uma criança usar o jogo, o responsável pode desinstalar o aplicativo; o controle parental da loja ajuda a restringir a instalação.</p>
-<h2>Segurança</h2>
+</section>
+<section class="sec" id="pt-BR-s15"><h2><span>Segurança</span></h2>
 <p>O PIN é guardado apenas como um hash com sal aleatório. A função "Ocultar em "Recentes"" esconde a tela do jogo na lista de aplicativos e, no Android, também proíbe capturas e gravações da tela do jogo. Mas quem tiver acesso ao seu celular desbloqueado pode abrir o jogo se a proteção de acesso estiver desativada — por isso recomendamos o bloqueio de tela do celular e um PIN no jogo.</p>
-<h2>Mudanças na política</h2>
+</section>
+<section class="sec" id="pt-BR-s16"><h2><span>Mudanças na política</span></h2>
 <p>Se mudarmos a política, a data da última atualização nesta página será alterada. Avisaremos sobre mudanças importantes na descrição da atualização do aplicativo na loja. Se algum dia o jogo passar a coletar algum dado, primeiro atualizaremos esta política e, onde a lei exigir, pediremos seu consentimento no próprio jogo.</p>
-<h2>Contato</h2>
+</section>
+<section class="sec" id="pt-BR-s17"><h2><span>Contato</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Termos de Uso: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#pt-BR">Termos de Uso</a><a href="../privacy/#pt-BR">Política de Privacidade</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Voltar ao topo</a></footer></div></div>
 </article>
-<article id="de" data-lang="de" lang="de">
-<h1>Datenschutzerklärung für Murashki</h1>
-<p>Gültig ab: 14. November 2026<br>
-Zuletzt aktualisiert: 14. November 2026</p>
-<h2>Kurz gesagt</h2>
+<article data-lang="de" lang="de">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Datenschutzerklärung für Murashki</h1><div class="dates"><span>Gültig ab: 14. November 2026</span><span>Zuletzt aktualisiert: 14. November 2026</span></div><nav class="switch"><a href="../terms/#de">Nutzungsbedingungen</a><a href="../privacy/#de" aria-current="page">Datenschutzerklärung</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Inhalt"><details open><summary>Inhalt</summary><ol>
+<li><a href="#de-s1"><span class="n">1</span><span>Kurz gesagt</span></a></li>
+<li><a href="#de-s2"><span class="n">2</span><span>Wer wir sind</span></a></li>
+<li><a href="#de-s3"><span class="n">3</span><span>Was das Spiel auf deinem Handy speichert</span></a></li>
+<li><a href="#de-s4"><span class="n">4</span><span>Was das Spiel nicht tut</span></a></li>
+<li><a href="#de-s5"><span class="n">5</span><span>Käufe und Abo</span></a></li>
+<li><a href="#de-s6"><span class="n">6</span><span>Sicherungen und neues Handy</span></a></li>
+<li><a href="#de-s7"><span class="n">7</span><span>Erinnerungen</span></a></li>
+<li><a href="#de-s8"><span class="n">8</span><span>Eigene Kartenpakete</span></a></li>
+<li><a href="#de-s9"><span class="n">9</span><span>Spielen auf Distanz</span></a></li>
+<li><a href="#de-s10"><span class="n">10</span><span>Website mit den Dokumenten</span></a></li>
+<li><a href="#de-s11"><span class="n">11</span><span>Nachrichten an den Support</span></a></li>
+<li><a href="#de-s12"><span class="n">12</span><span>Wie lange Daten gespeichert werden und wie du sie löschst</span></a></li>
+<li><a href="#de-s13"><span class="n">13</span><span>Deine Rechte</span></a></li>
+<li><a href="#de-s14"><span class="n">14</span><span>Kinder</span></a></li>
+<li><a href="#de-s15"><span class="n">15</span><span>Sicherheit</span></a></li>
+<li><a href="#de-s16"><span class="n">16</span><span>Änderungen der Erklärung</span></a></li>
+<li><a href="#de-s17"><span class="n">17</span><span>Kontakt</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="de-s1"><h2><span>Kurz gesagt</span></h2>
 <ul>
 <li>Murashki ist ein Spiel für erwachsene Paare (18+). Es gibt keine Konten, keine Registrierung und keine Anmeldung.</li>
 <li>Alles, was du im Spiel eingibst, wird nur auf deinem Handy gespeichert. Wir erhalten und sehen diese Daten nicht: Wir haben keinen Server, auf den sie gelangen könnten.</li>
 <li>Das Spiel enthält keine Analyse, keine Werbung, keine Werbe-IDs, kein Tracking und keine Absturzberichte.</li>
 <li>Ins Internet geht das Spiel nur für Käufe über den App-Store und wenn du selbst einen Link öffnest.</li>
 </ul>
-<h2>Wer wir sind</h2>
+</section>
+<section class="sec" id="de-s2"><h2><span>Wer wir sind</span></h2>
 <p>Das Spiel Murashki wird von Soverion Games, einem unabhängigen Entwickler aus Israel (im Folgenden „wir“), entwickelt und veröffentlicht. Wir sind für die in dieser Erklärung beschriebene Datenverarbeitung verantwortlich. Bei Fragen zu Daten und zu dieser Erklärung schreib an <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>Was das Spiel auf deinem Handy speichert</h2>
+</section>
+<section class="sec" id="de-s3"><h2><span>Was das Spiel auf deinem Handy speichert</span></h2>
 <p>Damit das Spiel funktioniert, speichert es Daten im internen Ordner der App. Andere Apps sehen diesen Ordner nicht.</p>
 <ul>
 <li>Namen und Geschlecht der Spielenden – um sie in die Aufgabentexte einzusetzen. Stufe, Punkte, „Herzen“, Verlauf der gezeigten Karten.</li>
@@ -458,7 +658,8 @@ Zuletzt aktualisiert: 14. November 2026</p>
 </ul>
 <p>Diese Daten werden weder an uns noch an andere gesendet. Sie auf dem Handy zu speichern ist nötig, damit das Spiel läuft, das du selbst installiert hast; mehr als nötig speichert das Spiel nicht.</p>
 <p>Der Zugang per Fingerabdruck oder Gesicht wird vom Betriebssystem des Handys (Android oder iOS) geprüft. Das Spiel erhält weder den Fingerabdruck noch ein Bild des Gesichts – nur die Antwort „bestätigt“ oder „nein“.</p>
-<h2>Was das Spiel nicht tut</h2>
+</section>
+<section class="sec" id="de-s4"><h2><span>Was das Spiel nicht tut</span></h2>
 <ul>
 <li>Es sammelt keine Analyse- oder Nutzungsstatistiken, und es enthält keine Analyse-SDKs von Dritten. Die eingebaute Analyse und die Berichte der Unity-Engine sind ausgeschaltet.</li>
 <li>Es zeigt keine Werbung und liest keine Werbe-ID (Advertising ID, IDFA).</li>
@@ -467,19 +668,24 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Es trifft keine automatisierten Entscheidungen über dich und erstellt keine Profile.</li>
 <li>Es fragt nicht nach Zugriff auf Kamera, Mikrofon, Standort, Kontakte und Fotos. Auf eine Datei greift das Spiel nur zu, wenn du sie selbst im Systemfenster auswählst, um ein eigenes Paket zu laden oder zu speichern.</li>
 </ul>
-<h2>Käufe und Abo</h2>
+</section>
+<section class="sec" id="de-s5"><h2><span>Käufe und Abo</span></h2>
 <p>Die Vollversion und das Abo verkauft der App-Store, über den du das Spiel installiert hast (Google Play oder App Store). Die Zahlung wickelt der Store ab. Er erhält deine Zahlungs- und Kontodaten und verarbeitet sie nach seinen eigenen Regeln: <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>, <a href="https://www.apple.com/legal/privacy/">Datenschutzerklärung von Apple</a>. Wir erhalten deine Zahlungsdaten nicht.</p>
 <p>Dem Spiel teilt der Store nur mit, welche Käufe dein Konto hat – damit bezahlte Stufen freigeschaltet werden. Uns als Entwicklern zeigt der Store zusammengefasste Statistiken: Zahl der Installationen und Verkäufe nach Ländern, Bewertungen und Rezensionen, die du selbst veröffentlichst. Aus dieser Statistik lässt sich nicht erkennen, wer du bist und was du im Spiel tust.</p>
-<h2>Sicherungen und neues Handy</h2>
+</section>
+<section class="sec" id="de-s6"><h2><span>Sicherungen und neues Handy</span></h2>
 <ul>
 <li><strong>Android.</strong> Die Spieldaten sind von der Google-Sicherung und von der Übertragung auf ein neues Handy ausgeschlossen. Auf einem neuen Handy beginnt das Spiel bei null, und die Käufe kommen mit der Taste „Käufe wiederherstellen“ zurück.</li>
 <li><strong>iPhone und iPad.</strong> Die Spieldateien sind Teil der iCloud-Sicherung oder der Computer-Sicherung, wenn du sie aktiviert hast. Diese Sicherung bewahrt Apple (oder dein Computer) nach eigenen Regeln auf; wir haben darauf keinen Zugriff.</li>
 </ul>
-<h2>Erinnerungen</h2>
+</section>
+<section class="sec" id="de-s7"><h2><span>Erinnerungen</span></h2>
 <p>Wenn du Erinnerungen unter „Einstellungen“ aktivierst, plant das Spiel sie auf dem Handy selbst, nach dem Zeitplan, den du gewählt hast. Es gibt keinen Benachrichtigungsserver. Auf dem Sperrbildschirm erscheinen keine expliziten Wörter. Du kannst die Erinnerungen in den „Einstellungen“ des Spiels oder in den Handy-Einstellungen ausschalten.</p>
-<h2>Eigene Kartenpakete</h2>
+</section>
+<section class="sec" id="de-s8"><h2><span>Eigene Kartenpakete</span></h2>
 <p>Die Texte deiner eigenen Karten schreibst du. Sie bleiben auf deinem Handy, wir sehen und moderieren sie nicht. Wenn du ein Paket in einer Datei speicherst, liegt diese Datei dort, wo du sie abgelegt hast, und was damit geschieht, entscheidest du selbst.</p>
-<h2>Spielen auf Distanz</h2>
+</section>
+<section class="sec" id="de-s9"><h2><span>Spielen auf Distanz</span></h2>
 <p>In diesem Modus zeigt dir das Spiel einen kurzen Code, den du selbst an deine Partnerin oder deinen Partner schickst – zum Beispiel per Messenger. Das Spiel sendet dabei nichts.</p>
 <ul>
 <li><strong>Was im Code steckt:</strong> Nummern der Wünsche und deine Antworten (im „Wunsch-Match“), Nummer der Aufgabe und der Vermerk „erledigt“ oder „nein“ (im Bericht), Stufe und eine zufällige Codenummer. Namen, Geschlecht, Tabuliste und Verlauf sind nicht im Code.</li>
@@ -488,9 +694,11 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li>Die Taste „Kopieren“ legt den Code in die Zwischenablage. Die Zwischenablage liest das Spiel nur, wenn du auf „Aus Zwischenablage einfügen“ tippst.</li>
 <li>Die Codes und Antworten selbst speichert das Spiel nicht. Es merkt sich nur kurze interne Schlüssel der Codes, damit „Herzen“ nicht doppelt gutgeschrieben werden.</li>
 </ul>
-<h2>Website mit den Dokumenten</h2>
+</section>
+<section class="sec" id="de-s10"><h2><span>Website mit den Dokumenten</span></h2>
 <p>Diese Erklärung und die Nutzungsbedingungen liegen auf einer Website, die bei GitHub Pages gehostet wird. Auf der Website gibt es keine Cookies, keine Zähler und keine Tracking-Skripte. GitHub kann, wie jeder Hoster, die IP-Adressen der Besuchenden technisch zum Schutz vor Angriffen protokollieren – nach der <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">eigenen Datenschutzerklärung</a>.</p>
-<h2>Nachrichten an den Support</h2>
+</section>
+<section class="sec" id="de-s11"><h2><span>Nachrichten an den Support</span></h2>
 <p>Das ist der einzige Fall, in dem deine Daten zu uns gelangen.</p>
 <ul>
 <li><strong>Was wir erhalten:</strong> die E-Mail-Adresse, den Namen (wenn er in der Nachricht steht), den Text der Nachricht und Anhänge.</li>
@@ -500,7 +708,8 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li><strong>Wie lange wir sie speichern:</strong> solange wir das Anliegen klären und nicht länger als 12 Monate nach der letzten Nachricht im Schriftwechsel, es sei denn, das Gesetz verlangt eine längere Aufbewahrung (zum Beispiel bei einem Streit über einen Kauf). Auf Wunsch löschen wir sie früher.</li>
 <li><strong>Bitte schick nicht</strong> Details aus dem Intimleben, Fotos, Zahlungsdaten und Passwörter: Für eine Antwort sind sie nicht nötig. Falls du sie doch schickst, nutzen wir sie nur für die Antwort und löschen sie zusammen mit dem Schriftwechsel.</li>
 </ul>
-<h2>Wie lange Daten gespeichert werden und wie du sie löschst</h2>
+</section>
+<section class="sec" id="de-s12"><h2><span>Wie lange Daten gespeichert werden und wie du sie löschst</span></h2>
 <p>Die Spieldaten bleiben auf deinem Handy, bis du sie selbst auf einem der Wege unten löschst.</p>
 <ul>
 <li><strong>„Spiel zurücksetzen“</strong> unter „Einstellungen“ löscht Punkte und Fortschritt.</li>
@@ -508,37 +717,63 @@ Zuletzt aktualisiert: 14. November 2026</p>
 <li><strong>Das Deinstallieren der App</strong> löscht alle ihre Daten vom Handy. Auf dem iPhone kann eine Kopie in der iCloud-Sicherung bleiben – du kannst sie in den iCloud-Einstellungen löschen.</li>
 <li>Den Kaufverlauf speichert der Store; löschen oder anfordern kannst du ihn über den Store.</li>
 </ul>
-<h2>Deine Rechte</h2>
+</section>
+<section class="sec" id="de-s13"><h2><span>Deine Rechte</span></h2>
 <p>Datenschutzgesetze – das israelische Datenschutzgesetz (Privacy Protection Law, 5741-1981), die DSGVO (GDPR) in der Europäischen Union, die UK GDPR, Gesetze der USA (zum Beispiel CCPA/CPRA in Kalifornien) und andere – geben dir das Recht, zu erfahren, welche Daten über dich vorliegen, eine Kopie davon zu erhalten, sie zu berichtigen, zu löschen, die Verarbeitung einzuschränken oder ihr zu widersprechen, eine Einwilligung zu widerrufen und dich bei einer Aufsichtsbehörde zu beschweren.</p>
 <p>Wir haben keine Spieldaten von dir, deshalb können wir auch keine Kopie davon herausgeben oder auf unserer Seite etwas löschen – dort ist schlicht nichts. Alle Spieldaten liegen auf deinem Handy, und du verfügst darüber: Du siehst und änderst sie im Spiel und löschst sie auf den Wegen aus dem Abschnitt oben.</p>
 <p>Bei uns können nur deine Nachrichten an den Support liegen. Dazu kannst du alle oben genannten Rechte ausüben, auch eine Kopie in einem gängigen Format erhalten: Schreib uns von derselben Adresse, und wir schicken dir die Kopie, berichtigen, schränken die Nutzung ein oder löschen den Schriftwechsel. Wir antworten innerhalb von 30 Tagen, in der Sprache deiner Nachricht oder auf Englisch.</p>
 <p>Einen Vertreter in der Europäischen Union haben wir nicht benannt: Wir verarbeiten Support-Nachrichten nur gelegentlich (Art. 27 Abs. 2 lit. a DSGVO).</p>
 <p>Wir verkaufen keine personenbezogenen Daten, geben sie nicht für Werbung weiter und legen sie niemandem offen – weder im Sinne von CCPA/CPRA noch in irgendeinem anderen Sinn.</p>
 <p>Wenn du der Meinung bist, dass deine Rechte verletzt wurden, schreib uns. Du kannst dich außerdem an die Aufsichtsbehörde deines Landes wenden, in Israel an die Datenschutzbehörde (Privacy Protection Authority) beim Justizministerium.</p>
-<h2>Kinder</h2>
+</section>
+<section class="sec" id="de-s14"><h2><span>Kinder</span></h2>
 <p>Murashki richtet sich nur an Menschen über 18 Jahre. Beim ersten Start bittet das Spiel dich, dein Alter zu bestätigen. Das Spiel ist nicht für Kinder und Jugendliche gedacht (auch nicht für unter 13-Jährige, in der EU nicht für unter 16-Jährige) und sammelt über niemanden Daten – auch nicht über Kinder. Wenn wir erfahren, dass uns ein Kind geschrieben hat, löschen wir seine Nachricht und nutzen sie nicht. Wenn ein Kind das Spiel benutzt hat, können die Eltern die App deinstallieren; die Kindersicherung des Stores hilft, die Installation zu beschränken.</p>
-<h2>Sicherheit</h2>
+</section>
+<section class="sec" id="de-s15"><h2><span>Sicherheit</span></h2>
 <p>Die PIN wird nur als Hash mit zufälligem Salt gespeichert. Die Funktion „In „Zuletzt“ verbergen“ versteckt den Spielbildschirm in der App-Liste und verbietet unter Android außerdem Screenshots und Bildschirmaufnahmen des Spiels. Aber wer Zugriff auf dein entsperrtes Handy hat, kann das Spiel öffnen, wenn der Zugangsschutz ausgeschaltet ist – deshalb empfehlen wir die Bildschirmsperre des Handys und eine PIN im Spiel.</p>
-<h2>Änderungen der Erklärung</h2>
+</section>
+<section class="sec" id="de-s16"><h2><span>Änderungen der Erklärung</span></h2>
 <p>Wenn wir die Erklärung ändern, ändert sich auf dieser Seite das Datum der letzten Aktualisierung. Über wesentliche Änderungen informieren wir in der Beschreibung des App-Updates im Store. Falls das Spiel jemals Daten sammeln sollte, aktualisieren wir zuerst diese Erklärung und fragen, wo es gesetzlich nötig ist, im Spiel selbst nach deiner Einwilligung.</p>
-<h2>Kontakt</h2>
+</section>
+<section class="sec" id="de-s17"><h2><span>Kontakt</span></h2>
 <p>Soverion Games (Israel), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Nutzungsbedingungen: <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#de">Nutzungsbedingungen</a><a href="../privacy/#de">Datenschutzerklärung</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Nach oben</a></footer></div></div>
 </article>
-<article id="fr" data-lang="fr" lang="fr">
-<h1>Politique de confidentialité de Murashki</h1>
-<p>Entre en vigueur le : 14 novembre 2026<br>
-Dernière mise à jour : 14 novembre 2026</p>
-<h2>En bref</h2>
+<article data-lang="fr" lang="fr">
+<div class="hero"><p class="eyebrow">Soverion Games · 18+</p><h1>Politique de confidentialité de Murashki</h1><div class="dates"><span>Entre en vigueur le : 14 novembre 2026</span><span>Dernière mise à jour : 14 novembre 2026</span></div><nav class="switch"><a href="../terms/#fr">Conditions d&#x27;utilisation</a><a href="../privacy/#fr" aria-current="page">Politique de confidentialité</a></nav></div>
+<div class="layout"><nav class="toc" aria-label="Sommaire"><details open><summary>Sommaire</summary><ol>
+<li><a href="#fr-s1"><span class="n">1</span><span>En bref</span></a></li>
+<li><a href="#fr-s2"><span class="n">2</span><span>Qui sommes-nous</span></a></li>
+<li><a href="#fr-s3"><span class="n">3</span><span>Ce que le jeu enregistre sur votre téléphone</span></a></li>
+<li><a href="#fr-s4"><span class="n">4</span><span>Ce que le jeu ne fait pas</span></a></li>
+<li><a href="#fr-s5"><span class="n">5</span><span>Achats et abonnement</span></a></li>
+<li><a href="#fr-s6"><span class="n">6</span><span>Sauvegardes et nouveau téléphone</span></a></li>
+<li><a href="#fr-s7"><span class="n">7</span><span>Rappels</span></a></li>
+<li><a href="#fr-s8"><span class="n">8</span><span>Vos propres paquets de cartes</span></a></li>
+<li><a href="#fr-s9"><span class="n">9</span><span>Jeu à distance</span></a></li>
+<li><a href="#fr-s10"><span class="n">10</span><span>Site des documents</span></a></li>
+<li><a href="#fr-s11"><span class="n">11</span><span>Courriers au support</span></a></li>
+<li><a href="#fr-s12"><span class="n">12</span><span>Durée de conservation des données et comment les supprimer</span></a></li>
+<li><a href="#fr-s13"><span class="n">13</span><span>Vos droits</span></a></li>
+<li><a href="#fr-s14"><span class="n">14</span><span>Enfants</span></a></li>
+<li><a href="#fr-s15"><span class="n">15</span><span>Sécurité</span></a></li>
+<li><a href="#fr-s16"><span class="n">16</span><span>Modification de la politique</span></a></li>
+<li><a href="#fr-s17"><span class="n">17</span><span>Contact</span></a></li>
+</ol></details></nav>
+<div class="doc"><section class="sec summary" id="fr-s1"><h2><span>En bref</span></h2>
 <ul>
 <li>Murashki est un jeu pour couples adultes (18+). Il n'y a ni compte, ni inscription, ni connexion.</li>
 <li>Tout ce que vous saisissez dans le jeu est stocké uniquement sur votre téléphone. Nous ne recevons pas ces données et ne les voyons pas : nous n'avons pas de serveur où elles pourraient arriver.</li>
 <li>Le jeu ne contient ni analyse d'usage, ni publicité, ni identifiant publicitaire, ni suivi, ni rapport de plantage.</li>
 <li>Le jeu n'accède à internet que pour les achats via la boutique d'applications et lorsque vous ouvrez vous-même un lien.</li>
 </ul>
-<h2>Qui sommes-nous</h2>
+</section>
+<section class="sec" id="fr-s2"><h2><span>Qui sommes-nous</span></h2>
 <p>Le jeu Murashki est développé et publié par Soverion Games, développeur indépendant établi en Israël (ci-après « nous »). Nous sommes responsables du traitement des données dont il est question dans la présente politique. Pour toute question sur les données et sur la présente politique, écrivez à <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
-<h2>Ce que le jeu enregistre sur votre téléphone</h2>
+</section>
+<section class="sec" id="fr-s3"><h2><span>Ce que le jeu enregistre sur votre téléphone</span></h2>
 <p>Pour fonctionner, le jeu enregistre des données dans le dossier interne de l'application. Les autres applications ne voient pas ce dossier.</p>
 <ul>
 <li>Les prénoms des joueurs et leur genre, pour les insérer dans les textes des défis. Le niveau, les points, les « Cœurs », l'historique des cartes affichées.</li>
@@ -550,7 +785,8 @@ Dernière mise à jour : 14 novembre 2026</p>
 </ul>
 <p>Ces données ne sont envoyées ni à nous, ni à personne d'autre. Elles doivent être stockées sur le téléphone pour que le jeu que vous avez installé vous-même fonctionne ; le jeu n'enregistre rien de superflu.</p>
 <p>La connexion par empreinte digitale ou par reconnaissance faciale est vérifiée par le système du téléphone lui-même (Android ou iOS). Le jeu ne reçoit ni l'empreinte, ni l'image du visage, seulement la réponse « confirmé » ou « non ».</p>
-<h2>Ce que le jeu ne fait pas</h2>
+</section>
+<section class="sec" id="fr-s4"><h2><span>Ce que le jeu ne fait pas</span></h2>
 <ul>
 <li>Il ne collecte ni analyses ni statistiques d'utilisation, et ne contient aucun SDK d'analyse tiers. L'analyse intégrée et les rapports du moteur Unity sont désactivés.</li>
 <li>Il n'affiche pas de publicité et ne lit pas l'identifiant publicitaire (Advertising ID, IDFA).</li>
@@ -559,19 +795,24 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>Il ne prend aucune décision automatisée vous concernant et n'établit aucun profil.</li>
 <li>Il ne demande pas l'accès à l'appareil photo, au microphone, à la localisation, aux contacts ni aux photos. Le jeu n'accède à un fichier que lorsque vous le choisissez vous-même dans la fenêtre système, pour charger ou enregistrer votre paquet.</li>
 </ul>
-<h2>Achats et abonnement</h2>
+</section>
+<section class="sec" id="fr-s5"><h2><span>Achats et abonnement</span></h2>
 <p>La version complète et l'abonnement sont vendus par la boutique d'applications depuis laquelle vous avez installé le jeu (Google Play ou App Store). Le paiement est effectué par la boutique. Elle reçoit vos données de paiement et de compte et les traite selon ses propres règles : <a href="https://policies.google.com/privacy">politique de Google</a>, <a href="https://www.apple.com/legal/privacy/">politique d'Apple</a>. Nous ne recevons pas vos données de paiement.</p>
 <p>La boutique indique seulement au jeu quels achats existent sur votre compte, afin de débloquer les niveaux payés. En tant que développeur, la boutique nous montre des statistiques agrégées : nombre d'installations et de ventes par pays, notes et avis que vous publiez vous-même. Ces statistiques ne permettent pas de savoir qui vous êtes ni ce que vous faites dans le jeu.</p>
-<h2>Sauvegardes et nouveau téléphone</h2>
+</section>
+<section class="sec" id="fr-s6"><h2><span>Sauvegardes et nouveau téléphone</span></h2>
 <ul>
 <li><strong>Android.</strong> Les données du jeu sont exclues de la sauvegarde Google et du transfert vers un nouveau téléphone. Sur un nouveau téléphone, le jeu repart de zéro, et les achats se récupèrent avec le bouton « Restaurer les achats ».</li>
 <li><strong>iPhone et iPad.</strong> Les fichiers du jeu sont inclus dans la sauvegarde iCloud ou celle de l'ordinateur, si vous l'avez activée. Cette sauvegarde est conservée par Apple (ou par votre ordinateur) selon ses propres règles ; nous n'y avons pas accès.</li>
 </ul>
-<h2>Rappels</h2>
+</section>
+<section class="sec" id="fr-s7"><h2><span>Rappels</span></h2>
 <p>Si vous activez les rappels dans les « Réglages », le jeu les programme sur le téléphone lui-même, selon le calendrier que vous avez choisi. Il n'y a pas de serveur de notifications. L'écran de verrouillage ne contient aucun mot explicite. Vous pouvez désactiver les rappels dans les « Réglages » du jeu ou dans les réglages du téléphone.</p>
-<h2>Vos propres paquets de cartes</h2>
+</section>
+<section class="sec" id="fr-s8"><h2><span>Vos propres paquets de cartes</span></h2>
 <p>Vous rédigez vous-même les textes de vos cartes. Ils restent sur votre téléphone, nous ne les voyons pas et ne les modérons pas. Si vous enregistrez un paquet dans un fichier, ce fichier se trouve là où vous l'avez placé, et c'est ensuite à vous de décider ce que vous en faites.</p>
-<h2>Jeu à distance</h2>
+</section>
+<section class="sec" id="fr-s9"><h2><span>Jeu à distance</span></h2>
 <p>Dans ce mode, le jeu vous affiche un court code que vous envoyez vous-même à votre partenaire, par exemple dans une messagerie. Le jeu n'envoie rien à cette occasion.</p>
 <ul>
 <li><strong>Ce que contient le code :</strong> les numéros des désirs et vos réponses (dans les « Désirs partagés »), le numéro du défi et la mention « Fait » ou non (dans le compte rendu), le niveau et un numéro de code aléatoire. Le code ne contient ni prénoms, ni genre, ni liste des limites, ni historique.</li>
@@ -580,9 +821,11 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li>Le bouton « Copier » place le code dans le presse-papiers. Le jeu ne lit le presse-papiers que lorsque vous appuyez sur « Coller depuis le presse-papiers ».</li>
 <li>Le jeu ne conserve ni les codes ni les réponses eux-mêmes. Il mémorise seulement de courtes clés techniques des codes, afin de ne pas créditer deux fois les « Cœurs ».</li>
 </ul>
-<h2>Site des documents</h2>
+</section>
+<section class="sec" id="fr-s10"><h2><span>Site des documents</span></h2>
 <p>La présente politique et les conditions d'utilisation sont publiées sur un site hébergé sur GitHub Pages. Le site ne contient ni cookies, ni compteurs, ni scripts de suivi. GitHub, comme tout hébergeur, peut techniquement enregistrer les adresses IP des visiteurs pour se protéger contre les attaques, selon <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">sa propre politique</a>.</p>
-<h2>Courriers au support</h2>
+</section>
+<section class="sec" id="fr-s11"><h2><span>Courriers au support</span></h2>
 <p>C'est le seul cas où vos données nous parviennent.</p>
 <ul>
 <li><strong>Ce que nous recevons :</strong> l'adresse e-mail, le nom (s'il figure dans le message), le texte du message et les pièces jointes.</li>
@@ -592,7 +835,8 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li><strong>Durée de conservation :</strong> le temps de régler votre question et au plus 12 mois après le dernier message de l'échange, sauf si la loi impose de conserver plus longtemps (par exemple en cas de litige sur un achat). Sur votre demande, nous les supprimerons plus tôt.</li>
 <li><strong>Merci de ne pas envoyer</strong> de détails sur votre vie intime, de photos, de données de paiement ni de mots de passe : ils ne sont pas nécessaires pour vous répondre. Si vous les envoyez, nous ne les utiliserons que pour vous répondre et les supprimerons avec l'échange.</li>
 </ul>
-<h2>Durée de conservation des données et comment les supprimer</h2>
+</section>
+<section class="sec" id="fr-s12"><h2><span>Durée de conservation des données et comment les supprimer</span></h2>
 <p>Les données du jeu restent sur votre téléphone jusqu'à ce que vous les supprimiez vous-même, par l'un des moyens ci-dessous.</p>
 <ul>
 <li><strong>« Réinitialiser le jeu »</strong> dans les « Réglages » supprime les points et la progression.</li>
@@ -600,25 +844,31 @@ Dernière mise à jour : 14 novembre 2026</p>
 <li><strong>La désinstallation de l'application</strong> supprime toutes ses données du téléphone. Sur iPhone, une copie peut subsister dans la sauvegarde iCloud ; vous pouvez la supprimer dans les réglages d'iCloud.</li>
 <li>L'historique des achats est conservé par la boutique ; vous pouvez le supprimer ou l'obtenir via la boutique.</li>
 </ul>
-<h2>Vos droits</h2>
+</section>
+<section class="sec" id="fr-s13"><h2><span>Vos droits</span></h2>
 <p>Les lois sur les données personnelles (la loi israélienne sur la protection de la vie privée (Privacy Protection Law, 5741-1981), le RGPD (GDPR) dans l'Union européenne, le UK GDPR, les lois américaines comme le CCPA/CPRA en Californie et d'autres) vous donnent le droit de savoir quelles données vous concernent, d'en obtenir une copie, de les rectifier, de les supprimer, de limiter leur traitement ou de vous y opposer, de retirer votre consentement et de saisir une autorité de contrôle.</p>
 <p>Nous ne détenons pas les données du jeu ; nous ne pouvons donc ni en fournir une copie, ni rien supprimer de notre côté : il n'y a tout simplement rien. Toutes les données du jeu se trouvent sur votre téléphone et vous en disposez : vous les consultez et les modifiez dans le jeu, et vous les supprimez par les moyens décrits dans la section ci-dessus.</p>
 <p>Seuls vos courriers au support peuvent se trouver chez nous. Pour ceux-ci, vous pouvez exercer tous les droits ci-dessus, y compris obtenir une copie dans un format courant : écrivez-nous depuis la même adresse, et nous vous enverrons une copie, rectifierons, limiterons l'utilisation ou supprimerons l'échange. Nous répondons sous 30 jours, dans la langue de votre message ou en anglais.</p>
 <p>Nous n'avons pas désigné de représentant dans l'Union européenne : nous ne traitons les messages au support qu'à titre occasionnel (art. 27(2)(a) du RGPD).</p>
 <p>Nous ne vendons pas les données personnelles, ne les transmettons pas à des fins publicitaires et ne les divulguons à personne, ni au sens du CCPA/CPRA, ni dans aucun autre sens.</p>
 <p>Si vous estimez que vos droits sont violés, écrivez-nous. Vous pouvez également saisir l'autorité de contrôle de votre pays et, en Israël, la Privacy Protection Authority auprès du ministère de la Justice.</p>
-<h2>Enfants</h2>
+</section>
+<section class="sec" id="fr-s14"><h2><span>Enfants</span></h2>
 <p>Murashki est destiné uniquement aux personnes de plus de 18 ans. Au premier lancement, le jeu demande de confirmer votre âge. Le jeu n'est pas conçu pour les enfants ni les adolescents (y compris de moins de 13 ans, et de moins de 16 ans dans l'UE) et ne collecte de données sur personne, y compris sur les enfants. Si nous apprenons qu'un enfant nous a écrit, nous supprimerons son message et ne l'utiliserons pas. Si un enfant a utilisé le jeu, un parent peut supprimer l'application ; le contrôle parental de la boutique aide à limiter l'installation.</p>
-<h2>Sécurité</h2>
+</section>
+<section class="sec" id="fr-s15"><h2><span>Sécurité</span></h2>
 <p>Le code PIN n'est stocké que sous forme d'empreinte (hash) avec un sel aléatoire. La fonction « Masquer dans « Récents » » cache l'écran du jeu dans la liste des applications et, sur Android, interdit en plus les captures et l'enregistrement de l'écran du jeu. Mais quiconque a accès à votre téléphone déverrouillé peut ouvrir le jeu si la protection de l'accès est désactivée ; nous vous conseillons donc de verrouiller l'écran du téléphone et de définir un code PIN dans le jeu.</p>
-<h2>Modification de la politique</h2>
+</section>
+<section class="sec" id="fr-s16"><h2><span>Modification de la politique</span></h2>
 <p>Si nous modifions la politique, la date de dernière mise à jour change sur cette page. Nous vous informerons des modifications importantes dans la description de la mise à jour de l'application dans la boutique. Si le jeu venait un jour à collecter des données, nous mettrions d'abord à jour la présente politique et, lorsque la loi l'exige, nous vous demanderions votre consentement dans le jeu lui-même.</p>
-<h2>Contact</h2>
+</section>
+<section class="sec" id="fr-s17"><h2><span>Contact</span></h2>
 <p>Soverion Games (Israël), <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a>.</p>
 <p>Conditions d'utilisation : <a href="https://soveriongames.github.io/murashki/terms">https://soveriongames.github.io/murashki/terms</a></p>
+</section>
+<footer class="doc-foot"><span>© Soverion Games</span><a href="../terms/#fr">Conditions d&#x27;utilisation</a><a href="../privacy/#fr">Politique de confidentialité</a><a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a><a href="#top">↑ Haut de page</a></footer></div></div>
 </article>
 </main>
-<footer>© Soverion Games · <a href="../terms/" data-page="../terms/">Terms</a> · <a href="../privacy/" data-page="../privacy/">Privacy</a> · <a href="mailto:soveriongames.support@gmail.com">soveriongames.support@gmail.com</a></footer>
-</div>
+<a class="totop" href="#top" aria-label="Back to top">↑</a>
 </body>
 </html>
